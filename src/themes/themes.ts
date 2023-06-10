@@ -17,6 +17,21 @@ declare module "@mui/material/styles" {
 }
 
 const baseOptions: ThemeOptions = {
+  typography: {
+    fontFamily: [
+      '"Advanced Pixel"',
+      "-apple-system",
+      "BlinkMacSystemFont",
+      '"Segoe UI"',
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(","),
+  },
   components: {
     MuiCssBaseline: {
       styleOverrides: {

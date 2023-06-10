@@ -12,7 +12,9 @@ const RootPage = () => {
         backgroundColor: (theme) => theme.palette.background.paper,
       }}
     >
-      <Typography variant='h1'>Vite + React</Typography>
+      <Typography variant='h1' sx={{ fontFamily: "Karma Future" }}>
+        Vite + React
+      </Typography>
       <Button
         sx={{ backgroundColor: (theme) => theme.palette.primary.main }}
         variant='contained'
