@@ -6,6 +6,7 @@ const RootPage = () => {
       sx={{
         width: "100%",
         height: "100%",
+        overflowX: "hidden",
         p: 3,
         backgroundColor: (theme) => theme.palette.background.paper,
       }}

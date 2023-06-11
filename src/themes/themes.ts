@@ -31,24 +31,103 @@ const baseOptions: ThemeOptions = {
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
     ].join(","),
-    h1: { fontFamily: "Karma Future", marginTop: "0.4em", marginBottom: "0.2em" },
-    h2: { fontFamily: "Karma Future", marginTop: "0.4em", marginBottom: "0.2em" },
-    h3: { fontFamily: "Karma Future", marginTop: "0.4em", marginBottom: "0.2em" },
-    h4: { fontFamily: "Karma Future", marginTop: "0.4em", marginBottom: "0.2em" },
-    h5: { fontFamily: "Karma Future", marginTop: "0.4em", marginBottom: "0.2em" },
-    h6: { fontFamily: "Karma Future", marginTop: "0.4em", marginBottom: "0.2em" },
-    subtitle1: { fontSize: "1.4em", lineHeight: 1.2, fontWeight: 600 },
-    subtitle2: { fontSize: "1.2em", lineHeight: 1.2, fontWeight: 600 },
+    h1: {
+      fontFamily: "Karma Future",
+      "@media (max-width:600px)": {
+        fontSize: "5rem",
+      },
+      marginTop: "0.4em",
+      marginBottom: "0.2em",
+    },
+    h2: {
+      fontFamily: "Karma Future",
+      marginTop: "0.4em",
+      marginBottom: "0.2em",
+      "@media (max-width:600px)": {
+        fontSize: "4rem",
+      },
+    },
+    h3: {
+      fontFamily: "Karma Future",
+      marginTop: "0.4em",
+      marginBottom: "0.2em",
+
+      "@media (max-width:600px)": {
+        fontSize: "3rem",
+      },
+    },
+    h4: {
+      fontFamily: "Karma Future",
+      marginTop: "0.4em",
+      marginBottom: "0.2em",
+      "@media (max-width:600px)": {
+        fontSize: "2rem",
+      },
+    },
+    h5: {
+      fontFamily: "Karma Future",
+      marginTop: "0.4em",
+      marginBottom: "0.2em",
+      "@media (max-width:600px)": {
+        fontSize: "1.5rem",
+      },
+    },
+    h6: {
+      fontFamily: "Karma Future",
+      marginTop: "0.4em",
+      marginBottom: "0.2em",
+      "@media (max-width:600px)": {
+        fontSize: "1.2rem",
+      },
+    },
+    subtitle1: {
+      fontSize: "1.8rem",
+      "@media (max-width:600px)": {
+        fontSize: "1.6rem",
+      },
+      lineHeight: 1,
+      fontWeight: 600,
+      marginTop: "0.2em",
+      marginBottom: "0.1em",
+    },
+    subtitle2: {
+      fontSize: "1.6rem",
+      "@media (max-width:600px)": {
+        fontSize: "1.4rem",
+      },
+      lineHeight: 1,
+      fontWeight: 600,
+      marginTop: "0.2em",
+      marginBottom: "0.1em",
+    },
     body1: {
-      fontSize: "1.4em",
+      fontSize: "1.8rem",
+      "@media (max-width:600px)": {
+        fontSize: "1.6rem",
+      },
       lineHeight: 0.8,
     },
     body2: {
-      fontSize: "1.2em",
+      fontSize: "1.6rem",
+      "@media (max-width:600px)": {
+        fontSize: "1.4rem",
+      },
       lineHeight: 0.8,
     },
-    button: { fontSize: "1.2em" },
-    caption: { fontSize: "1.2em", lineHeight: 0.8, fontStyle: "italic" },
+    button: {
+      fontSize: "1.4rem",
+      "@media (max-width:600px)": {
+        fontSize: "1.2rem",
+      },
+    },
+    caption: {
+      fontSize: "1.4rem",
+      lineHeight: 0.8,
+      fontStyle: "italic",
+      "@media (max-width:600px)": {
+        fontSize: "1.2rem",
+      },
+    },
     overline: {},
   },
   components: {
@@ -86,7 +165,10 @@ const baseOptions: ThemeOptions = {
             boxShadow: "none",
           },
           "&.MuiButton-text": {
-            fontSize: "1.2em",
+            fontSize: "1.4rem",
+            "@media (max-width:600px)": {
+              fontSize: "1.2rem",
+            },
             lineHeight: "normal",
           },
         },
