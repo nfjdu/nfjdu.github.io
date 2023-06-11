@@ -38,6 +38,7 @@ const baseOptions: ThemeOptions = {
       },
       marginTop: "0.4em",
       marginBottom: "0.2em",
+      hyphens: "manual",
     },
     h2: {
       fontFamily: "Karma Future",
@@ -46,6 +47,7 @@ const baseOptions: ThemeOptions = {
       "@media (max-width:600px)": {
         fontSize: "4rem",
       },
+      hyphens: "manual",
     },
     h3: {
       fontFamily: "Karma Future",
@@ -55,6 +57,7 @@ const baseOptions: ThemeOptions = {
       "@media (max-width:600px)": {
         fontSize: "3rem",
       },
+      hyphens: "manual",
     },
     h4: {
       fontFamily: "Karma Future",
