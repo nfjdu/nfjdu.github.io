@@ -12,6 +12,13 @@ export default defineConfig({
           {
             name: "Advanced Pixel",
             src: "./src/assets/fonts/advanced-pixel-7.regular.ttf",
+            transform(font) {
+              // update the font weight
+              // font.weight = 700
+
+              // we can also return null to skip the font
+              return font;
+            },
           },
           {
             name: "Karma Future",

@@ -1,30 +1,102 @@
 import { Box, Button, Typography } from "@mui/material";
-import { useState } from "react";
 
 const RootPage = () => {
-  const [count, setCount] = useState(0);
-
   return (
     <Box
       sx={{
         width: "100%",
         height: "100%",
+        p: 3,
         backgroundColor: (theme) => theme.palette.background.paper,
       }}
     >
-      <Typography variant='h1' sx={{ fontFamily: "Karma Future" }}>
-        Vite + React
+      <Typography variant='h1'>Heading 1</Typography>
+      <Typography variant='body1'>
+        My name is Edward Hinrichsen and I have recently completed a Bachelor of Science, majoring
       </Typography>
-      <Button
-        sx={{ backgroundColor: (theme) => theme.palette.primary.main }}
-        variant='contained'
-        onClick={() => setCount((_count) => _count + 1)}
-      >
-        count is {count}
-      </Button>
-      <p>
-        Edit <code>src/App.tsx</code> and save to test HMR
-      </p>
+      <Typography variant='subtitle1'>Subtitle 1</Typography>
+      <Typography variant='body1'>
+        My name is Edward Hinrichsen and I have recently completed a Bachelor of Science, majoring
+      </Typography>
+      <Typography variant='subtitle2'>Subtitle 2</Typography>
+      <Typography variant='body2'>
+        My name is Edward Hinrichsen and I have recently completed a Bachelor of Science, majoring
+      </Typography>
+
+      <Typography variant='h2'>Heading 2</Typography>
+      <Typography variant='body1'>
+        My name is Edward Hinrichsen and I have recently completed a Bachelor of Science, majoring
+      </Typography>
+      <Typography variant='subtitle1'>Subtitle 1</Typography>
+      <Typography variant='body1'>
+        My name is Edward Hinrichsen and I have recently completed a Bachelor of Science, majoring
+      </Typography>
+      <Typography variant='subtitle2'>Subtitle 2</Typography>
+      <Typography variant='body2'>
+        My name is Edward Hinrichsen and I have recently completed a Bachelor of Science, majoring
+      </Typography>
+
+      <Typography variant='h3'>Heading 3</Typography>
+      <Typography variant='body1'>
+        My name is Edward Hinrichsen and I have recently completed a Bachelor of Science, majoring
+      </Typography>
+      <Typography variant='subtitle1'>Subtitle 1</Typography>
+      <Typography variant='body1'>
+        My name is Edward Hinrichsen and I have recently completed a Bachelor of Science, majoring
+      </Typography>
+      <Typography variant='subtitle2'>Subtitle 2</Typography>
+      <Typography variant='body2'>
+        My name is Edward Hinrichsen and I have recently completed a Bachelor of Science, majoring
+      </Typography>
+
+      <Typography variant='h4'>Heading 4</Typography>
+      <Typography variant='body1'>
+        My name is Edward Hinrichsen and I have recently completed a Bachelor of Science, majoring
+      </Typography>
+      <Typography variant='subtitle1'>Subtitle 1</Typography>
+      <Typography variant='body1'>
+        My name is Edward Hinrichsen and I have recently completed a Bachelor of Science, majoring
+      </Typography>
+      <Typography variant='subtitle2'>Subtitle 2</Typography>
+      <Typography variant='body2'>
+        My name is Edward Hinrichsen and I have recently completed a Bachelor of Science, majoring
+      </Typography>
+
+      <Typography variant='h5'>Heading 5</Typography>
+      <Typography variant='body1'>
+        My name is Edward Hinrichsen and I have recently completed a Bachelor of Science, majoring
+      </Typography>
+      <Typography variant='subtitle1'>Subtitle 1</Typography>
+      <Typography variant='body1'>
+        My name is Edward Hinrichsen and I have recently completed a Bachelor of Science, majoring
+      </Typography>
+      <Typography variant='subtitle2'>Subtitle 2</Typography>
+      <Typography variant='body2'>
+        My name is Edward Hinrichsen and I have recently completed a Bachelor of Science, majoring
+      </Typography>
+
+      <Typography variant='h6'>Heading 6</Typography>
+      <Typography variant='body1'>
+        My name is Edward Hinrichsen and I have recently completed a Bachelor of Science, majoring
+      </Typography>
+      <Typography variant='subtitle1'>Subtitle 1</Typography>
+      <Typography variant='body1'>
+        My name is Edward Hinrichsen and I have recently completed a Bachelor of Science, majoring
+      </Typography>
+      <Typography variant='subtitle2'>Subtitle 2</Typography>
+      <Typography variant='body2'>
+        My name is Edward Hinrichsen and I have recently completed a Bachelor of Science, majoring
+      </Typography>
+
+      <br />
+      <Typography variant='button'>Button text</Typography>
+      <Button>Button text</Button>
+      <br />
+
+      <Typography variant='caption'>
+        My name is Edward Hinrichsen and I have recently completed a Bachelor of Science, majoring
+      </Typography>
+      <br />
     </Box>
   );
 };

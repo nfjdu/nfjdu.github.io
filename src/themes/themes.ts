@@ -31,6 +31,25 @@ const baseOptions: ThemeOptions = {
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
     ].join(","),
+    h1: { fontFamily: "Karma Future", marginTop: "0.4em", marginBottom: "0.2em" },
+    h2: { fontFamily: "Karma Future", marginTop: "0.4em", marginBottom: "0.2em" },
+    h3: { fontFamily: "Karma Future", marginTop: "0.4em", marginBottom: "0.2em" },
+    h4: { fontFamily: "Karma Future", marginTop: "0.4em", marginBottom: "0.2em" },
+    h5: { fontFamily: "Karma Future", marginTop: "0.4em", marginBottom: "0.2em" },
+    h6: { fontFamily: "Karma Future", marginTop: "0.4em", marginBottom: "0.2em" },
+    subtitle1: { fontSize: "1.4em", lineHeight: 1.2, fontWeight: 600 },
+    subtitle2: { fontSize: "1.2em", lineHeight: 1.2, fontWeight: 600 },
+    body1: {
+      fontSize: "1.4em",
+      lineHeight: 0.8,
+    },
+    body2: {
+      fontSize: "1.2em",
+      lineHeight: 0.8,
+    },
+    button: { fontSize: "1.2em" },
+    caption: { fontSize: "1.2em", lineHeight: 0.8, fontStyle: "italic" },
+    overline: {},
   },
   components: {
     MuiCssBaseline: {
@@ -39,6 +58,7 @@ const baseOptions: ThemeOptions = {
           boxSizing: "border-box",
         },
         html: {
+          fontSize: 16,
           MozOsxFontSmoothing: "grayscale",
           WebkitFontSmoothing: "antialiased",
           height: "100%",
@@ -60,11 +80,14 @@ const baseOptions: ThemeOptions = {
           borderRadius: 0,
           fontWeight: "bold",
           textTransform: "uppercase",
-          fontSize: "12px",
           padding: "8px 16px",
           boxShadow: "none",
           "&:hover": {
             boxShadow: "none",
+          },
+          "&.MuiButton-text": {
+            fontSize: "1.2em",
+            lineHeight: "normal",
           },
         },
       },
