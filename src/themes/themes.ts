@@ -18,48 +18,39 @@ declare module "@mui/material/styles" {
 
 const baseOptions: ThemeOptions = {
   typography: {
-    fontFamily: [
-      '"Advanced Pixel"',
-      "-apple-system",
-      "BlinkMacSystemFont",
-      '"Segoe UI"',
-      "Roboto",
-      '"Helvetica Neue"',
-      "Arial",
-      "sans-serif",
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(","),
+    fontFamily: ['"Advanced Pixel"', "monospace"].join(","),
     h1: {
+      fontSize: "5rem",
       fontFamily: "Karma Future",
       "@media (max-width:600px)": {
-        fontSize: "5rem",
+        fontSize: "4rem",
       },
       marginTop: "0.4em",
       marginBottom: "0.2em",
       hyphens: "manual",
     },
     h2: {
+      fontSize: "3.5rem",
       fontFamily: "Karma Future",
       marginTop: "0.4em",
       marginBottom: "0.2em",
-      "@media (max-width:600px)": {
-        fontSize: "4rem",
-      },
-      hyphens: "manual",
-    },
-    h3: {
-      fontFamily: "Karma Future",
-      marginTop: "0.4em",
-      marginBottom: "0.2em",
-
       "@media (max-width:600px)": {
         fontSize: "3rem",
       },
       hyphens: "manual",
     },
+    h3: {
+      fontSize: "3rem",
+      fontFamily: "Karma Future",
+      marginTop: "0.4em",
+      marginBottom: "0.2em",
+      "@media (max-width:600px)": {
+        fontSize: "2.5rem",
+      },
+      hyphens: "manual",
+    },
     h4: {
+      fontSize: "2.5rem",
       fontFamily: "Karma Future",
       marginTop: "0.4em",
       marginBottom: "0.2em",
@@ -68,6 +59,7 @@ const baseOptions: ThemeOptions = {
       },
     },
     h5: {
+      fontSize: "2rem",
       fontFamily: "Karma Future",
       marginTop: "0.4em",
       marginBottom: "0.2em",
@@ -76,11 +68,12 @@ const baseOptions: ThemeOptions = {
       },
     },
     h6: {
+      fontSize: "1.5rem",
       fontFamily: "Karma Future",
       marginTop: "0.4em",
       marginBottom: "0.2em",
       "@media (max-width:600px)": {
-        fontSize: "1.2rem",
+        fontSize: "1rem",
       },
     },
     subtitle1: {
@@ -108,14 +101,14 @@ const baseOptions: ThemeOptions = {
       "@media (max-width:600px)": {
         fontSize: "1.6rem",
       },
-      lineHeight: 0.8,
+      lineHeight: 1,
     },
     body2: {
       fontSize: "1.6rem",
       "@media (max-width:600px)": {
         fontSize: "1.4rem",
       },
-      lineHeight: 0.8,
+      lineHeight: 1,
     },
     button: {
       fontSize: "1.4rem",
