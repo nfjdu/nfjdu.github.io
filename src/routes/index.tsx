@@ -14,7 +14,10 @@ export const routes = [
       {
         path: "styleguide",
         element: <StyleguidePage />,
-        children: [{ path: "typography", element: <TypographyPage /> }],
+        children: [
+          { path: "typography", element: <TypographyPage /> },
+          { path: "buttons", element: <div>Buttons</div> },
+        ],
       },
     ],
   },

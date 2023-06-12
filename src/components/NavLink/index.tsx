@@ -20,7 +20,17 @@ const NavLink = ({
     <ListItem disablePadding sx={{ pl: paddingMultiplier * 6 }} {...props}>
       <ListItemButton component={RouterLink} to={to}>
         <ListItemText disableTypography>
-          <Typography variant={typographyVariant}>{text}</Typography>
+          <Typography
+            variant={typographyVariant}
+            sx={{
+              marginBlockStart: 0,
+              marginBlockEnd: 0,
+              marginInlineStart: 0,
+              marginInlineEnd: 0,
+            }}
+          >
+            {text}
+          </Typography>
         </ListItemText>
       </ListItemButton>
     </ListItem>

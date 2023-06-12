@@ -3,16 +3,24 @@ import merge from "lodash/merge";
 import { THEME } from "../constants/themes";
 
 declare module "@mui/material/styles" {
-  interface Theme {
-    status: {
-      danger: string;
-    };
+  // interface Theme {
+  //   status: {
+  //     danger: string;
+  //   };
+  // }
+  // // allow configuration using `createTheme`
+  // interface ThemeOptions {
+  //   status?: {
+  //     danger?: string;
+  //   };
+  // }
+
+  interface Palette {
+    background2: Palette["primary"];
   }
-  // allow configuration using `createTheme`
-  interface ThemeOptions {
-    status?: {
-      danger?: string;
-    };
+
+  interface PaletteOptions {
+    background2: PaletteOptions["primary"];
   }
 }
 
@@ -170,18 +178,48 @@ const baseOptions: ThemeOptions = {
         },
       },
     },
+    MuiIconButton: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          color: theme.palette.background2.contrastText,
+          background: theme.palette.primary.main,
+          border: `1px solid ${theme.palette.background.paper}`,
+          boxShadow: theme.shadows[1],
+          borderRadius: "0",
+          minWidth: "40px",
+          height: "40px",
+          paddingRight: "16px",
+          paddingLeft: "16px",
+          "& .MuiSvgIcon-root": {
+            width: "100%",
+            height: "100%",
+          },
+          "&:hover": {
+            background: theme.palette.primary.main,
+          },
+        }),
+      },
+    },
   },
 };
 
 const lightThemeOptions: ThemeOptions = {
   palette: {
     mode: "light",
+    text: {
+      primary: "#525252",
+    },
+    divider: "#525252",
     background: {
       default: "#ffffff", // White
       paper: "#f5f5f5", // Light Gray
     },
+    background2: {
+      main: "#dedede",
+      contrastText: "#f5f5f5",
+    },
     primary: {
-      main: "#2b7ce9", // Light Blue
+      main: "#525252", // Dark grey
     },
     secondary: {
       main: "#f50057", // Pink
@@ -199,45 +237,47 @@ const lightThemeOptions: ThemeOptions = {
       main: "#4caf50", // Green
     },
   },
-  components: {
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          borderRadius: 0,
-          fontWeight: "bold",
-          textTransform: "uppercase",
-          fontSize: "12px",
-          padding: "8px 16px",
-          boxShadow: "none",
-          "&:hover": {
-            boxShadow: "none",
-          },
-        },
-        contained: {
-          backgroundColor: "#2b7ce9", // Light Blue
-          color: "#ffffff", // White
-          "&:hover": {
-            backgroundColor: "#007bff", // Blue
-          },
-        },
-        outlined: {
-          color: "#2b7ce9", // Light Blue
-          border: "1px solid #2b7ce9", // Light Blue
-          "&:hover": {
-            backgroundColor: "#2b7ce9", // Light Blue
-            color: "#ffffff", // White
-          },
-        },
-      },
-    },
-  },
+  shadows: [
+    "none",
+    "6px 6px 0px rgba(82, 82, 82, 0.25)",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+  ],
+  components: {},
 };
+
 const darkThemeOptions: ThemeOptions = {
   palette: {
     mode: "dark",
+    divider: "#ffffff",
     background: {
       default: "#303030", // Dark Gray
       paper: "#424242", // Gray
+    },
+    background2: {
+      main: "#613a4c",
+      contrastText: "#ffffff",
     },
     primary: {
       main: "#ff4081", // Magenta
@@ -258,38 +298,34 @@ const darkThemeOptions: ThemeOptions = {
       main: "#8bc34a", // Lime Green
     },
   },
-  components: {
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          borderRadius: 0,
-          fontWeight: "bold",
-          textTransform: "uppercase",
-          fontSize: "12px",
-          padding: "8px 16px",
-          boxShadow: "none",
-          "&:hover": {
-            boxShadow: "none",
-          },
-        },
-        contained: {
-          backgroundColor: "#ff4081", // Magenta
-          color: "#ffffff", // White
-          "&:hover": {
-            backgroundColor: "#ff0066", // Dark Magenta
-          },
-        },
-        outlined: {
-          color: "#ff4081", // Magenta
-          border: "1px solid #ff4081", // Magenta
-          "&:hover": {
-            backgroundColor: "#ff4081", // Magenta
-            color: "#ffffff", // White
-          },
-        },
-      },
-    },
-  },
+  shadows: [
+    "none",
+    "6px 6px 0px rgba(255, 255, 255, 0.15)",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+  ],
+  components: {},
 };
 const themeOptions = {
   [THEME.LIGHT]: lightThemeOptions,

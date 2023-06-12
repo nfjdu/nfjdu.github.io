@@ -1,10 +1,11 @@
 import { Typography } from "@mui/material";
+import HeadingWithDivider from "../../../components/HeadingWithDivider";
 
 const TypographyPage = () => {
   return (
     <>
-      <Typography variant='h2'>Typography</Typography>
-      <Typography variant='h3'>Variant examples</Typography>
+      <HeadingWithDivider variant='h2'>Typography</HeadingWithDivider>
+      <HeadingWithDivider variant='h3'>Variant examples</HeadingWithDivider>
 
       <Typography variant='h1'>Heading 1</Typography>
 

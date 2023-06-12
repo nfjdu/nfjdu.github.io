@@ -6,6 +6,7 @@ import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import NavLink from "../../components/NavLink";
 import NavLinksGroup from "../../components/NavLinksGroup";
+import Brightness6Icon from "@mui/icons-material/Brightness6";
 
 const RootPage = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
@@ -16,29 +17,45 @@ const RootPage = () => {
         width: "100%",
         height: "100%",
         overflowX: "hidden",
-        position: "relative",
-        py: { xs: 5, md: 8 },
-        px: { xs: 3, md: 14 },
+        py: { xs: 10, sm: 12 },
+        px: { xs: 3.6, sm: 14 },
         backgroundColor: (theme) => theme.palette.background.paper,
       }}
     >
       <Box
         sx={{
           position: "fixed",
-          top: 10,
-          left: 20,
+          top: 0,
+          left: 0,
+          p: 3.6,
           zIndex: (theme) => theme.zIndex.drawer + 1,
+          width: "100%",
+          display: "flex",
         }}
       >
-        <IconButton sx={{ mr: 2 }} onClick={() => setIsMenuOpened(!isMenuOpened)}>
+        <IconButton
+          sx={{
+            mr: 3.3,
+          }}
+          onClick={() => setIsMenuOpened(!isMenuOpened)}
+        >
           <MenuIcon />
         </IconButton>
-        <IconButton>
+        <IconButton
+          sx={{
+            mr: 0.3,
+          }}
+        >
           <LinkedInIcon />
         </IconButton>
         <IconButton>
           <GitHubIcon />
         </IconButton>
+        {/** 
+        <IconButton sx={{ ml: "auto" }} onClick={}>
+          <Brightness6Icon />
+        </IconButton>
+ */}
       </Box>
 
       <Box
@@ -48,17 +65,17 @@ const RootPage = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: "#dedede",
+          backgroundColor: (theme) => theme.palette.background2.main,
           opacity: isMenuOpened ? 1 : 0,
           zIndex: isMenuOpened ? (theme) => theme.zIndex.drawer : -1,
           transition: "all 0.3s ease-in-out",
           transform: isMenuOpened ? "translateX(0)" : "translateX(-100%)",
         }}
       >
-        <List sx={{ py: { xs: 5, md: 8 }, px: { xs: 3, md: 14 } }}>
+        <List sx={{ py: { xs: 12, sm: 12 }, px: { xs: 1.5, sm: 14 } }}>
           <NavLink to='/home' text='Home' onClick={() => setIsMenuOpened(false)} />
           <NavLinksGroup
-            title='Styleguide'
+            title='Style&shy;guide'
             children={[
               <NavLink
                 typographyVariant='h2'

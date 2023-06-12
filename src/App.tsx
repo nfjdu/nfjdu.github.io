@@ -10,7 +10,7 @@ const router = createBrowserRouter(routes);
 interface Props {
   themeName?: THEME;
 }
-function App({ themeName = THEME.LIGHT }: Props) {
+function App({ themeName = THEME.DARK }: Props) {
   const theme = createCustomTheme(themeName);
 
   return (

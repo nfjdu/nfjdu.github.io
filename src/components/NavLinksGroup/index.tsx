@@ -34,7 +34,17 @@ const NavLinksGroup = ({
       >
         <ListItemButton>
           <ListItemText disableTypography>
-            <Typography variant='h1'>{title}</Typography>
+            <Typography
+              variant='h1'
+              sx={{
+                marginBlockStart: 0,
+                marginBlockEnd: 0,
+                marginInlineStart: 0,
+                marginInlineEnd: 0,
+              }}
+            >
+              {title}
+            </Typography>
           </ListItemText>
         </ListItemButton>
       </ListItem>

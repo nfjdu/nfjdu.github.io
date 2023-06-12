@@ -1,10 +1,10 @@
-import { Typography } from "@mui/material";
 import { Outlet } from "react-router-dom";
+import HeadingWithDivider from "../../components/HeadingWithDivider";
 
 const StyleguidePage = () => {
   return (
     <>
-      <Typography variant='h1'>Style&shy;giude</Typography>
+      <HeadingWithDivider variant='h1'>Style&shy;giude</HeadingWithDivider>
       <Outlet />
     </>
   );
