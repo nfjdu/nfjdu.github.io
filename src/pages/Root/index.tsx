@@ -7,9 +7,12 @@ import { useState } from "react";
 import NavLink from "../../components/NavLink";
 import NavLinksGroup from "../../components/NavLinksGroup";
 import Brightness6Icon from "@mui/icons-material/Brightness6";
+import { useAppDispatch } from "../../store";
+import { toggleTheme } from "../../store/settings/slice";
 
 const RootPage = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
+  const dispatch = useAppDispatch();
 
   return (
     <Box
@@ -51,11 +54,9 @@ const RootPage = () => {
         <IconButton>
           <GitHubIcon />
         </IconButton>
-        {/** 
-        <IconButton sx={{ ml: "auto" }} onClick={}>
+        <IconButton sx={{ ml: "auto" }} onClick={() => dispatch(toggleTheme())}>
           <Brightness6Icon />
         </IconButton>
- */}
       </Box>
 
       <Box
