@@ -69,11 +69,12 @@ const RootPage = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: (theme) => theme.palette.background2.main,
+          backgroundColor: (theme) => theme.palette.menuBackground.main,
           opacity: isMenuOpened ? 1 : 0,
           zIndex: isMenuOpened ? (theme) => theme.zIndex.drawer : -1,
           transition: "all 0.3s ease-in-out",
           transform: isMenuOpened ? "translateX(0)" : "translateX(-100%)",
+          overflowX: "hidden",
         }}
       >
         <List sx={{ py: { xs: 12, sm: 12 }, px: { xs: 1.5, sm: 14 } }}>
@@ -82,6 +83,15 @@ const RootPage = () => {
             title='Style&shy;guide'
             children={[
               <NavLink
+                key='/styleguide/colors'
+                paddingMultiplier={1}
+                typographyVariant='h2'
+                to='/styleguide/colors'
+                text='Colors'
+                onClick={() => setIsMenuOpened(false)}
+              />,
+              <NavLink
+                key='/styleguide/typography'
                 typographyVariant='h2'
                 paddingMultiplier={1}
                 to='/styleguide/typography'
@@ -89,10 +99,19 @@ const RootPage = () => {
                 onClick={() => setIsMenuOpened(false)}
               />,
               <NavLink
+                key='/styleguide/buttons'
                 paddingMultiplier={1}
                 typographyVariant='h2'
                 to='/styleguide/buttons'
                 text='Buttons'
+                onClick={() => setIsMenuOpened(false)}
+              />,
+              <NavLink
+                key='/styleguide/icons'
+                paddingMultiplier={1}
+                typographyVariant='h2'
+                to='/styleguide/icons'
+                text='Icons'
                 onClick={() => setIsMenuOpened(false)}
               />,
             ]}

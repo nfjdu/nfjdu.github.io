@@ -16,11 +16,11 @@ declare module "@mui/material/styles" {
   // }
 
   interface Palette {
-    background2: Palette["primary"];
+    menuBackground: Palette["primary"];
   }
 
   interface PaletteOptions {
-    background2: PaletteOptions["primary"];
+    menuBackground: PaletteOptions["primary"];
   }
 }
 
@@ -181,7 +181,7 @@ const baseOptions: ThemeOptions = {
     MuiIconButton: {
       styleOverrides: {
         root: ({ theme }) => ({
-          color: theme.palette.background2.contrastText,
+          color: theme.palette.menuBackground.contrastText,
           background: theme.palette.primary.main,
           border: `1px solid ${theme.palette.background.paper}`,
           boxShadow: theme.shadows[1],
@@ -214,7 +214,7 @@ const lightThemeOptions: ThemeOptions = {
       default: "#ffffff", // White
       paper: "#f5f5f5", // Light Gray
     },
-    background2: {
+    menuBackground: {
       main: "#e0e0e0",
       contrastText: "#f5f5f5",
     },
@@ -275,7 +275,7 @@ const darkThemeOptions: ThemeOptions = {
     background: {
       paper: "#424242", // Dark gray
     },
-    background2: {
+    menuBackground: {
       main: "#616161",
       contrastText: "#424242",
     },
