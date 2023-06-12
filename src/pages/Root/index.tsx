@@ -48,10 +48,13 @@ const RootPage = () => {
           sx={{
             mr: 0.3,
           }}
+          LinkComponent={"a"}
+          target='_blank'
+          href='https://www.linkedin.com/in/vlad-mosienko-766910186/'
         >
           <LinkedInIcon />
         </IconButton>
-        <IconButton>
+        <IconButton LinkComponent={"a"} target='_blank' href='https://github.com/nfjdu'>
           <GitHubIcon />
         </IconButton>
         <IconButton sx={{ ml: "auto" }} onClick={() => dispatch(toggleTheme())}>

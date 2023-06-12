@@ -215,15 +215,13 @@ const lightThemeOptions: ThemeOptions = {
       paper: "#f5f5f5", // Light Gray
     },
     background2: {
-      main: "#dedede",
+      main: "#e0e0e0",
       contrastText: "#f5f5f5",
     },
     primary: {
       main: "#525252", // Dark grey
     },
-    secondary: {
-      main: "#f50057", // Pink
-    },
+    // secondary: {},
     error: {
       main: "#ff3d00", // Orange
     },
@@ -270,21 +268,21 @@ const lightThemeOptions: ThemeOptions = {
 const darkThemeOptions: ThemeOptions = {
   palette: {
     mode: "dark",
-    divider: "#ffffff",
+    text: {
+      primary: "#f5f5f5",
+    },
+    divider: "#f5f5f5",
     background: {
-      default: "#303030", // Dark Gray
-      paper: "#424242", // Gray
+      paper: "#424242", // Dark gray
     },
     background2: {
-      main: "#613a4c",
-      contrastText: "#ffffff",
+      main: "#616161",
+      contrastText: "#424242",
     },
     primary: {
-      main: "#ff4081", // Magenta
+      main: "#f5f5f5", // Light gray
     },
-    secondary: {
-      main: "#e91e63", // Dark Pink
-    },
+    // secondary: {},
     error: {
       main: "#f44336", // Red
     },
