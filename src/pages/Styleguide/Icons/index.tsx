@@ -31,6 +31,10 @@ const IconsPage = () => {
           <AppIcon icon='expand-less' />
           <Typography>ExpandLess</Typography>
         </Stack>
+        <Stack sx={{ alignItems: "center" }}>
+          <AppIcon icon='email' />
+          <Typography>Email</Typography>
+        </Stack>
       </Stack>
     </>
   );
