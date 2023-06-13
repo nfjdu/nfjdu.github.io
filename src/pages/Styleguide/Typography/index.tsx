@@ -5,7 +5,9 @@ const TypographyPage = () => {
   return (
     <>
       <HeadingWithDivider variant='h2'>Typography</HeadingWithDivider>
+      {/** 
       <HeadingWithDivider variant='h3'>Variant examples</HeadingWithDivider>
+*/}
 
       <Typography variant='h1'>Heading 1</Typography>
 

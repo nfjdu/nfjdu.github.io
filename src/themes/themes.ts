@@ -159,23 +159,25 @@ const baseOptions: ThemeOptions = {
     },
     MuiButton: {
       styleOverrides: {
-        root: {
-          borderRadius: 0,
-          fontWeight: "bold",
-          textTransform: "uppercase",
-          padding: "8px 16px",
-          boxShadow: "none",
+        root: ({ theme }) => ({
+          color: theme.palette.menuBackground.contrastText,
+          background: theme.palette.primary.main,
+          border: `1px solid ${theme.palette.background.paper}`,
+          boxShadow: theme.shadows[1],
+          borderRadius: "0",
+          paddingRight: theme.spacing(2),
+          paddingLeft: theme.spacing(2),
           "&:hover": {
-            boxShadow: "none",
+            background: theme.palette.primary.main,
           },
           "&.MuiButton-text": {
             fontSize: "1.4rem",
+            lineHeight: "normal",
             "@media (max-width:600px)": {
               fontSize: "1.2rem",
             },
-            lineHeight: "normal",
           },
-        },
+        }),
       },
     },
     MuiIconButton: {

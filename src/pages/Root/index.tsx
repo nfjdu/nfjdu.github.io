@@ -9,6 +9,7 @@ import NavLinksGroup from "../../components/NavLinksGroup";
 import Brightness6Icon from "@mui/icons-material/Brightness6";
 import { useAppDispatch } from "../../store";
 import { toggleTheme } from "../../store/settings/slice";
+import AppIcon from "../../components/AppIcon";
 
 const RootPage = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
@@ -42,7 +43,7 @@ const RootPage = () => {
           }}
           onClick={() => setIsMenuOpened(!isMenuOpened)}
         >
-          <MenuIcon />
+          <AppIcon icon='menu' />
         </IconButton>
         <IconButton
           sx={{
@@ -52,13 +53,13 @@ const RootPage = () => {
           target='_blank'
           href='https://www.linkedin.com/in/vlad-mosienko-766910186/'
         >
-          <LinkedInIcon />
+          <AppIcon icon='linkedin' />
         </IconButton>
         <IconButton LinkComponent={"a"} target='_blank' href='https://github.com/nfjdu'>
-          <GitHubIcon />
+          <AppIcon icon='github' />
         </IconButton>
         <IconButton sx={{ ml: "auto" }} onClick={() => dispatch(toggleTheme())}>
-          <Brightness6Icon />
+          <AppIcon icon='theme' />
         </IconButton>
       </Box>
 
