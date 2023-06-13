@@ -28,10 +28,10 @@ const baseOptions: ThemeOptions = {
   typography: {
     fontFamily: ['"Advanced Pixel"', "monospace"].join(","),
     h1: {
-      fontSize: "5rem",
+      fontSize: "4.5rem",
       fontFamily: "Karma Future",
       "@media (max-width:600px)": {
-        fontSize: "4rem",
+        fontSize: "3.5rem",
       },
       marginTop: "0.4em",
       marginBottom: "0.2em",
@@ -125,11 +125,11 @@ const baseOptions: ThemeOptions = {
       },
     },
     caption: {
-      fontSize: "1.4rem",
+      fontSize: "1.5rem",
       lineHeight: 0.8,
       fontStyle: "italic",
       "@media (max-width:600px)": {
-        fontSize: "1.2rem",
+        fontSize: "1.3rem",
       },
     },
     overline: {},
@@ -217,7 +217,7 @@ const lightThemeOptions: ThemeOptions = {
       paper: "#f5f5f5", // Light Gray
     },
     menuBackground: {
-      main: "#e0e0e0",
+      main: "#eeeeee",
       contrastText: "#f5f5f5",
     },
     primary: {

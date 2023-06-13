@@ -1,3 +1,4 @@
+import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import {
   Collapse,
   ListItem,
@@ -7,6 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import { useState } from "react";
+import AppIcon from "../AppIcon";
 
 interface Props extends ListItemProps {
   title: string;
@@ -37,6 +39,8 @@ const NavLinksGroup = ({
             <Typography
               variant='h1'
               sx={{
+                display: "flex",
+                alignItems: "center",
                 marginBlockStart: 0,
                 marginBlockEnd: 0,
                 marginInlineStart: 0,
@@ -44,6 +48,11 @@ const NavLinksGroup = ({
               }}
             >
               {title}
+              <AppIcon
+                icon={isGroupExpanded ? "expand-less" : "expand-more"}
+                fontSize='large'
+                sx={{ ml: "auto" }}
+              />
             </Typography>
           </ListItemText>
         </ListItemButton>

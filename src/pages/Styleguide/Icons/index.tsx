@@ -6,7 +6,7 @@ const IconsPage = () => {
   return (
     <>
       <HeadingWithDivider variant='h2'>Icons</HeadingWithDivider>
-      <Stack direction='row' sx={{ mt: 2 }} gap={2}>
+      <Stack direction='row' sx={{ mt: 2, flexWrap: "wrap" }} gap={4}>
         <Stack sx={{ alignItems: "center" }}>
           <AppIcon icon='menu' />
           <Typography>Menu</Typography>
@@ -22,6 +22,14 @@ const IconsPage = () => {
         <Stack sx={{ alignItems: "center" }}>
           <AppIcon icon='theme' />
           <Typography>Theme</Typography>
+        </Stack>
+        <Stack sx={{ alignItems: "center" }}>
+          <AppIcon icon='expand-more' />
+          <Typography>ExpandMore</Typography>
+        </Stack>
+        <Stack sx={{ alignItems: "center" }}>
+          <AppIcon icon='expand-less' />
+          <Typography>ExpandLess</Typography>
         </Stack>
       </Stack>
     </>
