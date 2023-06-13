@@ -188,14 +188,8 @@ const baseOptions: ThemeOptions = {
           border: `1px solid ${theme.palette.background.paper}`,
           boxShadow: theme.shadows[1],
           borderRadius: "0",
-          minWidth: "40px",
-          height: "40px",
-          paddingRight: "16px",
-          paddingLeft: "16px",
-          "& .MuiSvgIcon-root": {
-            width: "100%",
-            height: "100%",
-          },
+          paddingRight: theme.spacing(2),
+          paddingLeft: theme.spacing(2),
           "&:hover": {
             background: theme.palette.primary.main,
           },
