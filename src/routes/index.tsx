@@ -1,3 +1,4 @@
+import { Navigate } from "react-router-dom";
 import ErrorPage from "../pages/Error";
 import HomePage from "../pages/Home";
 import RootPage from "../pages/Root";
@@ -13,6 +14,7 @@ export const routes = [
     element: <RootPage />,
     errorElement: <ErrorPage />,
     children: [
+      { index: true, element: <Navigate to='/home' /> },
       { path: "home", element: <HomePage /> },
       {
         path: "styleguide",
