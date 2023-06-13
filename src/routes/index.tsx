@@ -7,6 +7,8 @@ import ButtonsPage from "../pages/Styleguide/Buttons";
 import ColorsPage from "../pages/Styleguide/Colors";
 import IconsPage from "../pages/Styleguide/Icons";
 import TypographyPage from "../pages/Styleguide/Typography";
+import ProjectsPage from "../pages/Projects";
+import ContactsPage from "../pages/Contacts";
 
 export const routes = [
   {
@@ -16,6 +18,7 @@ export const routes = [
     children: [
       { index: true, element: <Navigate to='/home' /> },
       { path: "home", element: <HomePage /> },
+      { path: "projects", element: <ProjectsPage /> },
       {
         path: "styleguide",
         element: <StyleguidePage />,
@@ -25,9 +28,9 @@ export const routes = [
           { path: "buttons", element: <ButtonsPage /> },
           { path: "icons", element: <IconsPage /> },
           // { path: "inputs", element: <ButtonsPage /> },
-          // { path: "spacing", element: <ButtonsPage /> },
         ],
       },
+      { path: "contacts", element: <ContactsPage /> },
     ],
   },
 ];

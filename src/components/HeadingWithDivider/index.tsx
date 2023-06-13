@@ -9,10 +9,19 @@ interface Props extends TypographyProps {
 const HeadingWithDivider = ({ variant = "h1", children, ...props }: Props) => {
   return (
     <>
-      <Typography variant={variant} {...props}>
+      <Typography
+        variant={variant}
+        {...props}
+        sx={{ mb: 0, display: "flex", flexDirection: "column", ...props.sx }}
+      >
         {children}
+        <DashedDivider
+          sx={{
+            mt: "0.1em",
+            mb: "0.2em",
+          }}
+        />
       </Typography>
-      <DashedDivider />
     </>
   );
 };

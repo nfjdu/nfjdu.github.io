@@ -1,9 +1,10 @@
 import { Typography } from "@mui/material";
+import HeadingWithDivider from "../../components/HeadingWithDivider";
 
 const HomePage = () => {
   return (
     <>
-      <Typography variant='h1'>Hi there!</Typography>
+      <HeadingWithDivider variant='h1'>Hi there!</HeadingWithDivider>
       <Typography variant='body1'>
         Welcome to my professional portfolio website, dedicated to showcasing my skills and
         expertise as a Middle Frontend React Developer from Ukraine. I bring four years of valuable
@@ -25,7 +26,7 @@ const HomePage = () => {
       </Typography>
       <Typography variant='caption'>P.S. Of course this text wasn't written by ChatGPT</Typography>
       <br />
-      <Typography variant='caption'>P.S.2 But I'm not sure</Typography>
+      <Typography variant='caption'>P.S.2. But there is no assurance =)</Typography>
     </>
   );
 };

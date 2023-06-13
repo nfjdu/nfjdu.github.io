@@ -2,8 +2,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ThemeIcon from "@mui/icons-material/Brightness6";
-import ExpandLess from "@mui/icons-material/ExpandLess";
-import ExpandMore from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import EmailIcon from "@mui/icons-material/Email";
 import { SvgIconProps } from "@mui/material";
 
 const iconsMap = {
@@ -11,8 +12,9 @@ const iconsMap = {
   linkedin: LinkedInIcon,
   github: GitHubIcon,
   theme: ThemeIcon,
-  "expand-less": ExpandLess,
-  "expand-more": ExpandMore,
+  email: EmailIcon,
+  "expand-less": ExpandLessIcon,
+  "expand-more": ExpandMoreIcon,
 };
 
 interface Props extends SvgIconProps {
