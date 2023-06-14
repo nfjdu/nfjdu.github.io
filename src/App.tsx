@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { routes } from "./routes";
 import CssBaseline from "@mui/material/CssBaseline";
 import { connect } from "react-redux";
-import { RootState } from "./store";
+import { AppState } from "./store";
 
 const router = createBrowserRouter(routes);
 
@@ -23,4 +23,4 @@ function App({ theme = THEME.DARK }: Props) {
   );
 }
 
-export default connect((state: RootState, _) => ({ theme: state.settings.theme }))(App);
+export default connect((state: AppState, _) => ({ theme: state.settings.theme }))(App);

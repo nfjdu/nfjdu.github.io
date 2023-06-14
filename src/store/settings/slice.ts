@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { RootState } from "..";
+import { AppState } from "..";
 import { THEME } from "../../constants/themes";
 
 export interface SettingsState {
@@ -22,6 +22,6 @@ export const settingsSlice = createSlice({
 
 export const { toggleTheme } = settingsSlice.actions;
 
-export const selectTheme = (state: RootState) => state.settings.theme;
+export const selectTheme = (state: AppState) => state.settings.theme;
 
 export const settingsReducer = settingsSlice.reducer;
