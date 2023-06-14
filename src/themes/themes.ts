@@ -34,14 +34,12 @@ const baseOptions: ThemeOptions = {
         fontSize: "3.5rem",
       },
       marginTop: "0.4em",
-      marginBottom: "0.2em",
       hyphens: "manual",
     },
     h2: {
       fontSize: "3.5rem",
       fontFamily: "Karma Future",
       marginTop: "0.4em",
-      marginBottom: "0.2em",
       "@media (max-width:600px)": {
         fontSize: "3rem",
       },
@@ -51,7 +49,6 @@ const baseOptions: ThemeOptions = {
       fontSize: "3rem",
       fontFamily: "Karma Future",
       marginTop: "0.4em",
-      marginBottom: "0.2em",
       "@media (max-width:600px)": {
         fontSize: "2.5rem",
       },
@@ -61,7 +58,6 @@ const baseOptions: ThemeOptions = {
       fontSize: "2.5rem",
       fontFamily: "Karma Future",
       marginTop: "0.4em",
-      marginBottom: "0.2em",
       "@media (max-width:600px)": {
         fontSize: "2rem",
       },
@@ -70,7 +66,6 @@ const baseOptions: ThemeOptions = {
       fontSize: "2rem",
       fontFamily: "Karma Future",
       marginTop: "0.4em",
-      marginBottom: "0.2em",
       "@media (max-width:600px)": {
         fontSize: "1.5rem",
       },
@@ -79,7 +74,6 @@ const baseOptions: ThemeOptions = {
       fontSize: "1.5rem",
       fontFamily: "Karma Future",
       marginTop: "0.4em",
-      marginBottom: "0.2em",
       "@media (max-width:600px)": {
         fontSize: "1rem",
       },
@@ -89,27 +83,26 @@ const baseOptions: ThemeOptions = {
       "@media (max-width:600px)": {
         fontSize: "1.6rem",
       },
-      lineHeight: 1,
+      lineHeight: 0.8,
       fontWeight: 600,
-      marginTop: "0.2em",
-      marginBottom: "0.1em",
+      marginTop: "0.3em",
     },
     subtitle2: {
       fontSize: "1.6rem",
       "@media (max-width:600px)": {
         fontSize: "1.4rem",
       },
-      lineHeight: 1,
+      lineHeight: 0.8,
       fontWeight: 600,
-      marginTop: "0.2em",
-      marginBottom: "0.1em",
+      marginTop: "0.3em",
     },
     body1: {
       fontSize: "1.8rem",
       "@media (max-width:600px)": {
         fontSize: "1.6rem",
       },
-      lineHeight: 1,
+      lineHeight: 0.9,
+      marginTop: "0.6em",
     },
     body2: {
       fontSize: "1.6rem",
@@ -117,6 +110,7 @@ const baseOptions: ThemeOptions = {
         fontSize: "1.4rem",
       },
       lineHeight: 1,
+      marginTop: "0.3em",
     },
     button: {
       fontSize: "1.4rem",
@@ -150,6 +144,7 @@ const baseOptions: ThemeOptions = {
         body: {
           height: "100%",
           width: "100%",
+          marginTop: 0,
         },
         "#root": {
           height: "100%",
@@ -193,6 +188,13 @@ const baseOptions: ThemeOptions = {
           "&:hover": {
             background: theme.palette.primary.main,
           },
+        }),
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          textDecorationColor: theme.palette.text.primary,
         }),
       },
     },

@@ -1,13 +1,16 @@
-import { Button, Stack, Typography } from "@mui/material";
+import { Button, Stack } from "@mui/material";
 import HeadingWithDivider from "../../components/HeadingWithDivider";
 import AppIcon from "../../components/AppIcon";
+import TypographyNoMargin from "../../components/TypographyNoMargin";
 
 const ContactsPage = () => {
   return (
     <>
       <HeadingWithDivider variant='h1'>Contacts</HeadingWithDivider>
-      <Stack direction='row' sx={{ flexWrap: "wrap" }}>
-        <Typography sx={{ mr: 1 }}>Feel free to contact me with any questions:</Typography>
+      <Stack direction='row' sx={{ flexWrap: "wrap", alignItems: "center" }}>
+        <TypographyNoMargin sx={{ mr: 1.5 }}>
+          Feel free to contact me with any questions:
+        </TypographyNoMargin>
         <Button
           sx={{ mr: 1 }}
           LinkComponent='a'

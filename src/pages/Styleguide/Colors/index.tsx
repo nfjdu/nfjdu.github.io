@@ -1,19 +1,20 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import HeadingWithDivider from "../../../components/HeadingWithDivider";
+import TypographyNoMargin from "../../../components/TypographyNoMargin";
 
 const ColorsPage = () => {
   return (
     <>
       <HeadingWithDivider variant='h2'>Colors</HeadingWithDivider>
-      <Stack sx={{ mt: 2 }} spacing={1}>
-        <Stack direction='row' spacing={1}>
-          <Typography>Background: </Typography>
+      <Stack sx={{ mt: 2 }} spacing={2}>
+        <Stack direction='row' spacing={2}>
+          <TypographyNoMargin>Background: </TypographyNoMargin>
           <Box
             sx={{ width: "150px", border: "1px solid black", backgroundColor: "background.paper" }}
           />
         </Stack>
         <Stack direction='row' spacing={1}>
-          <Typography>Menu background: </Typography>
+          <TypographyNoMargin>Menu background: </TypographyNoMargin>
           <Box
             sx={{
               width: "150px",
@@ -23,31 +24,31 @@ const ColorsPage = () => {
           />
         </Stack>
         <Stack direction='row' spacing={1}>
-          <Typography>Text: </Typography>
+          <TypographyNoMargin>Text: </TypographyNoMargin>
           <Box
             sx={{ width: "150px", border: "1px solid black", backgroundColor: "text.primary" }}
           />
         </Stack>
         <Stack direction='row' spacing={1}>
-          <Typography>Divider: </Typography>
+          <TypographyNoMargin>Divider: </TypographyNoMargin>
           <Box sx={{ width: "150px", border: "1px solid black", backgroundColor: "divider" }} />
         </Stack>
         <Stack direction='row' spacing={1}>
-          <Typography>Error: </Typography>
+          <TypographyNoMargin>Error: </TypographyNoMargin>
           <Box sx={{ width: "150px", border: "1px solid black", backgroundColor: "error.main" }} />
         </Stack>
         <Stack direction='row' spacing={1}>
-          <Typography>Warning: </Typography>
+          <TypographyNoMargin>Warning: </TypographyNoMargin>
           <Box
             sx={{ width: "150px", border: "1px solid black", backgroundColor: "warning.main" }}
           />
         </Stack>
         <Stack direction='row' spacing={1}>
-          <Typography>Info: </Typography>
+          <TypographyNoMargin>Info: </TypographyNoMargin>
           <Box sx={{ width: "150px", border: "1px solid black", backgroundColor: "info.main" }} />
         </Stack>
         <Stack direction='row' spacing={1}>
-          <Typography>Success: </Typography>
+          <TypographyNoMargin>Success: </TypographyNoMargin>
           <Box
             sx={{ width: "150px", border: "1px solid black", backgroundColor: "success.main" }}
           />

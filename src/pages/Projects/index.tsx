@@ -1,11 +1,46 @@
-import { Typography } from "@mui/material";
+import { Link, Typography } from "@mui/material";
 import HeadingWithDivider from "../../components/HeadingWithDivider";
 import DashedDivider from "../../components/DashedDivider";
+import ProjectImage from "../../components/ProjectImage";
+import TypographyNoMargin from "../../components/TypographyNoMargin";
 
 const ProjectsPage = () => {
   return (
     <>
       <HeadingWithDivider variant='h1'>Projects</HeadingWithDivider>
+      <Typography variant='h2'>Seequre</Typography>
+      <TypographyNoMargin variant='subtitle1'>2019-2021</TypographyNoMargin>
+      <DashedDivider />
+      <Typography>
+        I had the privilege of working on an exciting project involving the development of a video
+        communication system, named{" "}
+        <Link target='_blank' href='https://www.seequre.no/'>
+          Seequre
+        </Link>
+        . My key tasks revolved around improving, and bug fixing the video calls feature to ensure
+        seamless and high-quality communication between users.
+      </Typography>
+      <Typography>
+        Additionally, I was responsible for the implementation of the chatting feature, enabling
+        users to exchange messages and stay connected beyond video calls. This feature provided a
+        convenient way for users to communicate and share information in real-time.{" "}
+      </Typography>
+      <Typography>
+        Another significant aspect of the project was the implementation of a meetings calendar
+        feature. This functionality allowed users to schedule and manage their video meetings
+        efficiently. By integrating a user-friendly calendar interface, users could effortlessly
+        organize their video communication sessions.
+      </Typography>
+      <Typography>
+        Throughout the project, I also contributed to various UI aspects, including the development
+        of forms, views, and common components. By focusing on the user experience and visual
+        appeal, I aimed to create an intuitive and visually appealing interface that enhanced
+        usability and engagement.
+      </Typography>
+      <ProjectImage
+        src='https://www.seequre.no/wp-content/uploads/2022/07/chrome_l3TfPj8lc3.png'
+        alt='Seequre'
+      />
 
       <Typography variant='h2'>Company internal management tool</Typography>
       <Typography variant='subtitle1'>2018-2019</Typography>
