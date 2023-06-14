@@ -21,8 +21,8 @@ const HomePage = () => {
         cutting-edge solutions that drive your business forward. Collaboration is at the heart of my
         work philosophy. I firmly believe that the best results are achieved through open
         communication, teamwork, and a shared passion for innovation. Thank you for visiting my
-        portfolio site and taking a glimpse into my world. If you're interested in collaborating,
-        have a project in mind, or simply want to connect, don't hesitate to reach out.
+        portfolio website. If you're interested in collaborating, have a project in mind, or simply
+        want to connect, don't hesitate to reach out.
       </Typography>
       <Typography variant='caption'>P.S. Of course this text wasn't written by ChatGPT</Typography>
       <br />
