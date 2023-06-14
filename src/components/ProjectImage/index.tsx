@@ -8,7 +8,13 @@ interface Props {
 const ProjectImage = ({ src, alt }: Props) => {
   return (
     <Box
-      sx={{ mt: 3, width: { xs: "100%", lg: "50%" }, height: "auto" }}
+      sx={{
+        mt: 3,
+        ml: "auto",
+        mr: "auto",
+        width: { xs: "100%", lg: "70%" },
+        height: "auto",
+      }}
       component={"img"}
       src={src}
       alt={alt}

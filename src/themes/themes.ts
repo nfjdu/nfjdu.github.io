@@ -125,6 +125,7 @@ const baseOptions: ThemeOptions = {
       "@media (max-width:600px)": {
         fontSize: "1.3rem",
       },
+      marginTop: "0.2em",
     },
     overline: {},
   },

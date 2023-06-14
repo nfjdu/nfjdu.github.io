@@ -20,6 +20,8 @@ const RootPage = () => {
         py: { xs: 10, sm: 12 },
         px: { xs: 3.6, sm: 14 },
         backgroundColor: (theme) => theme.palette.background.paper,
+        display: "flex",
+        flexDirection: "column",
       }}
     >
       <Box

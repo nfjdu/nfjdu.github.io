@@ -8,6 +8,39 @@ const ProjectsPage = () => {
   return (
     <>
       <HeadingWithDivider variant='h1'>Projects</HeadingWithDivider>
+
+      <Typography variant='h2'>NexusFleet</Typography>
+      <TypographyNoMargin variant='subtitle1'>2022-2023</TypographyNoMargin>
+      <DashedDivider />
+      <Typography>Coming soon...</Typography>
+
+      <Typography variant='h2'>ALD Automotive</Typography>
+      <TypographyNoMargin variant='subtitle1'>2021-2022</TypographyNoMargin>
+      <DashedDivider />
+      <Typography>
+        Another project I worked on is an internal tool for{" "}
+        <Link target='_blank' href='https://www.aldautomotive.com/'>
+          ALD Automotive
+        </Link>
+        . It is difficult to explain what my specific tasks were, as I cannot disclose details about
+        the tool's purpose due to its private nature, but in general my key tasks were designing the
+        frontend core architecture, developing a comprehensive style guide, and creating views and
+        forms to provide clear user interaction.
+      </Typography>
+      <Typography>
+        To accomplish these tasks, I leveraged a range of cutting-edge technologies. React served as
+        the foundation of the frontend development, providing a robust and efficient library. I
+        utilized Material-UI to ensure a visually appealing and cohesive user interface.
+        Additionally, Redux and Redux Toolkit empowered me to manage state effectively and RTK Query
+        and SignalR, to facilitate seamless data fetching, synchronization, and real-time
+        communication. These technologies allowed for dynamic and collaborative experiences,
+        enhancing the overall usability and productivity of the application.
+      </Typography>
+      <ProjectImage src='/ald-screenshot.png' alt='ALD Automotive' />
+      <Typography variant='caption' sx={{ textAlign: "center" }}>
+        Picture 1. Very informative screenshot of ALD Automotive internal tool application =)
+      </Typography>
+
       <Typography variant='h2'>Seequre</Typography>
       <TypographyNoMargin variant='subtitle1'>2019-2021</TypographyNoMargin>
       <DashedDivider />
@@ -23,7 +56,7 @@ const ProjectsPage = () => {
       <Typography>
         Additionally, I was responsible for the implementation of the chatting feature, enabling
         users to exchange messages and stay connected beyond video calls. This feature provided a
-        convenient way for users to communicate and share information in real-time.{" "}
+        convenient way for users to communicate and share information in real-time.
       </Typography>
       <Typography>
         Another significant aspect of the project was the implementation of a meetings calendar
@@ -34,13 +67,20 @@ const ProjectsPage = () => {
       <Typography>
         Throughout the project, I also contributed to various UI aspects, including the development
         of forms, views, and common components. By focusing on the user experience and visual
-        appeal, I aimed to create an intuitive and visually appealing interface that enhanced
-        usability and engagement.
+        appeal, an intuitive and visually appealing interface that enhanced usability and engagement
+        were created.
       </Typography>
       <ProjectImage
         src='https://www.seequre.no/wp-content/uploads/2022/07/chrome_l3TfPj8lc3.png'
         alt='Seequre'
       />
+      <Typography variant='caption' sx={{ textAlign: "center" }}>
+        Picture 1. Screenshot of Seequre №1
+      </Typography>
+      <ProjectImage src='/seequre-screenshot.png' alt='Seequre' />
+      <Typography variant='caption' sx={{ textAlign: "center" }}>
+        Picture 2. Screenshot of Seequre №2
+      </Typography>
 
       <Typography variant='h2'>Company internal management tool</Typography>
       <Typography variant='subtitle1'>2018-2019</Typography>
