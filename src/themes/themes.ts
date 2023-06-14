@@ -208,11 +208,11 @@ const lightThemeOptions: ThemeOptions = {
     divider: "#525252",
     background: {
       default: "#ffffff", // White
-      paper: "#f5f5f5", // Light Gray
+      paper: "#fafafa", // Light Gray
     },
     menuBackground: {
-      main: "#eeeeee",
-      contrastText: "#f5f5f5",
+      main: "#f5f5f5",
+      contrastText: "#fafafa",
     },
     primary: {
       main: "#525252", // Dark grey
