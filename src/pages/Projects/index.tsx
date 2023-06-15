@@ -98,6 +98,13 @@ const ProjectsPage = () => {
         estimates for various project tasks. This functionality provided a clear overview of
         resource requirements and helped teams make informed decisions based on accurate estimates.
       </Typography>
+
+      <DashedDivider sx={{ my: 3 }} />
+
+      <Typography variant='caption'>
+        This represents just a small selection of the projects I have worked on over the years. I
+        have many more pieces of personal and university work.
+      </Typography>
     </>
   );
 };
