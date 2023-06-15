@@ -18,7 +18,6 @@ const ProjectImage = ({ src, alt }: Props) => {
       component={"img"}
       src={src}
       alt={alt}
-      height={400}
     />
   );
 };
