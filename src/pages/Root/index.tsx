@@ -1,6 +1,6 @@
 import { Box, IconButton, List } from "@mui/material";
-import { Outlet } from "react-router-dom";
-import { useState } from "react";
+import { Outlet, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import NavLink from "../../components/NavLink";
 import NavLinksGroup from "../../components/NavLinksGroup";
 import { useAppDispatch } from "../../store";
@@ -10,6 +10,15 @@ import AppIcon from "../../components/AppIcon";
 const RootPage = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const path = localStorage.getItem("path");
+    if (path) {
+      localStorage.removeItem("path");
+      navigate(path);
+    }
+  }, []);
 
   return (
     <Box
