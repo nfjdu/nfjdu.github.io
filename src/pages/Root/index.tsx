@@ -12,6 +12,7 @@ const RootPage = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
+  // trick to fix github SPA routing problem
   useEffect(() => {
     const path = localStorage.getItem("path");
     if (path) {
