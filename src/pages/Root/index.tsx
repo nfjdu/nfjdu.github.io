@@ -89,43 +89,36 @@ const RootPage = () => {
         <List sx={{ py: { xs: 12, sm: 12 }, px: { xs: 1.5, sm: 14 } }}>
           <NavLink to='/home' text='Home' onClick={() => setIsMenuOpened(false)} />
           <NavLink to='/projects' text='Projects' onClick={() => setIsMenuOpened(false)} />
-          <NavLinksGroup
-            title='Style&shy;guide'
-            children={[
-              <NavLink
-                key='/styleguide/colors'
-                paddingMultiplier={1}
-                typographyVariant='h2'
-                to='/styleguide/colors'
-                text='Colors'
-                onClick={() => setIsMenuOpened(false)}
-              />,
-              <NavLink
-                key='/styleguide/typography'
-                typographyVariant='h2'
-                paddingMultiplier={1}
-                to='/styleguide/typography'
-                text='Typography'
-                onClick={() => setIsMenuOpened(false)}
-              />,
-              <NavLink
-                key='/styleguide/buttons'
-                paddingMultiplier={1}
-                typographyVariant='h2'
-                to='/styleguide/buttons'
-                text='Buttons'
-                onClick={() => setIsMenuOpened(false)}
-              />,
-              <NavLink
-                key='/styleguide/icons'
-                paddingMultiplier={1}
-                typographyVariant='h2'
-                to='/styleguide/icons'
-                text='Icons'
-                onClick={() => setIsMenuOpened(false)}
-              />,
-            ]}
-          />
+          <NavLinksGroup title='Style&shy;guide'>
+            <NavLink
+              paddingMultiplier={1}
+              typographyVariant='h2'
+              to='/styleguide/colors'
+              text='Colors'
+              onClick={() => setIsMenuOpened(false)}
+            />
+            <NavLink
+              typographyVariant='h2'
+              paddingMultiplier={1}
+              to='/styleguide/typography'
+              text='Typography'
+              onClick={() => setIsMenuOpened(false)}
+            />
+            <NavLink
+              paddingMultiplier={1}
+              typographyVariant='h2'
+              to='/styleguide/buttons'
+              text='Buttons'
+              onClick={() => setIsMenuOpened(false)}
+            />
+            <NavLink
+              paddingMultiplier={1}
+              typographyVariant='h2'
+              to='/styleguide/icons'
+              text='Icons'
+              onClick={() => setIsMenuOpened(false)}
+            />
+          </NavLinksGroup>
           <NavLink to='/contacts' text='Contacts' onClick={() => setIsMenuOpened(false)} />
         </List>
       </Box>
