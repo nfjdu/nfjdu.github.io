@@ -107,8 +107,9 @@ const ProjectsPage = () => {
       <DashedDivider sx={{ my: 3 }} />
 
       <Typography variant='caption'>
-        This represents just a small selection of the projects I have worked on over the years. I
-        have many more pieces of personal and university work.
+        This is just a small glimpse into the projects I have worked on during my programming
+        career. There are numerous other projects that I have developed both during my time in
+        university and for personal endeavors.
       </Typography>
     </>
   );
