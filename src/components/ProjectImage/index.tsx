@@ -17,6 +17,9 @@ const ProjectImage = ({ src, alt }: Props) => {
       }}
       component={"img"}
       src={src}
+      onError={(e) => {
+        e.currentTarget.src = "/no-image.png";
+      }}
       alt={alt}
     />
   );
