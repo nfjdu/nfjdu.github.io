@@ -13,10 +13,11 @@ const ProjectsPage = () => {
       <TypographyNoMargin variant='subtitle1'>2022-2023</TypographyNoMargin>
       <DashedDivider />
       <Typography>
-        Coming soon... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Details coming soon... Breafly: My key tasks were designing a part of frontend core
+        architecture, implementing a comprehensive style guide, and creating some(tons, omg) views
+        and forms. To accomplish these objectives, technologies like React, MUI React (Material-UI),
+        Formik, Redux, and SignalR were used. By using these tools, I ensured a robust and efficient
+        end user experience.
       </Typography>
 
       <Typography variant='h2'>ALD Automotive</Typography>

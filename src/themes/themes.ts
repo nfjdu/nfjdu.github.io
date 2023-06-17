@@ -163,7 +163,11 @@ const baseOptions: ThemeOptions = {
           borderRadius: "0",
           paddingRight: theme.spacing(2),
           paddingLeft: theme.spacing(2),
+          transition: "all 0.2s",
+          zIndex: 0,
           "&:hover": {
+            zIndex: 1,
+            transform: "scale(1.1)",
             background: theme.palette.primary.main,
           },
           "&.MuiButton-text": {
@@ -186,7 +190,11 @@ const baseOptions: ThemeOptions = {
           borderRadius: "0",
           paddingRight: theme.spacing(2),
           paddingLeft: theme.spacing(2),
+          transition: "all 0.2s",
+          zIndex: 0,
           "&:hover": {
+            zIndex: 1,
+            transform: "scale(1.1)",
             background: theme.palette.primary.main,
           },
         }),
