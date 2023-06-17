@@ -129,6 +129,9 @@ const baseOptions: ThemeOptions = {
     },
     overline: {},
   },
+  shape: {
+    borderRadius: 0,
+  },
   components: {
     MuiCssBaseline: {
       styleOverrides: {
@@ -160,7 +163,7 @@ const baseOptions: ThemeOptions = {
           background: theme.palette.primary.main,
           border: `1px solid ${theme.palette.background.paper}`,
           boxShadow: theme.shadows[1],
-          borderRadius: "0",
+          borderRadius: theme.shape.borderRadius,
           paddingRight: theme.spacing(2),
           paddingLeft: theme.spacing(2),
           transition: "all 0.2s",
@@ -187,7 +190,7 @@ const baseOptions: ThemeOptions = {
           background: theme.palette.primary.main,
           border: `1px solid ${theme.palette.background.paper}`,
           boxShadow: theme.shadows[1],
-          borderRadius: "0",
+          borderRadius: theme.shape.borderRadius,
           paddingRight: theme.spacing(2),
           paddingLeft: theme.spacing(2),
           transition: "all 0.2s",
