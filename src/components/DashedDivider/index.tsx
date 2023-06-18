@@ -5,7 +5,7 @@ interface Props extends DividerProps {
 }
 
 const DashedDivider = ({ sx }: Props) => {
-  return <Divider sx={{ borderStyle: "dashed", borderBottomWidth: "medium", ...sx }} />;
+  return <Divider sx={{ borderStyle: "dashed", ...sx }} />;
 };
 
 export default DashedDivider;

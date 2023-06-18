@@ -9,6 +9,7 @@ import IconsPage from "../pages/Styleguide/Icons";
 import TypographyPage from "../pages/Styleguide/Typography";
 import ProjectsPage from "../pages/Projects";
 import ContactsPage from "../pages/Contacts";
+import DividersPage from "../pages/Styleguide/Dividers";
 
 export const routes = [
   {
@@ -23,11 +24,11 @@ export const routes = [
         path: "styleguide",
         element: <StyleguidePage />,
         children: [
-          { path: "colors", element: <ColorsPage /> },
-          { path: "typography", element: <TypographyPage /> },
           { path: "buttons", element: <ButtonsPage /> },
+          { path: "colors", element: <ColorsPage /> },
+          { path: "dividers", element: <DividersPage /> },
           { path: "icons", element: <IconsPage /> },
-          // { path: "inputs", element: <ButtonsPage /> },
+          { path: "typography", element: <TypographyPage /> },
         ],
       },
       { path: "contacts", element: <ContactsPage /> },

@@ -93,20 +93,6 @@ const RootPage = () => {
             <NavLink
               paddingMultiplier={1}
               typographyVariant='h2'
-              to='/styleguide/colors'
-              text='Colors'
-              onClick={() => setIsMenuOpened(false)}
-            />
-            <NavLink
-              typographyVariant='h2'
-              paddingMultiplier={1}
-              to='/styleguide/typography'
-              text='Typography'
-              onClick={() => setIsMenuOpened(false)}
-            />
-            <NavLink
-              paddingMultiplier={1}
-              typographyVariant='h2'
               to='/styleguide/buttons'
               text='Buttons'
               onClick={() => setIsMenuOpened(false)}
@@ -114,8 +100,29 @@ const RootPage = () => {
             <NavLink
               paddingMultiplier={1}
               typographyVariant='h2'
+              to='/styleguide/colors'
+              text='Colors'
+              onClick={() => setIsMenuOpened(false)}
+            />
+            <NavLink
+              paddingMultiplier={1}
+              typographyVariant='h2'
+              to='/styleguide/dividers'
+              text='Dividers'
+              onClick={() => setIsMenuOpened(false)}
+            />
+            <NavLink
+              paddingMultiplier={1}
+              typographyVariant='h2'
               to='/styleguide/icons'
               text='Icons'
+              onClick={() => setIsMenuOpened(false)}
+            />
+            <NavLink
+              typographyVariant='h2'
+              paddingMultiplier={1}
+              to='/styleguide/typography'
+              text='Typography'
               onClick={() => setIsMenuOpened(false)}
             />
           </NavLinksGroup>

@@ -170,6 +170,13 @@ const baseOptions: ThemeOptions = {
         disableRipple: true,
       },
     },
+    MuiDivider: {
+      styleOverrides: {
+        root: {
+          borderBottomWidth: "medium",
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: ({ theme }) => ({
