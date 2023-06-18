@@ -157,6 +157,11 @@ const baseOptions: ThemeOptions = {
         },
       },
     },
+    MuiButtonBase: {
+      defaultProps: {
+        disableRipple: true,
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: ({ theme }) => ({
@@ -177,6 +182,9 @@ const baseOptions: ThemeOptions = {
                   transform: "scale(1.1)",
                 }),
             background: theme.palette.primary.main,
+          },
+          "&:active": {
+            transform: "scale(1.05)",
           },
           "&.MuiButton-text": {
             fontSize: "1.4rem",
@@ -208,6 +216,9 @@ const baseOptions: ThemeOptions = {
                   transform: "scale(1.1)",
                 }),
             background: theme.palette.primary.main,
+          },
+          "&:active": {
+            transform: "scale(1.05)",
           },
         }),
       },
