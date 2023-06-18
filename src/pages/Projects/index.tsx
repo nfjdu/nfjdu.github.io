@@ -11,7 +11,7 @@ const ProjectsPage = () => {
 
       <Typography variant='h2'>NexusFleet</Typography>
       <TypographyNoMargin variant='subtitle1'>2022-2023</TypographyNoMargin>
-      <DashedDivider />
+      <DashedDivider sx={{ mb: 1 }} />
       <Typography>
         Details coming soon... Breafly: My key tasks were designing a part of frontend core
         architecture, implementing a comprehensive style guide, and creating some(tons, omg) views
@@ -22,7 +22,7 @@ const ProjectsPage = () => {
 
       <Typography variant='h2'>ALD Automotive</Typography>
       <TypographyNoMargin variant='subtitle1'>2021-2022</TypographyNoMargin>
-      <DashedDivider />
+      <DashedDivider sx={{ mb: 1 }} />
       <Typography>
         Another project I worked on is an internal tool for{" "}
         <Link target='_blank' href='https://www.aldautomotive.com/'>
@@ -49,7 +49,7 @@ const ProjectsPage = () => {
 
       <Typography variant='h2'>Seequre</Typography>
       <TypographyNoMargin variant='subtitle1'>2019-2021</TypographyNoMargin>
-      <DashedDivider />
+      <DashedDivider sx={{ mb: 1 }} />
       <Typography>
         I had the privilege of working on an exciting project involving the development of a video
         communication system, named{" "}
@@ -90,7 +90,7 @@ const ProjectsPage = () => {
 
       <Typography variant='h2'>Company internal management tool</Typography>
       <Typography variant='subtitle1'>2018-2019</Typography>
-      <DashedDivider />
+      <DashedDivider sx={{ mb: 1 }} />
       <Typography>
         I was involved in the development of an internal system for a company, focusing on project
         documentation, estimates, and plans. This platform streamlined project management processes,

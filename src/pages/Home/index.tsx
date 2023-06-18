@@ -30,7 +30,6 @@ const HomePage = () => {
         project in mind, or simply want to connect, don't hesitate to reach out.
       </Typography>
       <Typography variant='caption'>
-        <br />
         P.S. Of course this text wasn't written by ChatGPT
         <br />
         P.S.2. But there is no assurance =)
