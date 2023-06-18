@@ -1,6 +1,7 @@
 import { ThemeOptions, createTheme } from "@mui/material";
 import merge from "lodash/merge";
 import { THEME } from "../constants/themes";
+import { isMobile } from "mobile-device-detect";
 
 declare module "@mui/material/styles" {
   // interface Theme {
@@ -169,8 +170,12 @@ const baseOptions: ThemeOptions = {
           transition: "all 0.2s",
           zIndex: 0,
           "&:hover": {
-            zIndex: 1,
-            transform: "scale(1.1)",
+            ...(isMobile
+              ? {}
+              : {
+                  zIndex: 1,
+                  transform: "scale(1.1)",
+                }),
             background: theme.palette.primary.main,
           },
           "&.MuiButton-text": {
@@ -196,8 +201,12 @@ const baseOptions: ThemeOptions = {
           transition: "all 0.2s",
           zIndex: 0,
           "&:hover": {
-            zIndex: 1,
-            transform: "scale(1.1)",
+            ...(isMobile
+              ? {}
+              : {
+                  zIndex: 1,
+                  transform: "scale(1.1)",
+                }),
             background: theme.palette.primary.main,
           },
         }),
