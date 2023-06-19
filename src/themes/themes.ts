@@ -153,6 +153,8 @@ const baseOptions: ThemeOptions = {
           WebkitFontSmoothing: "antialiased",
           height: "100%",
           width: "100%",
+
+          cursor: "url('/Normal select.cur'), auto",
         },
         body: {
           height: "100%",
@@ -168,6 +170,11 @@ const baseOptions: ThemeOptions = {
     MuiButtonBase: {
       defaultProps: {
         disableRipple: true,
+      },
+      styleOverrides: {
+        root: {
+          cursor: "url('/Link select.cur'), pointer",
+        },
       },
     },
     MuiDivider: {
@@ -242,6 +249,7 @@ const baseOptions: ThemeOptions = {
       styleOverrides: {
         root: ({ theme }) => ({
           textDecorationColor: theme.palette.text.primary,
+          cursor: "url('/Link select.cur'), auto",
         }),
       },
     },
@@ -252,9 +260,9 @@ const lightThemeOptions: ThemeOptions = {
   palette: {
     mode: "light",
     text: {
-      primary: "#525252",
+      primary: "#424242",
     },
-    divider: "#525252",
+    divider: "#424242",
     background: {
       default: "#ffffff", // White
       paper: "#fafafa", // Light Gray
@@ -264,7 +272,7 @@ const lightThemeOptions: ThemeOptions = {
       contrastText: "#fafafa",
     },
     primary: {
-      main: "#525252", // Dark grey
+      main: "#424242", // Dark grey
     },
     // secondary: {},
     error: {
@@ -321,7 +329,7 @@ const darkThemeOptions: ThemeOptions = {
       paper: "#424242", // Dark gray
     },
     menuBackground: {
-      main: "#616161",
+      main: "#525252",
       contrastText: "#424242",
     },
     primary: {
