@@ -1,17 +1,45 @@
-import { Link, Typography } from "@mui/material";
+import { Stack, Link, Typography } from "@mui/material";
 import HeadingWithDivider from "../../components/HeadingWithDivider";
 import DashedDivider from "../../components/DashedDivider";
 import ProjectImage from "../../components/ProjectImage";
 import TypographyNoMargin from "../../components/TypographyNoMargin";
+import Tag from "../../components/Tag";
+
+interface Props {
+  title: string;
+  dates: string;
+  tags: string[];
+}
+
+const ProjectHeader = ({ title, dates, tags }: Props) => {
+  return (
+    <>
+      <Typography variant='h2' sx={{ mb: 0 }}>
+        {title}
+      </Typography>
+      <TypographyNoMargin variant='subtitle1' sx={{ mb: 0.8 }}>
+        {`(${dates})`}
+      </TypographyNoMargin>
+      <Stack direction='row' sx={{ flexWrap: "wrap", mt: 1 }} gap={1}>
+        {tags.map((tag) => (
+          <Tag key={tag} text={tag} />
+        ))}
+      </Stack>
+      <DashedDivider sx={{ my: 2 }} />
+    </>
+  );
+};
 
 const ProjectsPage = () => {
   return (
     <>
       <HeadingWithDivider variant='h1'>Projects</HeadingWithDivider>
 
-      <Typography variant='h2'>NexusFleet</Typography>
-      <TypographyNoMargin variant='subtitle1'>2022-2023</TypographyNoMargin>
-      <DashedDivider sx={{ mb: 1 }} />
+      <ProjectHeader
+        title='NexusFleet'
+        dates='2022-2023'
+        tags={["React", "MUI", "Redux", "SignalR", ".NET Core"]}
+      />
       <Typography>
         Details coming soon... Breafly: My key tasks were designing a part of frontend core
         architecture, implementing a comprehensive style guide, and creating some(tons, omg) views
@@ -20,9 +48,11 @@ const ProjectsPage = () => {
         end user experience.
       </Typography>
 
-      <Typography variant='h2'>ALD Automotive</Typography>
-      <TypographyNoMargin variant='subtitle1'>2021-2022</TypographyNoMargin>
-      <DashedDivider sx={{ mb: 1 }} />
+      <ProjectHeader
+        title='ALD Automotive'
+        dates='2021-2022'
+        tags={["React", "MUI", "Redux", "RTK Query", "SignalR"]}
+      />
       <Typography>
         Another project I worked on is an internal tool for{" "}
         <Link target='_blank' href='https://www.aldautomotive.com/'>
@@ -47,9 +77,11 @@ const ProjectsPage = () => {
         Picture 1. Very informative screenshot of ALD Automotive internal tool application =)
       </Typography>
 
-      <Typography variant='h2'>Seequre</Typography>
-      <TypographyNoMargin variant='subtitle1'>2019-2021</TypographyNoMargin>
-      <DashedDivider sx={{ mb: 1 }} />
+      <ProjectHeader
+        title='Seequre'
+        dates='2019-2021'
+        tags={["React", "SCSS", "Redux", "SignalR", "SocketIO", "Mediasoup"]}
+      />
       <Typography>
         I had the privilege of working on an exciting project involving the development of a video
         communication system, named{" "}
@@ -88,9 +120,11 @@ const ProjectsPage = () => {
         Picture 2. Screenshot of Seequre №2
       </Typography>
 
-      <Typography variant='h2'>Company internal management tool</Typography>
-      <Typography variant='subtitle1'>2018-2019</Typography>
-      <DashedDivider sx={{ mb: 1 }} />
+      <ProjectHeader
+        title='Company internal management tool'
+        dates='2018-2019'
+        tags={["React", "SCSS", "Redux", "SignalR", ".NET Framework"]}
+      />
       <Typography>
         I was involved in the development of an internal system for a company, focusing on project
         documentation, estimates, and plans. This platform streamlined project management processes,

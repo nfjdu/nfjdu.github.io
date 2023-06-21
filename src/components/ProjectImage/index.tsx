@@ -9,7 +9,7 @@ const ProjectImage = ({ src, alt }: Props) => {
   return (
     <Box
       sx={{
-        mt: 3,
+        mt: 1,
         ml: "auto",
         mr: "auto",
         width: { xs: "100%", lg: "70%" },

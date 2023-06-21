@@ -112,6 +112,7 @@ const baseOptions: ThemeOptions = {
       },
       lineHeight: 0.9,
       marginBottom: "0.6em",
+      letterSpacing: "0.03em",
     },
     body2: {
       fontSize: "1.6rem",
@@ -120,6 +121,7 @@ const baseOptions: ThemeOptions = {
       },
       lineHeight: 1,
       marginBottom: "0.3em",
+      letterSpacing: "0.04em",
     },
     button: {
       fontSize: "1.4rem",
@@ -135,6 +137,8 @@ const baseOptions: ThemeOptions = {
         fontSize: "1.3rem",
       },
       marginTop: "0.2em",
+      marginBottom: "0.4em",
+      letterSpacing: "0.04em",
     },
     overline: {},
   },
@@ -189,8 +193,7 @@ const baseOptions: ThemeOptions = {
         root: ({ theme }) => ({
           color: theme.palette.menuBackground.contrastText,
           background: theme.palette.primary.main,
-          border: `1px solid ${theme.palette.background.paper}`,
-          boxShadow: theme.shadows[1],
+          boxShadow: theme.shadows[2],
           borderRadius: theme.shape.borderRadius,
           paddingRight: theme.spacing(2),
           paddingLeft: theme.spacing(2),
@@ -223,8 +226,7 @@ const baseOptions: ThemeOptions = {
         root: ({ theme }) => ({
           color: theme.palette.menuBackground.contrastText,
           background: theme.palette.primary.main,
-          border: `1px solid ${theme.palette.background.paper}`,
-          boxShadow: theme.shadows[1],
+          boxShadow: theme.shadows[2],
           borderRadius: theme.shape.borderRadius,
           paddingRight: theme.spacing(2),
           paddingLeft: theme.spacing(2),
@@ -250,6 +252,21 @@ const baseOptions: ThemeOptions = {
         root: ({ theme }) => ({
           textDecorationColor: theme.palette.text.primary,
           cursor: "url('/Link select.cur'), auto",
+        }),
+      },
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          color: theme.palette.primary.main,
+          background: theme.palette.background.paper,
+          border: `1px dashed ${theme.palette.primary.main}`,
+          boxShadow: theme.shadows[1],
+          borderRadius: theme.shape.borderRadius,
+          paddingRight: theme.spacing(1),
+          paddingLeft: theme.spacing(1),
+          fontSize: "1.4rem",
+          letterSpacing: "0.05em",
         }),
       },
     },
@@ -290,8 +307,8 @@ const lightThemeOptions: ThemeOptions = {
   },
   shadows: [
     "none",
-    "6px 6px 0px rgba(82, 82, 82, 0.25)",
-    "",
+    "1px 1px 0px #fafafa, 3px 3px 0px rgba(82, 82, 82, 0.25)",
+    "1px 1px 0px #fafafa, 6px 6px 0px rgba(82, 82, 82, 0.25)",
     "",
     "",
     "",
@@ -351,8 +368,8 @@ const darkThemeOptions: ThemeOptions = {
   },
   shadows: [
     "none",
-    "6px 6px 0px rgba(255, 255, 255, 0.15)",
-    "",
+    "1px 1px 0px #424242, 3px 3px 0px rgba(255, 255, 255, 0.15)",
+    "1px 1px 0px #424242, 6px 6px 0px rgba(255, 255, 255, 0.15)",
     "",
     "",
     "",

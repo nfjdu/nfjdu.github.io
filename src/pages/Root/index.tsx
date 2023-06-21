@@ -121,6 +121,13 @@ const RootPage = () => {
             <NavLink
               typographyVariant='h2'
               paddingMultiplier={1}
+              to='/styleguide/tags'
+              text='Tags'
+              onClick={() => setIsMenuOpened(false)}
+            />
+            <NavLink
+              typographyVariant='h2'
+              paddingMultiplier={1}
               to='/styleguide/typography'
               text='Typography'
               onClick={() => setIsMenuOpened(false)}

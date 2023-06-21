@@ -10,6 +10,7 @@ import TypographyPage from "../pages/Styleguide/Typography";
 import ProjectsPage from "../pages/Projects";
 import ContactsPage from "../pages/Contacts";
 import DividersPage from "../pages/Styleguide/Dividers";
+import TagsPage from "../pages/Styleguide/Tags";
 
 export const routes = [
   {
@@ -28,6 +29,7 @@ export const routes = [
           { path: "colors", element: <ColorsPage /> },
           { path: "dividers", element: <DividersPage /> },
           { path: "icons", element: <IconsPage /> },
+          { path: "tags", element: <TagsPage /> },
           { path: "typography", element: <TypographyPage /> },
         ],
       },
