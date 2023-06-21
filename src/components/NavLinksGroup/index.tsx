@@ -19,7 +19,7 @@ interface Props extends ListItemProps {
 const NavLinksGroup = ({
   title,
   children,
-  defaultOpened = true,
+  defaultOpened = false,
   paddingMultiplier = 0,
   ...props
 }: Props) => {
