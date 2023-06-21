@@ -86,7 +86,7 @@ const RootPage = () => {
           overflowX: "hidden",
         }}
       >
-        <List sx={{ py: { xs: 12, sm: 12, xl: 16 }, px: { xs: 1.5, sm: 14, xl: 18 } }}>
+        <List sx={{ py: { xs: 12, sm: 14, xl: 18 }, px: { xs: 1.5, sm: 14, xl: 18 } }}>
           <NavLink to='/home' text='Home' onClick={() => setIsMenuOpened(false)} />
           <NavLink to='/projects' text='Projects' onClick={() => setIsMenuOpened(false)} />
           <NavLinksGroup title='Style&shy;guide'>
