@@ -27,8 +27,8 @@ const RootPage = () => {
         width: "100%",
         height: "100%",
         overflowX: "hidden",
-        py: { xs: 10, sm: 12 },
-        px: { xs: 3.6, sm: 14 },
+        py: { xs: 10, sm: 12, xl: 16 },
+        px: { xs: 3.6, sm: 14, xl: 18 },
         backgroundColor: (theme) => theme.palette.background.paper,
         display: "flex",
         flexDirection: "column",
@@ -86,7 +86,7 @@ const RootPage = () => {
           overflowX: "hidden",
         }}
       >
-        <List sx={{ py: { xs: 12, sm: 12 }, px: { xs: 1.5, sm: 14 } }}>
+        <List sx={{ py: { xs: 12, sm: 12, xl: 16 }, px: { xs: 1.5, sm: 14, xl: 18 } }}>
           <NavLink to='/home' text='Home' onClick={() => setIsMenuOpened(false)} />
           <NavLink to='/projects' text='Projects' onClick={() => setIsMenuOpened(false)} />
           <NavLinksGroup title='Style&shy;guide'>
