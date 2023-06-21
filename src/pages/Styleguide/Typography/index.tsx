@@ -30,7 +30,9 @@ const TypographyPage = () => {
       </Typography>
 
       <HeadingWithDivider variant='h3'>Heading with divider</HeadingWithDivider>
-      <HeadingWithDivider variant='h6'>Lorem ipsum</HeadingWithDivider>
+      <HeadingWithDivider variant='h6' sx={{ width: "50%" }}>
+        Lorem ipsum
+      </HeadingWithDivider>
 
       <HeadingWithDivider variant='h3'>Typography with no margin</HeadingWithDivider>
       <TypographyNoMargin variant='h1'>Heading 1</TypographyNoMargin>

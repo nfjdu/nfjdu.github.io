@@ -20,12 +20,12 @@ const ProjectHeader = ({ title, dates, tags }: Props) => {
       <TypographyNoMargin variant='subtitle1' sx={{ mb: 0.8 }}>
         {`(${dates})`}
       </TypographyNoMargin>
-      <Stack direction='row' sx={{ flexWrap: "wrap", mt: 1 }} gap={1}>
+      <Stack direction='row' sx={{ flexWrap: "wrap", mt: 0.5, mb: 2 }} gap={1}>
         {tags.map((tag) => (
           <Tag key={tag} text={tag} />
         ))}
       </Stack>
-      <DashedDivider sx={{ my: 2 }} />
+      <DashedDivider sx={{ mb: 1 }} />
     </>
   );
 };
