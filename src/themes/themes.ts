@@ -258,6 +258,7 @@ const baseOptions: ThemeOptions = {
     MuiChip: {
       styleOverrides: {
         root: ({ theme }) => ({
+          cursor: "url('/Normal select.cur'), auto",
           color: theme.palette.primary.main,
           background: theme.palette.background.paper,
           border: `1px dashed ${theme.palette.primary.main}`,

@@ -5,13 +5,13 @@ import ProjectImage from "../../components/ProjectImage";
 import TypographyNoMargin from "../../components/TypographyNoMargin";
 import Tag from "../../components/Tag";
 
-interface Props {
+interface ProjectHeaderProps {
   title: string;
   dates: string;
   tags: string[];
 }
 
-const ProjectHeader = ({ title, dates, tags }: Props) => {
+const ProjectHeader = ({ title, dates, tags }: ProjectHeaderProps) => {
   return (
     <>
       <Typography variant='h2' sx={{ mb: 0 }}>
@@ -59,9 +59,10 @@ const ProjectsPage = () => {
           ALD Automotive
         </Link>
         . It is difficult to explain what my specific tasks were, as I cannot disclose details about
-        the tool's purpose due to its private nature, but in general my key tasks were designing the
-        frontend core architecture, developing a comprehensive style guide, and creating views and
-        forms to provide clear user interaction.
+        the tool's purpose due to its private nature, but in general, the purpose of the application
+        was related to cars management, and my key tasks were designing the frontend core
+        architecture, developing a comprehensive style guide, and creating views and forms to
+        provide clear user interaction.
       </Typography>
       <Typography>
         To accomplish these tasks, I leveraged a range of cutting-edge technologies. React served as
@@ -139,7 +140,7 @@ const ProjectsPage = () => {
         resource requirements and helped teams make informed decisions based on accurate estimates.
       </Typography>
 
-      <DashedDivider sx={{ my: 3 }} />
+      <DashedDivider sx={{ mt: 1, mb: 3 }} />
 
       <Typography variant='caption'>
         This is just a small glimpse into the comercial projects I have worked on during my
