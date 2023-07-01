@@ -6,6 +6,7 @@ import NavLinksGroup from "../../components/NavLinksGroup";
 import { useAppDispatch } from "../../store";
 import { toggleTheme } from "../../store/settings/slice";
 import AppIcon from "../../components/AppIcon";
+import WalkingDude from "../../components/WalkingDude";
 
 const RootPage = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
@@ -27,6 +28,7 @@ const RootPage = () => {
         width: "100%",
         height: "100%",
         overflowX: "hidden",
+        position: "relative",
         py: { xs: 10, sm: 12, xl: 16 },
         px: { xs: 3.6, sm: 14, xl: 18 },
         backgroundColor: (theme) => theme.palette.background.paper,
@@ -34,6 +36,7 @@ const RootPage = () => {
         flexDirection: "column",
       }}
     >
+      <WalkingDude />
       <Box
         sx={{
           position: "fixed",
