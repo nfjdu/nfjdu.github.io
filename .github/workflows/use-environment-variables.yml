@@ -12,5 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: First script from job1
-        run: echo Test env var: $OPENAI_API_KEY
+        run: echo Test env var $OPENAI_API_KEY
 
