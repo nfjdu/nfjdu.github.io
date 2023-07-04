@@ -3,18 +3,19 @@ import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
 
 const walkingDudeWidth = 28;
 const walkingDudeHeight = 49;
-const walkingDudeAnimationFramesCount = 9;
+const walkingDudeAnimationFramesCount = 8;
 const idleDudeWidth = 64;
 const idleDudeHeight = 49;
 const idleDudeAnimationFramesCount = 5;
 
 const WalkingDude = () => {
-  const [currentAnimation, setCurrentAnimation] = useState<"walking" | "idle">("idle");
+  const [currentAnimation, setCurrentAnimation] = useState<"walking" | "idle">("walking");
   const [currentWalkingFrame, setCurrentWalkingFrame] = useState(0);
   const [currentIdleFrame, setCurrentIdleFrame] = useState(0);
-  const isWalking = currentAnimation === "walking";
   const [walkingDirection, setWalkingDirection] = useState<"left" | "right">("left");
+  const isWalking = currentAnimation === "walking";
 
+  // update dude animation frame
   useEffect(() => {
     setTimeout(() => {
       const currentFrame = isWalking ? currentWalkingFrame : currentIdleFrame;
@@ -22,6 +23,7 @@ const WalkingDude = () => {
         ? walkingDudeAnimationFramesCount
         : idleDudeAnimationFramesCount;
       const setFn = isWalking ? setCurrentWalkingFrame : setCurrentIdleFrame;
+
       if (currentFrame < maxFramesCount - 1) {
         setFn(currentFrame + 1);
       } else {
@@ -32,16 +34,17 @@ const WalkingDude = () => {
 
   const right = useMotionValue(0);
 
+  // update dude position
   useAnimationFrame(() => {
-    const val = right.get();
-    const newVal = val + (walkingDirection === "left" ? 1 : -1);
     if (isWalking) {
+      const val = right.get();
+      const newVal = val + (walkingDirection === "left" ? 1 : -1);
       right.set(newVal);
-    }
-    if (val <= 0) {
-      setWalkingDirection("left");
-    } else if (val >= 200) {
-      setWalkingDirection("right");
+      if (val <= 0) {
+        setWalkingDirection("left");
+      } else if (val >= 200) {
+        setWalkingDirection("right");
+      }
     }
   });
 
