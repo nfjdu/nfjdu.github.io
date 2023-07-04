@@ -7,32 +7,41 @@ const walkingDudeAnimationFramesCount = 8;
 const idleDudeWidth = 64;
 const idleDudeHeight = 49;
 const idleDudeAnimationFramesCount = 5;
+const walkDistance = 200;
+
+type AnimationType = "walking" | "idle";
+export function getMaxAnimationFramesCount(animationType: AnimationType) {
+  switch (animationType) {
+    case "walking":
+      return walkingDudeAnimationFramesCount;
+    case "idle":
+      return idleDudeAnimationFramesCount;
+  }
+}
 
 const WalkingDude = () => {
-  const [currentAnimation, setCurrentAnimation] = useState<"walking" | "idle">("walking");
-  const [currentWalkingFrame, setCurrentWalkingFrame] = useState(0);
-  const [currentIdleFrame, setCurrentIdleFrame] = useState(0);
+  const [currentAnimation, setCurrentAnimation] = useState<AnimationType>("walking");
+  const [animationFrames, setAnimationFrames] = useState<Record<AnimationType, number>>({
+    walking: 0,
+    idle: 0,
+  });
   const [walkingDirection, setWalkingDirection] = useState<"left" | "right">("left");
+  const right = useMotionValue(0);
   const isWalking = currentAnimation === "walking";
 
   // update dude animation frame
   useEffect(() => {
     setTimeout(() => {
-      const currentFrame = isWalking ? currentWalkingFrame : currentIdleFrame;
-      const maxFramesCount = isWalking
-        ? walkingDudeAnimationFramesCount
-        : idleDudeAnimationFramesCount;
-      const setFn = isWalking ? setCurrentWalkingFrame : setCurrentIdleFrame;
+      const currentFrame = animationFrames[currentAnimation];
+      const maxFramesCount = getMaxAnimationFramesCount(currentAnimation);
 
       if (currentFrame < maxFramesCount - 1) {
-        setFn(currentFrame + 1);
+        setAnimationFrames({ ...animationFrames, [currentAnimation]: currentFrame + 1 });
       } else {
-        setFn(0);
+        setAnimationFrames({ ...animationFrames, [currentAnimation]: 0 });
       }
     }, 150);
-  }, [currentWalkingFrame, currentIdleFrame, isWalking]);
-
-  const right = useMotionValue(0);
+  }, [animationFrames[currentAnimation]]);
 
   // update dude position
   useAnimationFrame(() => {
@@ -42,7 +51,7 @@ const WalkingDude = () => {
       right.set(newVal);
       if (val <= 0) {
         setWalkingDirection("left");
-      } else if (val >= 200) {
+      } else if (val >= walkDistance) {
         setWalkingDirection("right");
       }
     }
@@ -56,8 +65,8 @@ const WalkingDude = () => {
         width: `${walkingDudeWidth}px`,
         minHeight: `${isWalking ? walkingDudeHeight : idleDudeHeight}px`,
         background: isWalking
-          ? `url(DudeWalking.png) -${currentWalkingFrame * walkingDudeWidth}px 0px`
-          : `url(DudeLookingUp.png) -${currentIdleFrame * idleDudeWidth}px 0px`,
+          ? `url(DudeWalking.png) -${animationFrames.walking * walkingDudeWidth}px 0px`
+          : `url(DudeLookingUp.png) -${animationFrames.idle * idleDudeWidth}px 0px`,
         position: "fixed",
         bottom: 0,
         right: right,
