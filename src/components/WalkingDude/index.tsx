@@ -35,14 +35,14 @@ const WalkingDude = () => {
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setCurrentAnimation("idle");
-    //todo: show gpt generated msg
     setAnchorEl(event.currentTarget);
-    setTalkingText("Hello! I'm a dude");
+    //todo: show gpt generated msg
+    setTalkingText("Hello! I'm a dude!");
     setTimeout(() => {
       setCurrentAnimation("walking");
       setTalkingText("");
       setAnchorEl(null);
-    }, 44000);
+    }, 4000);
   };
 
   const open = Boolean(anchorEl);
@@ -111,6 +111,7 @@ const WalkingDude = () => {
             borderWidth: "28px 17px 40px 21px",
             borderStyle: "solid",
             bgcolor: "transparent",
+            filter: (theme) => `drop-shadow(${theme.shadows[3]})`,
           }}
         >
           <Box sx={{ backgroundColor: "white", color: "black" }}>{talkingText}</Box>
