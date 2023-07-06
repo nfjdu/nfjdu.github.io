@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
 import { Popper, Box } from "@mui/material";
+// import { generateDudeTalkingText } from "./gpt";
 
 const walkingDudeWidth = 28;
 const walkingDudeHeight = 49;
@@ -8,7 +9,7 @@ const walkingDudeAnimationFramesCount = 8;
 const idleDudeWidth = 64;
 const idleDudeHeight = 49;
 const idleDudeAnimationFramesCount = 5;
-const walkDistance = 200;
+const walkDistance = 400;
 
 type AnimationType = "walking" | "idle";
 export function getMaxAnimationFramesCount(animationType: AnimationType) {
@@ -33,11 +34,13 @@ const WalkingDude = () => {
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+  const handleClick = async (event: React.MouseEvent<HTMLElement>) => {
     setCurrentAnimation("idle");
+    // const text = await generateDudeTalkingText();
     setAnchorEl(event.currentTarget);
     //todo: show gpt generated msg
-    setTalkingText("Hello! I'm a dude!");
+    // setTalkingText(text);
+    -setTalkingText("Hello! I'm a dude!");
     setTimeout(() => {
       setCurrentAnimation("walking");
       setTalkingText("");
@@ -59,7 +62,7 @@ const WalkingDude = () => {
         setAnimationFrames({ ...animationFrames, [currentAnimation]: 0 });
       }
     }, 150);
-  }, [animationFrames[currentAnimation]]);
+  }, [currentAnimation, animationFrames[currentAnimation]]);
 
   // update dude position
   useAnimationFrame(() => {
