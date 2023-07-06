@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
 import { Popper, Box } from "@mui/material";
+import { generateDudeTalkingText } from "./gpt";
 // import { generateDudeTalkingText } from "./gpt";
 
 const walkingDudeWidth = 28;
@@ -36,16 +37,13 @@ const WalkingDude = () => {
 
   const handleClick = async (event: React.MouseEvent<HTMLElement>) => {
     setCurrentAnimation("idle");
-    // const text = await generateDudeTalkingText();
     setAnchorEl(event.currentTarget);
-    //todo: show gpt generated msg
-    // setTalkingText(text);
-    -setTalkingText("Hello! I'm a dude!");
+    setTalkingText(await generateDudeTalkingText());
     setTimeout(() => {
       setCurrentAnimation("walking");
       setTalkingText("");
       setAnchorEl(null);
-    }, 4000);
+    }, 8000);
   };
 
   const open = Boolean(anchorEl);
@@ -95,6 +93,7 @@ const WalkingDude = () => {
           scaleX: walkingDirection === "left" ? -1 : 1,
         }}
       ></motion.div>
+
       <Popper
         placement='top-end'
         open={open}
@@ -107,6 +106,7 @@ const WalkingDude = () => {
             },
           },
         ]}
+        sx={{ maxWidth: { xxs: "80%", md: "50%" } }}
       >
         <Box
           sx={{
