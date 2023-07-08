@@ -10,6 +10,7 @@
 // const openai = new OpenAIApi(configuration);
 // const tokenizedPromptLength = encode(aiPrompt).length;
 
+// constant data array used because of OpenAI api license ran out
 const generatedPhrazes = [
   "Code never lies; it reveals the truth behind the logic.",
   "Embrace the curly braces.",
@@ -109,6 +110,5 @@ export const generateDudeTalkingText = async () => {
   //
   // return response?.data?.choices[0].message?.content || "Hm...";
 
-  // constant data array used because of OpenAI api license ran out
   return getRandomArrayElement(generatedPhrazes);
 };
