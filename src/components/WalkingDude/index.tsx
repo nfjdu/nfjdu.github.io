@@ -9,7 +9,7 @@ const walkingDudeAnimationFramesCount = 8;
 const idleDudeWidth = 64;
 const idleDudeHeight = 49;
 const idleDudeAnimationFramesCount = 5;
-const walkDistance = 400;
+const walkDistance = 375 - walkingDudeWidth;
 
 type AnimationType = "walking" | "idle";
 export function getMaxAnimationFramesCount(animationType: AnimationType) {
