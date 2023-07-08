@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
 import { Popper, Box } from "@mui/material";
 import { generateDudeTalkingText } from "./gpt";
-// import { generateDudeTalkingText } from "./gpt";
 
 const walkingDudeWidth = 28;
 const walkingDudeHeight = 49;
@@ -36,14 +35,16 @@ const WalkingDude = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
   const handleClick = async (event: React.MouseEvent<HTMLElement>) => {
-    setCurrentAnimation("idle");
-    setAnchorEl(event.currentTarget);
-    setTalkingText(await generateDudeTalkingText());
-    setTimeout(() => {
-      setCurrentAnimation("walking");
-      setTalkingText("");
-      setAnchorEl(null);
-    }, 8000);
+    if (!anchorEl) {
+      setCurrentAnimation("idle");
+      setAnchorEl(event.currentTarget);
+      setTalkingText(await generateDudeTalkingText());
+      setTimeout(() => {
+        setCurrentAnimation("walking");
+        setTalkingText("");
+        setAnchorEl(null);
+      }, 8000);
+    }
   };
 
   const open = Boolean(anchorEl);
