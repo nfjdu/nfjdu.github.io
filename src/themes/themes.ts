@@ -15,6 +15,9 @@ declare module "@mui/material/styles" {
   //     danger?: string;
   //   };
   // }
+  interface BreakpointOverrides {
+    xxs: true;
+  }
 
   interface Palette {
     menuBackground: Palette["primary"];
@@ -26,6 +29,16 @@ declare module "@mui/material/styles" {
 }
 
 const baseOptions: ThemeOptions = {
+  breakpoints: {
+    values: {
+      xxs: 0,
+      xs: 300,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+    },
+  },
   typography: {
     fontFamily: ['"Advanced Pixel"', "monospace"].join(","),
     h1: {

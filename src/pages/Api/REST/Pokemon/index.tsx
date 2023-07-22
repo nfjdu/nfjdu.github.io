@@ -9,7 +9,13 @@ const Pokemon = ({ name }: Props) => {
   const { data, isLoading } = useGetPokemonByNameQuery({ name });
 
   return (
-    <Stack spacing={1}>
+    <Stack
+      sx={{
+        width: { xxs: "50%", xs: "30%", sm: "20%", md: "20%", lg: "10%" },
+        alignItems: "center",
+      }}
+      spacing={1}
+    >
       {isLoading ? (
         <CircularProgress />
       ) : (
