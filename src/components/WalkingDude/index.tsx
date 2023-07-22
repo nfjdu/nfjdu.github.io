@@ -86,8 +86,8 @@ const WalkingDude = () => {
           width: `${walkingDudeWidth}px`,
           minHeight: `${isWalking ? walkingDudeHeight : idleDudeHeight}px`,
           background: isWalking
-            ? `url(DudeWalking.png) -${animationFrames.walking * walkingDudeWidth}px 0px`
-            : `url(DudeLookingUp.png) -${animationFrames.idle * idleDudeWidth}px 0px`,
+            ? `url(/DudeWalking.png) -${animationFrames.walking * walkingDudeWidth}px 0px`
+            : `url(/DudeLookingUp.png) -${animationFrames.idle * idleDudeWidth}px 0px`,
           position: "fixed",
           bottom: 0,
           right: right,
@@ -111,7 +111,7 @@ const WalkingDude = () => {
       >
         <Box
           sx={{
-            borderImage: "url(balloon.png) 40 50 60 50 round",
+            borderImage: "url(/balloon.png) 40 50 60 50 round",
             borderWidth: "28px 17px 40px 21px",
             borderStyle: "solid",
             bgcolor: "transparent",

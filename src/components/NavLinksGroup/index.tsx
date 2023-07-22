@@ -6,6 +6,7 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
+import { Variant } from "@mui/material/styles/createTypography";
 import { useState } from "react";
 import AppIcon from "../AppIcon";
 
@@ -14,6 +15,7 @@ interface Props extends ListItemProps {
   children: React.ReactNode;
   defaultOpened?: boolean;
   paddingMultiplier?: number;
+  typographyVariant?: Variant;
 }
 
 const NavLinksGroup = ({
@@ -21,6 +23,7 @@ const NavLinksGroup = ({
   children,
   defaultOpened = false,
   paddingMultiplier = 0,
+  typographyVariant = "h1",
   ...props
 }: Props) => {
   const [isGroupExpanded, setIsGroupExpanded] = useState(defaultOpened);
@@ -36,7 +39,7 @@ const NavLinksGroup = ({
         <ListItemButton>
           <ListItemText disableTypography>
             <Typography
-              variant='h1'
+              variant={typographyVariant}
               sx={{
                 display: "flex",
                 alignItems: "center",

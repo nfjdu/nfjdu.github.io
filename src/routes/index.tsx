@@ -11,6 +11,9 @@ import ProjectsPage from "../pages/Projects";
 import ContactsPage from "../pages/Contacts";
 import DividersPage from "../pages/Styleguide/Dividers";
 import TagsPage from "../pages/Styleguide/Tags";
+import DevPage from "../pages/Dev/Dev";
+import ApiPage from "../pages/Api";
+import RESTPage from "../pages/Api/REST";
 
 export const routes = [
   {
@@ -22,15 +25,30 @@ export const routes = [
       { path: "home", element: <HomePage /> },
       { path: "projects", element: <ProjectsPage /> },
       {
-        path: "styleguide",
-        element: <StyleguidePage />,
+        path: "dev",
+        element: <DevPage />,
         children: [
-          { path: "buttons", element: <ButtonsPage /> },
-          { path: "colors", element: <ColorsPage /> },
-          { path: "dividers", element: <DividersPage /> },
-          { path: "icons", element: <IconsPage /> },
-          { path: "tags", element: <TagsPage /> },
-          { path: "typography", element: <TypographyPage /> },
+          {
+            path: "styleguide",
+            element: <StyleguidePage />,
+            children: [
+              { index: true, element: <Navigate to='/dev/styleguide/buttons' /> },
+              { path: "buttons", element: <ButtonsPage /> },
+              { path: "colors", element: <ColorsPage /> },
+              { path: "dividers", element: <DividersPage /> },
+              { path: "icons", element: <IconsPage /> },
+              { path: "tags", element: <TagsPage /> },
+              { path: "typography", element: <TypographyPage /> },
+            ],
+          },
+          {
+            path: "api",
+            element: <ApiPage />,
+            children: [
+              { index: true, element: <Navigate to='/dev/api/rest' /> },
+              { path: "rest", element: <RESTPage /> },
+            ],
+          },
         ],
       },
       { path: "contacts", element: <ContactsPage /> },

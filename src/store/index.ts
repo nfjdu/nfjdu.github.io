@@ -1,6 +1,7 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { settingsReducer } from "./settings/slice";
+import { emptySplitApi } from "../api/emptyApi";
 
 // const loggerMiddleware: Middleware<object, AppState> = (store) => (next) => (action) => {
 //   console.log("dispatching", action);
@@ -11,10 +12,11 @@ import { settingsReducer } from "./settings/slice";
 
 const rootReducer = combineReducers({
   settings: settingsReducer,
+  [emptySplitApi.reducerPath]: emptySplitApi.reducer,
 });
 export const store = configureStore({
   reducer: rootReducer,
-  middleware: (gDM) => gDM().concat([]),
+  middleware: (gDM) => gDM().concat([emptySplitApi.middleware]),
 });
 
 // RootState type taken from rootReducer to deal with cicle typing

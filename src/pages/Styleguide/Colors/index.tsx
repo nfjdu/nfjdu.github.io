@@ -5,7 +5,7 @@ import TypographyNoMargin from "../../../components/TypographyNoMargin";
 const ColorsPage = () => {
   return (
     <>
-      <HeadingWithDivider variant='h2'>Colors</HeadingWithDivider>
+      <HeadingWithDivider variant='h3'>Colors</HeadingWithDivider>
       <Stack sx={{ mt: 2 }} spacing={2}>
         <Stack direction='row' spacing={2}>
           <TypographyNoMargin>Background: </TypographyNoMargin>

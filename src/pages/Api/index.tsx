@@ -1,13 +1,13 @@
 import { Outlet } from "react-router-dom";
 import HeadingWithDivider from "../../components/HeadingWithDivider";
 
-const StyleguidePage = () => {
+const ApiPage = () => {
   return (
     <>
-      <HeadingWithDivider variant='h2'>Style&shy;giude</HeadingWithDivider>
+      <HeadingWithDivider variant='h2'>Api</HeadingWithDivider>
       <Outlet />
     </>
   );
 };
 
-export default StyleguidePage;
+export default ApiPage;
