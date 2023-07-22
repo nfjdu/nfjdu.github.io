@@ -1,5 +1,5 @@
 import { CircularProgress, Typography, Box, Stack } from "@mui/material";
-import { useGetPokemonByNameQuery } from "../../../../api/pokemonApi";
+import { /*pokemonApi,*/ useGetPokemonByNameQuery } from "../../../../api/pokemonApi";
 
 interface Props {
   name: string;
@@ -7,6 +7,7 @@ interface Props {
 
 const Pokemon = ({ name }: Props) => {
   const { data, isLoading } = useGetPokemonByNameQuery({ name });
+  // const { data, isLoading } = pokemonApi.endpoints.getPokemonByName.useQuery({ name });
 
   return (
     <Stack

@@ -5,7 +5,7 @@ type PokemonPagination = {
   results: Array<any>;
 };
 
-const pokemonApi = emptySplitApi.injectEndpoints({
+export const pokemonApi = emptySplitApi.injectEndpoints({
   endpoints: (build) => ({
     getPokemons: build.query<PokemonPagination, { limit: number; offset: number }>({
       query: ({ limit, offset }) => ({ url: `pokemon`, params: { limit, offset } }),
