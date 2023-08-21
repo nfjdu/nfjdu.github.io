@@ -83,7 +83,7 @@ const WalkingDude = () => {
       <motion.div
         onClick={handleClick}
         style={{
-          cursor: "pointer",
+          cursor: "url('/Link select.cur'), auto",
           width: `${walkingDudeWidth}px`,
           minHeight: `${isWalking ? walkingDudeHeight : idleDudeHeight}px`,
           background: isWalking
