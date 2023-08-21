@@ -67,7 +67,8 @@ const WalkingDude = () => {
   useAnimationFrame(() => {
     if (isWalking) {
       const val = right.get();
-      const newVal = val + (walkingDirection === "left" ? 1 : -1);
+      const speedMultiplier = 1 / 2.3;
+      const newVal = val + (walkingDirection === "left" ? 1 : -1) * speedMultiplier;
       right.set(newVal);
       if (val <= 0) {
         setWalkingDirection("left");
