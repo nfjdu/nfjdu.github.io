@@ -44,8 +44,7 @@ const ProjectsPage = () => {
         Details coming soon... Breafly: My key tasks were designing a part of frontend core
         architecture, implementing a comprehensive style guide, and creating some(tons, omg) views
         and forms. To accomplish these objectives, technologies like React, MUI React (Material-UI),
-        Formik, Redux, and SignalR were used. By using these tools, I ensured a robust and efficient
-        end user experience.
+        Formik, Redux, and SignalR were used.
       </Typography>
 
       <ProjectHeader
