@@ -21,6 +21,7 @@ export function getMaxAnimationFramesCount(animationType: AnimationType) {
   }
 }
 
+//todo: get rid of framer motion lib
 const WalkingDude = () => {
   const [currentAnimation, setCurrentAnimation] = useState<AnimationType>("walking");
   const [animationFrames, setAnimationFrames] = useState<Record<AnimationType, number>>({
