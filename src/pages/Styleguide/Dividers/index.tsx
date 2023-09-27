@@ -1,12 +1,12 @@
 import { Divider, Stack } from "@mui/material";
-import HeadingWithDivider from "../../../components/HeadingWithDivider";
 import TypographyNoMargin from "../../../components/TypographyNoMargin";
 import DashedDivider from "../../../components/DashedDivider";
+import TypographyNoMarginWithDivider from "../../../components/TypographyNoMarginWithDivider";
 
 const DividersPage = () => {
   return (
     <>
-      <HeadingWithDivider variant='h2'>Dividers</HeadingWithDivider>
+      <TypographyNoMarginWithDivider variant='h2'>Dividers</TypographyNoMarginWithDivider>
       <Stack spacing={2}>
         <Stack direction='row' sx={{ alignItems: "center" }} spacing={2}>
           <TypographyNoMargin>Default divider:</TypographyNoMargin>

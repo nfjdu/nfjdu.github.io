@@ -1,12 +1,12 @@
 import { Stack } from "@mui/material";
-import HeadingWithDivider from "../../../components/HeadingWithDivider";
 import TypographyNoMargin from "../../../components/TypographyNoMargin";
 import Tag from "../../../components/Tag";
+import TypographyNoMarginWithDivider from "../../../components/TypographyNoMarginWithDivider";
 
 const TagsPage = () => {
   return (
     <>
-      <HeadingWithDivider variant='h2'>Tags</HeadingWithDivider>
+      <TypographyNoMarginWithDivider variant='h2'>Tags</TypographyNoMarginWithDivider>
       <Stack spacing={2}>
         <Stack direction='row' sx={{ alignItems: "center" }} spacing={2}>
           <TypographyNoMargin>Default tag:</TypographyNoMargin>

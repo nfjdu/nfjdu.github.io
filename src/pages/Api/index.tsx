@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import HeadingWithDivider from "../../components/HeadingWithDivider";
+import TypographyWithDivider from "../../components/TypographyWithDivider";
 
 const ApiPage = () => {
   return (
     <>
-      <HeadingWithDivider variant='h1'>API examples</HeadingWithDivider>
+      <TypographyWithDivider variant='h1'>API examples</TypographyWithDivider>
       <Outlet />
     </>
   );

@@ -1,5 +1,5 @@
 import { Link as RouterLink, Outlet, useLocation } from "react-router-dom";
-import HeadingWithDivider from "../../components/HeadingWithDivider";
+import TypographyWithDivider from "../../components/TypographyWithDivider";
 import { Stack, Typography } from "@mui/material";
 
 interface StyleguideLinkProps {
@@ -26,7 +26,7 @@ const StyleguideLink = ({ to, children }: StyleguideLinkProps) => {
 const StyleguidePage = () => {
   return (
     <>
-      <HeadingWithDivider variant='h1'>Style&shy;giude</HeadingWithDivider>
+      <TypographyWithDivider variant='h1'>Style&shy;giude</TypographyWithDivider>
       <Stack direction={{ xs: "column", md: "row" }} sx={{ mt: 2 }} gap={2}>
         <Stack direction='column' sx={{ flex: "0 0 200px" }}>
           <StyleguideLink to='/dev/styleguide/buttons'>Buttons</StyleguideLink>

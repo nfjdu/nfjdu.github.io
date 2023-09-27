@@ -1,6 +1,6 @@
 import { Pagination, Stack, Theme, Typography, useMediaQuery } from "@mui/material";
 import { useGetPokemonsQuery } from "../../../api/pokemonApi";
-import HeadingWithDivider from "../../../components/HeadingWithDivider";
+import TypographyWithDivider from "../../../components/TypographyWithDivider";
 import Pokemon from "./Pokemon";
 import { useState } from "react";
 
@@ -12,7 +12,7 @@ const RESTPage = () => {
 
   return (
     <>
-      <HeadingWithDivider variant='h2'>REST (using RTK Query)</HeadingWithDivider>
+      <TypographyWithDivider variant='h2'>REST (using RTK Query)</TypographyWithDivider>
 
       {isLoading ? (
         <Typography>Loading...</Typography>

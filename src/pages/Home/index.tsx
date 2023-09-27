@@ -1,10 +1,10 @@
 import { Typography } from "@mui/material";
-import HeadingWithDivider from "../../components/HeadingWithDivider";
+import TypographyWithDivider from "../../components/TypographyWithDivider";
 
 const HomePage = () => {
   return (
     <>
-      <HeadingWithDivider variant='h1'>Hi there!</HeadingWithDivider>
+      <TypographyWithDivider variant='h1'>Hi there!</TypographyWithDivider>
       <Typography>
         Welcome to my professional portfolio website, dedicated to showcasing my skills and
         expertise as a Middle Frontend(React) Developer from Ukraine. I bring four years of valuable

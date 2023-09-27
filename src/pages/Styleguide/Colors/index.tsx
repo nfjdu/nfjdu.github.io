@@ -1,11 +1,11 @@
 import { Box, Stack } from "@mui/material";
-import HeadingWithDivider from "../../../components/HeadingWithDivider";
 import TypographyNoMargin from "../../../components/TypographyNoMargin";
+import TypographyNoMarginWithDivider from "../../../components/TypographyNoMarginWithDivider";
 
 const ColorsPage = () => {
   return (
     <>
-      <HeadingWithDivider variant='h2'>Colors</HeadingWithDivider>
+      <TypographyNoMarginWithDivider variant='h2'>Colors</TypographyNoMarginWithDivider>
       <Stack sx={{ mt: 2 }} spacing={2}>
         <Stack direction='row' spacing={2}>
           <TypographyNoMargin>Background: </TypographyNoMargin>

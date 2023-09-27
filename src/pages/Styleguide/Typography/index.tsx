@@ -1,13 +1,14 @@
 import { Typography } from "@mui/material";
-import HeadingWithDivider from "../../../components/HeadingWithDivider";
+import TypographyWithDivider from "../../../components/TypographyWithDivider";
 import TypographyNoMargin from "../../../components/TypographyNoMargin";
+import TypographyNoMarginWithDivider from "../../../components/TypographyNoMarginWithDivider";
 
 const TypographyPage = () => {
   return (
     <>
-      <HeadingWithDivider variant='h2'>Typography</HeadingWithDivider>
+      <TypographyNoMarginWithDivider variant='h2'>Typography</TypographyNoMarginWithDivider>
 
-      <HeadingWithDivider variant='h3'>Variant examples</HeadingWithDivider>
+      <TypographyWithDivider variant='h3'>Variants overview</TypographyWithDivider>
       <Typography variant='h1'>Heading 1</Typography>
       <Typography variant='h2'>Heading 2</Typography>
       <Typography variant='h3'>Heading 3</Typography>
@@ -29,12 +30,7 @@ const TypographyPage = () => {
         incididunt ut labore et dolore magna aliqua.
       </Typography>
 
-      <HeadingWithDivider variant='h3'>Heading with divider</HeadingWithDivider>
-      <HeadingWithDivider variant='h6' sx={{ width: "50%" }}>
-        Lorem ipsum
-      </HeadingWithDivider>
-
-      <HeadingWithDivider variant='h3'>Typography with no margin</HeadingWithDivider>
+      <TypographyWithDivider variant='h3'>Typography with no margin</TypographyWithDivider>
       <TypographyNoMargin variant='h1'>Heading 1</TypographyNoMargin>
       <TypographyNoMargin variant='h2'>Heading 2</TypographyNoMargin>
       <TypographyNoMargin variant='h3'>Heading 3</TypographyNoMargin>
@@ -55,6 +51,44 @@ const TypographyPage = () => {
         Caption. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
         incididunt ut labore et dolore magna aliqua.
       </TypographyNoMargin>
+
+      <TypographyWithDivider variant='h3'>Typography with divider</TypographyWithDivider>
+      <TypographyWithDivider variant='h1' sx={{ width: "fit-content" }}>
+        Heading 1
+      </TypographyWithDivider>
+      <TypographyWithDivider variant='h2' sx={{ width: "fit-content" }}>
+        Heading 2
+      </TypographyWithDivider>
+      <TypographyWithDivider variant='h3' sx={{ width: "fit-content" }}>
+        Heading 3
+      </TypographyWithDivider>
+      <TypographyWithDivider variant='h4' sx={{ width: "fit-content" }}>
+        Heading 4
+      </TypographyWithDivider>
+      <TypographyWithDivider variant='h5' sx={{ width: "fit-content" }}>
+        Heading 5
+      </TypographyWithDivider>
+      <TypographyWithDivider variant='h6' sx={{ width: "fit-content" }}>
+        Heading 6
+      </TypographyWithDivider>
+      <TypographyWithDivider variant='subtitle1' sx={{ width: "fit-content" }}>
+        Subtitle 1
+      </TypographyWithDivider>
+      <TypographyWithDivider variant='body1' sx={{ width: "fit-content" }}>
+        Body1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua.
+      </TypographyWithDivider>
+      <TypographyWithDivider variant='subtitle2' sx={{ width: "fit-content" }}>
+        Subtitle 2
+      </TypographyWithDivider>
+      <TypographyWithDivider variant='body2' sx={{ width: "fit-content" }}>
+        Body2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua.
+      </TypographyWithDivider>
+      <TypographyWithDivider variant='caption' sx={{ width: "fit-content" }}>
+        Caption. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua.
+      </TypographyWithDivider>
     </>
   );
 };

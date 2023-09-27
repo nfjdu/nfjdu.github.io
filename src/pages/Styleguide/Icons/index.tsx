@@ -1,11 +1,11 @@
 import { Stack, Typography } from "@mui/material";
-import HeadingWithDivider from "../../../components/HeadingWithDivider";
 import AppIcon from "../../../components/AppIcon";
+import TypographyNoMarginWithDivider from "../../../components/TypographyNoMarginWithDivider";
 
 const IconsPage = () => {
   return (
     <>
-      <HeadingWithDivider variant='h2'>Icons</HeadingWithDivider>
+      <TypographyNoMarginWithDivider variant='h2'>Icons</TypographyNoMarginWithDivider>
       <Stack direction='row' sx={{ mt: 2, flexWrap: "wrap" }} gap={4}>
         <Stack sx={{ alignItems: "center" }}>
           <AppIcon icon='menu' />

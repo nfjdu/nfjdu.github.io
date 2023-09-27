@@ -1,5 +1,5 @@
 import { Stack, Link, Typography } from "@mui/material";
-import HeadingWithDivider from "../../components/HeadingWithDivider";
+import TypographyWithDivider from "../../components/TypographyWithDivider";
 import DashedDivider from "../../components/DashedDivider";
 import ProjectImage from "../../components/ProjectImage";
 import TypographyNoMargin from "../../components/TypographyNoMargin";
@@ -33,7 +33,7 @@ const ProjectHeader = ({ title, dates, tags }: ProjectHeaderProps) => {
 const ProjectsPage = () => {
   return (
     <>
-      <HeadingWithDivider variant='h1'>Projects</HeadingWithDivider>
+      <TypographyWithDivider variant='h1'>Projects</TypographyWithDivider>
 
       <ProjectHeader
         title='NexusFleet'

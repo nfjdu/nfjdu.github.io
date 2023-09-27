@@ -1,12 +1,12 @@
 import { Divider, Typography, TypographyProps } from "@mui/material";
 
 interface Props extends TypographyProps {
-  variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  variant?: TypographyProps["variant"];
   dividerVariant?: "solid" | "dashed";
   children: React.ReactNode;
 }
 
-const HeadingWithDivider = ({
+const TypographyWithDivider = ({
   variant = "h1",
   dividerVariant = "dashed",
   children,
@@ -31,4 +31,4 @@ const HeadingWithDivider = ({
   );
 };
 
-export default HeadingWithDivider;
+export default TypographyWithDivider;
