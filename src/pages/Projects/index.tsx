@@ -37,7 +37,7 @@ const ProjectsPage = () => {
 
       <ProjectHeader
         title='NexusFleet'
-        dates='2022-2023'
+        dates='2022 - present'
         tags={["React", "MUI", "Redux", "SignalR", ".NET Core"]}
       />
       <Typography>
@@ -49,7 +49,7 @@ const ProjectsPage = () => {
 
       <ProjectHeader
         title='ALD Automotive'
-        dates='2021-2022'
+        dates='2021 - 2022'
         tags={["React", "MUI", "Redux", "RTK Query", "SignalR"]}
       />
       <Typography>
@@ -79,7 +79,7 @@ const ProjectsPage = () => {
 
       <ProjectHeader
         title='Seequre'
-        dates='2019-2021'
+        dates='2019 - 2021'
         tags={["React", "SCSS", "Redux", "SignalR", "SocketIO", "Mediasoup"]}
       />
       <Typography>
@@ -122,7 +122,7 @@ const ProjectsPage = () => {
 
       <ProjectHeader
         title='Company internal management tool'
-        dates='2018-2019'
+        dates='2018 - 2019'
         tags={["React", "SCSS", "Redux", "SignalR", ".NET Framework"]}
       />
       <Typography>
