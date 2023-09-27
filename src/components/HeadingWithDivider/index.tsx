@@ -13,23 +13,21 @@ const HeadingWithDivider = ({
   ...props
 }: Props) => {
   return (
-    <>
-      <Typography
-        variant={variant}
-        {...props}
-        sx={{ mb: 0, display: "flex", flexDirection: "column", ...props.sx }}
-      >
-        {children}
-        <Divider
-          sx={{
-            borderBottomWidth: "0.08em",
-            borderStyle: dividerVariant,
-            mt: "0.1em",
-            mb: "0.2em",
-          }}
-        />
-      </Typography>
-    </>
+    <Typography
+      variant={variant}
+      {...props}
+      sx={{ mb: 0, display: "flex", flexDirection: "column", ...props.sx }}
+    >
+      {children}
+      <Divider
+        sx={{
+          borderBottomWidth: "0.08em",
+          borderStyle: dividerVariant,
+          mt: "0.1em",
+          mb: "0.2em",
+        }}
+      />
+    </Typography>
   );
 };
 

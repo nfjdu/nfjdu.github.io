@@ -93,50 +93,13 @@ const RootPage = () => {
           <NavLink to='/home' text='Home' onClick={() => setIsMenuOpened(false)} />
           <NavLink to='/projects' text='Projects' onClick={() => setIsMenuOpened(false)} />
           <NavLinksGroup title='Dev'>
-            <NavLinksGroup title='Style&shy;guide' typographyVariant='h2' paddingMultiplier={1}>
-              <NavLink
-                paddingMultiplier={2}
-                typographyVariant='h3'
-                to='/dev/styleguide/buttons'
-                text='Buttons'
-                onClick={() => setIsMenuOpened(false)}
-              />
-              <NavLink
-                paddingMultiplier={2}
-                typographyVariant='h3'
-                to='/dev/styleguide/colors'
-                text='Colors'
-                onClick={() => setIsMenuOpened(false)}
-              />
-              <NavLink
-                paddingMultiplier={2}
-                typographyVariant='h3'
-                to='/dev/styleguide/dividers'
-                text='Dividers'
-                onClick={() => setIsMenuOpened(false)}
-              />
-              <NavLink
-                paddingMultiplier={2}
-                typographyVariant='h3'
-                to='/dev/styleguide/icons'
-                text='Icons'
-                onClick={() => setIsMenuOpened(false)}
-              />
-              <NavLink
-                typographyVariant='h3'
-                paddingMultiplier={2}
-                to='/dev/styleguide/tags'
-                text='Tags'
-                onClick={() => setIsMenuOpened(false)}
-              />
-              <NavLink
-                typographyVariant='h3'
-                paddingMultiplier={2}
-                to='/dev/styleguide/typography'
-                text='Typography'
-                onClick={() => setIsMenuOpened(false)}
-              />
-            </NavLinksGroup>
+            <NavLink
+              to='/dev/styleguide'
+              text='Style&shy;guide'
+              onClick={() => setIsMenuOpened(false)}
+              typographyVariant='h2'
+              paddingMultiplier={1}
+            />
             <NavLinksGroup title='API Examples' typographyVariant='h2' paddingMultiplier={1}>
               <NavLink
                 typographyVariant='h3'

@@ -12,7 +12,7 @@ const RESTPage = () => {
 
   return (
     <>
-      <HeadingWithDivider variant='h2'>REST example (using RTK Query)</HeadingWithDivider>
+      <HeadingWithDivider variant='h2'>REST (using RTK Query)</HeadingWithDivider>
 
       {isLoading ? (
         <Typography>Loading...</Typography>
