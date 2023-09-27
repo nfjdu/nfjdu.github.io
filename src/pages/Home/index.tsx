@@ -16,10 +16,8 @@ const HomePage = () => {
         to leverage their power in developing robust web applications. Inspired by the elegance of
         minimalism, I strive to create digital experiences that are both visually captivating and
         functionally seamless. In this portfolio, you'll find a curated collection of my most
-        notable projects. Driven by an insatiable thirst for knowledge and a relentless pursuit of
-        new challenges, I am eager to embark on future endeavors that push the boundaries of what's
-        possible. By leveraging the latest tools and frameworks, I strive to deliver innovative and
-        cutting-edge solutions that drive your business forward.
+        notable projects. By leveraging the latest tools and frameworks, I strive to deliver
+        innovative and cutting-edge solutions that drive your business forward.
       </Typography>
       <Typography>
         Collaboration is at the heart of my work philosophy. I firmly believe that the best results
