@@ -4,7 +4,7 @@ import HeadingWithDivider from "../../components/HeadingWithDivider";
 const StyleguidePage = () => {
   return (
     <>
-      <HeadingWithDivider variant='h2'>Style&shy;giude</HeadingWithDivider>
+      <HeadingWithDivider variant='h1'>Style&shy;giude</HeadingWithDivider>
       <Outlet />
     </>
   );

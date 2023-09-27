@@ -6,7 +6,7 @@ import Tag from "../../../components/Tag";
 const TagsPage = () => {
   return (
     <>
-      <HeadingWithDivider variant='h3'>Tags</HeadingWithDivider>
+      <HeadingWithDivider variant='h2'>Tags</HeadingWithDivider>
       <Stack spacing={2}>
         <Stack direction='row' sx={{ alignItems: "center" }} spacing={2}>
           <TypographyNoMargin>Default tag:</TypographyNoMargin>

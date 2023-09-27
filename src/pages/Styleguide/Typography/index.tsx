@@ -5,9 +5,9 @@ import TypographyNoMargin from "../../../components/TypographyNoMargin";
 const TypographyPage = () => {
   return (
     <>
-      <HeadingWithDivider variant='h3'>Typography</HeadingWithDivider>
+      <HeadingWithDivider variant='h2'>Typography</HeadingWithDivider>
 
-      <HeadingWithDivider variant='h4'>Variant examples</HeadingWithDivider>
+      <HeadingWithDivider variant='h3'>Variant examples</HeadingWithDivider>
       <Typography variant='h1'>Heading 1</Typography>
       <Typography variant='h2'>Heading 2</Typography>
       <Typography variant='h3'>Heading 3</Typography>
@@ -29,12 +29,12 @@ const TypographyPage = () => {
         incididunt ut labore et dolore magna aliqua.
       </Typography>
 
-      <HeadingWithDivider variant='h4'>Heading with divider</HeadingWithDivider>
+      <HeadingWithDivider variant='h3'>Heading with divider</HeadingWithDivider>
       <HeadingWithDivider variant='h6' sx={{ width: "50%" }}>
         Lorem ipsum
       </HeadingWithDivider>
 
-      <HeadingWithDivider variant='h4'>Typography with no margin</HeadingWithDivider>
+      <HeadingWithDivider variant='h3'>Typography with no margin</HeadingWithDivider>
       <TypographyNoMargin variant='h1'>Heading 1</TypographyNoMargin>
       <TypographyNoMargin variant='h2'>Heading 2</TypographyNoMargin>
       <TypographyNoMargin variant='h3'>Heading 3</TypographyNoMargin>

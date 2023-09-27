@@ -6,7 +6,7 @@ import TypographyNoMargin from "../../../components/TypographyNoMargin";
 const ButtonsPage = () => {
   return (
     <>
-      <HeadingWithDivider variant='h3'>Buttons</HeadingWithDivider>
+      <HeadingWithDivider variant='h2'>Buttons</HeadingWithDivider>
       <Stack sx={{ mt: 2 }} gap={1}>
         <Stack direction='row' sx={{ alignItems: "center" }} gap={1}>
           <TypographyNoMargin>Icon button: </TypographyNoMargin>

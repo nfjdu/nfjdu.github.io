@@ -5,7 +5,7 @@ import AppIcon from "../../../components/AppIcon";
 const IconsPage = () => {
   return (
     <>
-      <HeadingWithDivider variant='h3'>Icons</HeadingWithDivider>
+      <HeadingWithDivider variant='h2'>Icons</HeadingWithDivider>
       <Stack direction='row' sx={{ mt: 2, flexWrap: "wrap" }} gap={4}>
         <Stack sx={{ alignItems: "center" }}>
           <AppIcon icon='menu' />

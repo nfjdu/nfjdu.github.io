@@ -6,7 +6,7 @@ import DashedDivider from "../../../components/DashedDivider";
 const DividersPage = () => {
   return (
     <>
-      <HeadingWithDivider variant='h3'>Dividers</HeadingWithDivider>
+      <HeadingWithDivider variant='h2'>Dividers</HeadingWithDivider>
       <Stack spacing={2}>
         <Stack direction='row' sx={{ alignItems: "center" }} spacing={2}>
           <TypographyNoMargin>Default divider:</TypographyNoMargin>
