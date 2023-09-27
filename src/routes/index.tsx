@@ -12,8 +12,10 @@ import ContactsPage from "../pages/Contacts";
 import DividersPage from "../pages/Styleguide/Dividers";
 import TagsPage from "../pages/Styleguide/Tags";
 import DevPage from "../pages/Dev/Dev";
-import ApiPage from "../pages/Api";
-import RESTPage from "../pages/Api/REST";
+import ExamplesPage from "../pages/Examples";
+import RESTPage from "../pages/Examples/REST";
+import BrowserAPIsPage from "../pages/Examples/BrowserAPIs";
+import ThreeDPage from "../pages/Examples/3D";
 
 export const routes = [
   {
@@ -28,6 +30,7 @@ export const routes = [
         path: "dev",
         element: <DevPage />,
         children: [
+          { index: true, element: <Navigate to='/dev/styleguide' /> },
           {
             path: "styleguide",
             element: <StyleguidePage />,
@@ -42,11 +45,13 @@ export const routes = [
             ],
           },
           {
-            path: "api",
-            element: <ApiPage />,
+            path: "examples",
+            element: <ExamplesPage />,
             children: [
-              { index: true, element: <Navigate to='/dev/api/rest' /> },
+              { index: true, element: <Navigate to='/dev/examples/rest' /> },
               { path: "rest", element: <RESTPage /> },
+              { path: "browser", element: <BrowserAPIsPage /> },
+              { path: "3D", element: <ThreeDPage /> },
             ],
           },
         ],

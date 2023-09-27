@@ -1,13 +1,13 @@
 import { Outlet } from "react-router-dom";
 import TypographyWithDivider from "../../components/TypographyWithDivider";
 
-const ApiPage = () => {
+const ExamplesPage = () => {
   return (
     <>
-      <TypographyWithDivider variant='h1'>API examples</TypographyWithDivider>
+      <TypographyWithDivider variant='h1'>Examples</TypographyWithDivider>
       <Outlet />
     </>
   );
 };
 
-export default ApiPage;
+export default ExamplesPage;

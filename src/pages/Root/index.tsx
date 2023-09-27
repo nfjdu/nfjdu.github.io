@@ -100,12 +100,26 @@ const RootPage = () => {
               typographyVariant='h2'
               paddingMultiplier={1}
             />
-            <NavLinksGroup title='API Examples' typographyVariant='h2' paddingMultiplier={1}>
+            <NavLinksGroup title='Examples' typographyVariant='h2' paddingMultiplier={1}>
               <NavLink
                 typographyVariant='h3'
                 paddingMultiplier={2}
-                to='/dev/api/rest'
+                to='/dev/examples/rest'
                 text='REST'
+                onClick={() => setIsMenuOpened(false)}
+              />
+              <NavLink
+                typographyVariant='h3'
+                paddingMultiplier={2}
+                to='/dev/examples/browser'
+                text='Browser APIs'
+                onClick={() => setIsMenuOpened(false)}
+              />
+              <NavLink
+                typographyVariant='h3'
+                paddingMultiplier={2}
+                to='/dev/examples/3d'
+                text='3D'
                 onClick={() => setIsMenuOpened(false)}
               />
             </NavLinksGroup>
