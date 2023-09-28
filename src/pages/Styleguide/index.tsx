@@ -15,6 +15,7 @@ const StyleguideLink = ({ to, children }: StyleguideLinkProps) => {
       to={to}
       sx={{
         fontWeight: pathname.includes(to) ? "bold" : "unset",
+        color: (theme) => theme.palette.text.primary,
         "&:visited": { color: (theme) => theme.palette.text.primary },
       }}
     >
