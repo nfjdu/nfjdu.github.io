@@ -52,9 +52,13 @@ const ProjectsPage = () => {
       </Typography>
       <Typography>
         My key tasks were designing a part of frontend core architecture, implementing a
-        comprehensive style guide, and creating some(tons, omg) views and forms. Talking about more
-        interesting tasks - I had opportunity to develop, for example, vehicle damage detection
-        module, or generating some PDF reports about the vehicle condition on the backend side.
+        comprehensive style guide, and creating some(tons omg
+        <Typography component='span' sx={{ fontSize: "1.2rem !important" }}>
+          🥲
+        </Typography>
+        ) views and forms. Talking about more interesting tasks - I had opportunity to develop, for
+        example, vehicle damage detection module, or generating some PDF reports about the vehicle
+        condition on the backend side.
       </Typography>
       <Typography>
         To accomplish these objectives, technologies like React, MUI React (Material-UI), Formik,
