@@ -41,10 +41,32 @@ const ProjectsPage = () => {
         tags={["React", "MUI", "Redux", "SignalR", ".NET Core"]}
       />
       <Typography>
-        Details coming soon... Breafly: My key tasks were designing a part of frontend core
-        architecture, implementing a comprehensive style guide, and creating some(tons, omg) views
-        and forms. To accomplish these objectives, technologies like React, MUI React (Material-UI),
-        Formik, Redux, and SignalR were used.
+        <Link target='_blank' href='https://www.nexusfleet.io/'>
+          NexusFleet
+        </Link>{" "}
+        represents the forefront of fleet return management automation software, meticulously
+        engineered to optimize workflows, centralize document management, and enhance seamless
+        communication across all stakeholders within the fleet ecosystem. This comprehensive
+        platform facilitates the complete digitalization of all fleet return processes and
+        interactions with partners.
+      </Typography>
+      <Typography>
+        My key tasks were designing a part of frontend core architecture, implementing a
+        comprehensive style guide, and creating some(tons, omg) views and forms. Talking about more
+        interesting tasks - I had opportunity to develop, for example, vehicle damage detection
+        module, or generating some PDF reports about the vehicle condition on the backend side.
+      </Typography>
+      <Typography>
+        To accomplish these objectives, technologies like React, MUI React (Material-UI), Formik,
+        Redux, and SignalR were used.
+      </Typography>
+      <ProjectImage src='/nexus-screenshot1.png' alt='Seequre' />
+      <Typography variant='caption' sx={{ textAlign: "center" }}>
+        Picture 1. Screenshot of NexusFleet №1
+      </Typography>
+      <ProjectImage src='/nexus-screenshot2.png' alt='Seequre' />
+      <Typography variant='caption' sx={{ textAlign: "center" }}>
+        Picture 2. Screenshot of NexusFleet №2
       </Typography>
 
       <ProjectHeader
