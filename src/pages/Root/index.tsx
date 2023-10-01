@@ -111,6 +111,7 @@ const RootPage = () => {
                 text='REST'
                 onClick={() => setIsMenuOpened(false)}
               />
+              {/*
               <NavLink
                 typographyVariant='h3'
                 paddingMultiplier={2}
@@ -118,6 +119,7 @@ const RootPage = () => {
                 text='Browser APIs'
                 onClick={() => setIsMenuOpened(false)}
               />
+              */}
               <NavLink
                 typographyVariant='h3'
                 paddingMultiplier={2}

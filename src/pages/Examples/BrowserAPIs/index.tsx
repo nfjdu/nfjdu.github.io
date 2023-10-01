@@ -1,11 +1,13 @@
-import { Typography } from "@mui/material";
+import { Alert, Typography } from "@mui/material";
 import TypographyWithDivider from "../../../components/TypographyWithDivider";
 
 const BrowserAPIsPage = () => {
   return (
     <>
       <TypographyWithDivider variant='h2'>Browser API</TypographyWithDivider>
-      <Typography>Coming soon...</Typography>
+      <Alert variant='outlined' severity='info'>
+        Work in progress...
+      </Alert>
     </>
   );
 };

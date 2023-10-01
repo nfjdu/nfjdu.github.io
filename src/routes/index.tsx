@@ -57,7 +57,7 @@ export const routes = [
                 path: "graphics",
                 element: <GraphicsPage />,
                 children: [
-                  { index: true, element: <Navigate to='/dev/examples/graphics/other' /> },
+                  { index: true, element: <Navigate to='/dev/examples/graphics/models' /> },
                   { path: "models", element: <GraphicsModelsPage /> },
                   { path: "other", element: <GraphicsOtherPage /> },
                 ],

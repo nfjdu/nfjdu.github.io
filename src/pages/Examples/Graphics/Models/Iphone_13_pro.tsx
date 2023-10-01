@@ -72,12 +72,16 @@ type GLTFResult = GLTF & {
 export function Model(props: JSX.IntrinsicElements["group"]) {
   const { nodes, materials } = useGLTF("/iphone_13_pro.glb") as GLTFResult;
   const group = useRef<any>();
+
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
     if (group.current) {
-      group.current.rotation.z = 0.02 - (1 + Math.sin(t / 1.5)) / 20;
+      // group.current.rotation.z = 0.02 - (1 + Math.sin(t / 1.5)) / 20;
+      group.current.rotation.x = 0;
+      group.current.rotation.y = t / 1.8;
     }
   });
+
   return (
     <group {...props} ref={group} dispose={null}>
       <group position={[0, -2, 0]} rotation={[0, 0, 0]}>

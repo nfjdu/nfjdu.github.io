@@ -84,6 +84,7 @@ const WalkingDude = () => {
       <motion.div
         onClick={handleClick}
         style={{
+          zIndex: 2,
           cursor: "url('/Link select.cur'), auto",
           width: `${walkingDudeWidth}px`,
           minHeight: `${isWalking ? walkingDudeHeight : idleDudeHeight}px`,

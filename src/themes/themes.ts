@@ -1,4 +1,4 @@
-import { ThemeOptions, createTheme } from "@mui/material";
+import { ThemeOptions, createTheme, darken } from "@mui/material";
 import merge from "lodash/merge";
 import { THEME } from "../constants/themes";
 import { isMobile } from "mobile-device-detect";
@@ -283,6 +283,52 @@ const baseOptions: ThemeOptions = {
           letterSpacing: "0.05em",
         }),
       },
+    },
+    MuiAlert: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          fontWeight: "600",
+          borderStyle: "dashed",
+          borderWidth: "2px",
+          "& .MuiAlert-icon": {
+            alignItems: "center",
+          },
+        }),
+      },
+      variants: [
+        {
+          props: { severity: "info" },
+          style: ({ theme }) => {
+            return {
+              color: darken(theme.palette.info.main, 0.1),
+            };
+          },
+        },
+        {
+          props: { severity: "success" },
+          style: ({ theme }) => {
+            return {
+              color: darken(theme.palette.success.main, 0.1),
+            };
+          },
+        },
+        {
+          props: { severity: "warning" },
+          style: ({ theme }) => {
+            return {
+              color: darken(theme.palette.warning.main, 0.1),
+            };
+          },
+        },
+        {
+          props: { severity: "error" },
+          style: ({ theme }) => {
+            return {
+              color: darken(theme.palette.error.main, 0.1),
+            };
+          },
+        },
+      ],
     },
   },
 };
