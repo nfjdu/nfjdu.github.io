@@ -15,7 +15,9 @@ import DevPage from "../pages/Dev/Dev";
 import ExamplesPage from "../pages/Examples";
 import RESTPage from "../pages/Examples/REST";
 import BrowserAPIsPage from "../pages/Examples/BrowserAPIs";
-import ThreeDPage from "../pages/Examples/3D";
+import GraphicsPage from "../pages/Examples/Graphics";
+import GraphicsOtherPage from "../pages/Examples/Graphics/Other";
+import GraphicsModelsPage from "../pages/Examples/Graphics/Models";
 
 export const routes = [
   {
@@ -51,7 +53,15 @@ export const routes = [
               { index: true, element: <Navigate to='/dev/examples/rest' /> },
               { path: "rest", element: <RESTPage /> },
               { path: "browser", element: <BrowserAPIsPage /> },
-              { path: "3D", element: <ThreeDPage /> },
+              {
+                path: "graphics",
+                element: <GraphicsPage />,
+                children: [
+                  { index: true, element: <Navigate to='/dev/examples/graphics/other' /> },
+                  { path: "models", element: <GraphicsModelsPage /> },
+                  { path: "other", element: <GraphicsOtherPage /> },
+                ],
+              },
             ],
           },
         ],

@@ -118,8 +118,8 @@ const RootPage = () => {
               <NavLink
                 typographyVariant='h3'
                 paddingMultiplier={2}
-                to='/dev/examples/3d'
-                text='3D'
+                to='/dev/examples/graphics'
+                text='Graphics'
                 onClick={() => setIsMenuOpened(false)}
               />
             </NavLinksGroup>

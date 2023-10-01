@@ -1,5 +1,5 @@
 import { Link as RouterLink, Outlet, useLocation } from "react-router-dom";
-import TypographyWithDivider from "../../components/TypographyWithDivider";
+import TypographyWithDivider from "../../../components/TypographyWithDivider";
 import { Stack, Typography } from "@mui/material";
 
 interface StyleguideLinkProps {
@@ -23,19 +23,14 @@ const StyleguideLink = ({ to, children }: StyleguideLinkProps) => {
     </Typography>
   );
 };
-
-const StyleguidePage = () => {
+const GraphicsPage = () => {
   return (
     <>
-      <TypographyWithDivider variant='h1'>Style&shy;giude</TypographyWithDivider>
+      <TypographyWithDivider variant='h2'>Graphics</TypographyWithDivider>
       <Stack direction={{ xs: "column", md: "row" }} sx={{ mt: 2 }} gap={2}>
         <Stack direction='column' sx={{ flex: "0 0 200px" }}>
-          <StyleguideLink to='/dev/styleguide/buttons'>Buttons</StyleguideLink>
-          <StyleguideLink to='/dev/styleguide/colors'>Colors</StyleguideLink>
-          <StyleguideLink to='/dev/styleguide/dividers'>Dividers</StyleguideLink>
-          <StyleguideLink to='/dev/styleguide/icons'>Icons</StyleguideLink>
-          <StyleguideLink to='/dev/styleguide/tags'>Tags</StyleguideLink>
-          <StyleguideLink to='/dev/styleguide/typography'>Typography</StyleguideLink>
+          <StyleguideLink to='/dev/examples/graphics/models'>Models</StyleguideLink>
+          <StyleguideLink to='/dev/examples/graphics/other'>Other</StyleguideLink>
         </Stack>
         <Stack direction='column' sx={{ flex: 1 }}>
           <Outlet />
@@ -45,4 +40,4 @@ const StyleguidePage = () => {
   );
 };
 
-export default StyleguidePage;
+export default GraphicsPage;
