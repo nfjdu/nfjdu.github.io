@@ -178,7 +178,7 @@ function CustomScene1() {
 
   return (
     <>
-      <Stack direction='row' sx={{ position: "absolute", top: 0, zIndex: 1 }}>
+      <Stack direction='row' sx={{ position: "absolute", top: 0, zIndex: 1, p: 0.5 }}>
         <Button
           sx={{ mr: 1 }}
           onClick={() => {
@@ -206,7 +206,7 @@ function CustomScene1() {
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
         <Suspense>
-          <group scale={[0.4, 0.4, 1]} position={[-2, -2, 0]}>
+          <group scale={[0.35, 0.35, 1]} position={[-1.7, -2, 0]}>
             {/* <group> */}
             {particles.map((letter, index) => {
               return (
