@@ -24,6 +24,7 @@ const RootPage = () => {
 
   return (
     <Box
+      component='div'
       sx={{
         width: "100%",
         height: "100%",
@@ -38,6 +39,7 @@ const RootPage = () => {
     >
       <WalkingDude />
       <Box
+        component='div'
         sx={{
           position: "fixed",
           top: 0,
@@ -75,6 +77,7 @@ const RootPage = () => {
       </Box>
 
       <Box
+        component='div'
         sx={{
           position: "fixed",
           top: 0,

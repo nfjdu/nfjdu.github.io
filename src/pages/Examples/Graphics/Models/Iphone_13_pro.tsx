@@ -69,8 +69,6 @@ type GLTFResult = GLTF & {
   };
 };
 
-type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements["mesh"]>>;
-
 export function Model(props: JSX.IntrinsicElements["group"]) {
   const { nodes, materials } = useGLTF("/iphone_13_pro.glb") as GLTFResult;
   const group = useRef<any>();

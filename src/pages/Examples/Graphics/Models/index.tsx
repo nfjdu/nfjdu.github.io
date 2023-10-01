@@ -6,7 +6,7 @@ interface Props {}
 
 const GraphicsModelsPage = ({}: Props) => {
   return (
-    <Box sx={{ mt: 2, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2 }}>
+    <Box component='div' sx={{ mt: 2, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2 }}>
       <GraphicsExampleWrapper>
         <IphoneScene />
       </GraphicsExampleWrapper>

@@ -112,6 +112,7 @@ const WalkingDude = () => {
         sx={{ maxWidth: { xs: "80%", sm: "50%" } }}
       >
         <Box
+          component={"div"}
           sx={{
             borderImage: "url(/balloon.png) 40 50 60 50 round",
             borderWidth: "28px 17px 40px 21px",
@@ -120,7 +121,9 @@ const WalkingDude = () => {
             filter: (theme) => `drop-shadow(${theme.shadows[3]})`,
           }}
         >
-          <Box sx={{ backgroundColor: "white", color: "black" }}>{talkingText}</Box>
+          <Box component={"div"} sx={{ backgroundColor: "white", color: "black" }}>
+            {talkingText}
+          </Box>
         </Box>
       </Popper>
     </>

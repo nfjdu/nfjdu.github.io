@@ -7,6 +7,7 @@ interface ExampleProps {
 export function GraphicsExampleWrapper({ children }: ExampleProps) {
   return (
     <Box
+      component='div'
       sx={{
         height: "400px",
         borderRadius: "6px",
