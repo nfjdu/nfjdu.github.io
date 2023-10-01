@@ -46,13 +46,13 @@ const ProjectsPage = () => {
         </Link>{" "}
         represents the forefront of fleet return management automation software, meticulously
         engineered to optimize workflows, centralize document management, and enhance seamless
-        communication across all stakeholders within the fleet ecosystem. This comprehensive
-        platform facilitates the complete digitalization of all fleet return processes and
-        interactions with partners.
+        communication across all stakeholders within the fleet ecosystem. This platform facilitates
+        the complete digitalization of all fleet return processes and interactions with partners.
       </Typography>
       <Typography>
-        My key tasks were designing a part of frontend core architecture, implementing a
-        comprehensive style guide, and creating some(tons omg
+        Being closely connected with this platform development, I was responsible for tasks like:
+        designing a part of frontend core architecture, implementing a comprehensive style guide,
+        and creating some(tons omg
         <Typography component='span' sx={{ fontSize: "1.2rem !important" }}>
           🥲
         </Typography>
