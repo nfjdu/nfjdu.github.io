@@ -1,28 +1,8 @@
-import { Link as RouterLink, Outlet, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import TypographyWithDivider from "../../../components/TypographyWithDivider";
-import { Alert, Stack, Typography } from "@mui/material";
+import { Alert, Stack } from "@mui/material";
+import PageSideNav from "../../../components/PageSideNav";
 
-interface StyleguideLinkProps {
-  children: React.ReactNode;
-  to: string;
-}
-const StyleguideLink = ({ to, children }: StyleguideLinkProps) => {
-  const { pathname } = useLocation();
-
-  return (
-    <Typography
-      component={RouterLink}
-      to={to}
-      sx={{
-        fontWeight: pathname.includes(to) ? "bold" : "unset",
-        color: (theme) => theme.palette.text.primary,
-        "&:visited": { color: (theme) => theme.palette.text.primary },
-      }}
-    >
-      {children}
-    </Typography>
-  );
-};
 const GraphicsPage = () => {
   return (
     <>
@@ -33,10 +13,12 @@ const GraphicsPage = () => {
       </Alert>
 
       <Stack direction={{ xs: "column", md: "row" }} sx={{ mt: 2 }} gap={2}>
-        <Stack direction='column' sx={{ flex: { xs: "0 0 auto", md: "0 0 200px" } }}>
-          <StyleguideLink to='/dev/examples/graphics/models'>Models</StyleguideLink>
-          <StyleguideLink to='/dev/examples/graphics/other'>Other</StyleguideLink>
-        </Stack>
+        <PageSideNav
+          links={[
+            { text: "Models", to: "/dev/examples/graphics/models" },
+            { text: "Other", to: "/dev/examples/graphics/other" },
+          ]}
+        />
         <Stack direction='column' sx={{ flex: 1 }}>
           <Outlet />
         </Stack>
