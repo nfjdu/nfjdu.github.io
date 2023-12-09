@@ -28,44 +28,44 @@ export const routes = [
       { index: true, element: <Navigate to='/home' /> },
       { path: "home", element: <HomePage /> },
       { path: "projects", element: <ProjectsPage /> },
-      {
-        path: "dev",
-        element: <DevPage />,
-        children: [
-          { index: true, element: <Navigate to='/dev/styleguide' /> },
-          {
-            path: "styleguide",
-            element: <StyleguidePage />,
-            children: [
-              { index: true, element: <Navigate to='/dev/styleguide/buttons' /> },
-              { path: "buttons", element: <ButtonsPage /> },
-              { path: "colors", element: <ColorsPage /> },
-              { path: "dividers", element: <DividersPage /> },
-              { path: "icons", element: <IconsPage /> },
-              { path: "tags", element: <TagsPage /> },
-              { path: "typography", element: <TypographyPage /> },
-            ],
-          },
-          {
-            path: "examples",
-            element: <ExamplesPage />,
-            children: [
-              { index: true, element: <Navigate to='/dev/examples/rest' /> },
-              { path: "rest", element: <RESTPage /> },
-              { path: "browser", element: <BrowserAPIsPage /> },
-              {
-                path: "graphics",
-                element: <GraphicsPage />,
-                children: [
-                  { index: true, element: <Navigate to='/dev/examples/graphics/models' /> },
-                  { path: "models", element: <GraphicsModelsPage /> },
-                  { path: "other", element: <GraphicsOtherPage /> },
-                ],
-              },
-            ],
-          },
-        ],
-      },
+      // {
+      //   path: "dev",
+      //   element: <DevPage />,
+      //   children: [
+      //     { index: true, element: <Navigate to='/dev/styleguide' /> },
+      //     {
+      //       path: "styleguide",
+      //       element: <StyleguidePage />,
+      //       children: [
+      //         { index: true, element: <Navigate to='/dev/styleguide/buttons' /> },
+      //         { path: "buttons", element: <ButtonsPage /> },
+      //         { path: "colors", element: <ColorsPage /> },
+      //         { path: "dividers", element: <DividersPage /> },
+      //         { path: "icons", element: <IconsPage /> },
+      //         { path: "tags", element: <TagsPage /> },
+      //         { path: "typography", element: <TypographyPage /> },
+      //       ],
+      //     },
+      //     {
+      //       path: "examples",
+      //       element: <ExamplesPage />,
+      //       children: [
+      //         { index: true, element: <Navigate to='/dev/examples/rest' /> },
+      //         { path: "rest", element: <RESTPage /> },
+      //         { path: "browser", element: <BrowserAPIsPage /> },
+      //         {
+      //           path: "graphics",
+      //           element: <GraphicsPage />,
+      //           children: [
+      //             { index: true, element: <Navigate to='/dev/examples/graphics/models' /> },
+      //             { path: "models", element: <GraphicsModelsPage /> },
+      //             { path: "other", element: <GraphicsOtherPage /> },
+      //           ],
+      //         },
+      //       ],
+      //     },
+      //   ],
+      // },
       { path: "contacts", element: <ContactsPage /> },
     ],
   },

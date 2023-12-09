@@ -95,6 +95,7 @@ const RootPage = () => {
         <List sx={{ py: { xs: 12, sm: 14, xl: 18 }, px: { xs: 1.5, sm: 14, xl: 18 } }}>
           <NavLink to='/home' text='Home' onClick={() => setIsMenuOpened(false)} />
           <NavLink to='/projects' text='Projects' onClick={() => setIsMenuOpened(false)} />
+          {/*
           <NavLinksGroup title='Dev'>
             <NavLink
               to='/dev/styleguide'
@@ -111,7 +112,6 @@ const RootPage = () => {
                 text='REST'
                 onClick={() => setIsMenuOpened(false)}
               />
-              {/*
               <NavLink
                 typographyVariant='h3'
                 paddingMultiplier={2}
@@ -119,7 +119,6 @@ const RootPage = () => {
                 text='Browser APIs'
                 onClick={() => setIsMenuOpened(false)}
               />
-              */}
               <NavLink
                 typographyVariant='h3'
                 paddingMultiplier={2}
@@ -129,6 +128,7 @@ const RootPage = () => {
               />
             </NavLinksGroup>
           </NavLinksGroup>
+          */}
 
           <NavLink to='/contacts' text='Contacts' onClick={() => setIsMenuOpened(false)} />
         </List>
