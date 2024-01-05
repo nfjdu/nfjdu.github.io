@@ -80,7 +80,7 @@ const ProjectsPage = () => {
       />
       <Typography>
         Another project I worked on is an internal tool for{" "}
-        <Link target='_blank' href='https://www.aldautomotive.com/'>
+        <Link target='_blank' href='https://www.aldautomotive.no/'>
           ALD Automotive
         </Link>
         . It is difficult to explain what my specific tasks were, as I cannot disclose details about
