@@ -74,14 +74,14 @@ const ProjectsPage = () => {
       </Typography>
 
       <ProjectHeader
-        title='ALD Automotive'
+        title='Drivalia'
         dates='2021 - 2022'
         tags={["React", "MUI", "Redux", "RTK Query", "SignalR"]}
       />
       <Typography>
         Another project I worked on is an internal tool for{" "}
-        <Link target='_blank' href='https://www.aldautomotive.no/'>
-          ALD Automotive
+        <Link target='_blank' href='https://www.drivalia.es/en/'>
+          Drivalia (internal vehicles management application)
         </Link>
         . It is difficult to explain what my specific tasks were, as I cannot disclose details about
         the tool's purpose due to its private nature, but in general, the purpose of the application
@@ -98,9 +98,9 @@ const ProjectsPage = () => {
         communication. These technologies allowed for dynamic and collaborative experiences,
         enhancing the overall usability and productivity of the application.
       </Typography>
-      <ProjectImage src='/ald-screenshot.png' alt='ALD Automotive' />
+      <ProjectImage src='/ald-screenshot.png' alt='Drivalia' />
       <Typography variant='caption' sx={{ textAlign: "center" }}>
-        Picture 1. Very informative screenshot of ALD Automotive internal tool application =)
+        Picture 1. Very informative screenshot of Drivalia internal tool application =)
       </Typography>
 
       <ProjectHeader
