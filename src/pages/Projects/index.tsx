@@ -111,7 +111,7 @@ const ProjectsPage = () => {
       <Typography>
         I had the privilege of working on an exciting project involving the development of a video
         communication system, named{" "}
-        <Link target='_blank' href='https://www.seequre.no/'>
+        <Link target='_blank' href='https://www.linkedin.com/company/seequre/'>
           Seequre
         </Link>
         . My key tasks revolved around improving, and bug fixing the video calls feature to ensure
@@ -134,10 +134,7 @@ const ProjectsPage = () => {
         appeal, an intuitive and visually appealing interface that enhanced usability and engagement
         were created.
       </Typography>
-      <ProjectImage
-        src='https://www.seequre.no/wp-content/uploads/2022/07/chrome_l3TfPj8lc3.png'
-        alt='Seequre'
-      />
+      <ProjectImage src='/seequre-screenshot2.jpg' alt='Seequre' />
       <Typography variant='caption' sx={{ textAlign: "center" }}>
         Picture 1. Screenshot of Seequre №1
       </Typography>
