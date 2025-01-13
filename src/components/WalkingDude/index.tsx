@@ -12,6 +12,7 @@ const idleDudeAnimationFramesCount = 5;
 const walkDistance = 375 - walkingDudeWidth;
 
 type AnimationType = "walking" | "idle";
+
 export function getMaxAnimationFramesCount(animationType: AnimationType) {
   switch (animationType) {
     case "walking":
@@ -79,6 +80,11 @@ const WalkingDude = () => {
     }
   });
 
+  const walkingDudeImg = new Image();
+  const idleDudeImg = new Image();
+  walkingDudeImg.src = "/DudeWalking.png";
+  idleDudeImg.src = "/DudeLookingUp.png";
+
   return (
     <>
       <motion.div
@@ -88,9 +94,10 @@ const WalkingDude = () => {
           cursor: "url('/Link select.cur'), auto",
           width: `${walkingDudeWidth}px`,
           minHeight: `${isWalking ? walkingDudeHeight : idleDudeHeight}px`,
+          backgroundRepeat: "no-repeat",
           background: isWalking
-            ? `url(/DudeWalking.png) -${animationFrames.walking * walkingDudeWidth}px 0px`
-            : `url(/DudeLookingUp.png) -${animationFrames.idle * idleDudeWidth}px 0px`,
+            ? `url(${walkingDudeImg.src}) -${animationFrames.walking * walkingDudeWidth}px 0px`
+            : `url(${idleDudeImg.src}) -${animationFrames.idle * idleDudeWidth}px 0px`,
           position: "fixed",
           bottom: 0,
           right: right,
