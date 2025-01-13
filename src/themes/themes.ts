@@ -418,7 +418,7 @@ const darkThemeOptions: ThemeOptions = {
       paper: "#303030", // Dark gray
     },
     menuBackground: {
-      main: "#525252",
+      main: "#404040",
       contrastText: "#424242",
     },
     primary: {
