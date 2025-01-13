@@ -2,6 +2,12 @@ import { ThemeOptions, createTheme, darken } from "@mui/material";
 import merge from "lodash/merge";
 import { THEME } from "../constants/themes";
 import { isMobile } from "mobile-device-detect";
+import {
+  FontStyleOptions,
+  TypographyStyleOptions,
+  TypographyUtils,
+  Variant,
+} from "@mui/material/styles/createTypography";
 
 declare module "@mui/material/styles" {
   // interface Theme {
@@ -26,6 +32,16 @@ declare module "@mui/material/styles" {
   interface PaletteOptions {
     menuBackground: PaletteOptions["primary"];
   }
+
+  interface TypographyVariantsOptions
+    extends Partial<Record<Variant, TypographyStyleOptions> & FontStyleOptions & TypographyUtils> {}
+}
+
+const fontSize = 14; // the default font size of the Material Specification.
+const htmlFontSize = 16; // default html font size is 16px
+export function pxToRemCustom(sizeInPx: number) {
+  const coef = fontSize / 14;
+  return `${(sizeInPx / htmlFontSize) * coef}rem`;
 }
 
 const baseOptions: ThemeOptions = {
@@ -40,57 +56,59 @@ const baseOptions: ThemeOptions = {
     },
   },
   typography: {
+    pxToRem: pxToRemCustom,
+    fontSize,
     fontFamily: ['"Advanced Pixel"', "monospace"].join(","),
     h1: {
-      fontSize: "4.5rem",
+      fontSize: pxToRemCustom(72),
       fontFamily: "Karma Future",
       "@media (max-width:600px)": {
-        fontSize: "3.5rem",
+        fontSize: pxToRemCustom(56),
       },
       marginTop: "0.4em",
       marginBottom: "0.2em",
       hyphens: "manual",
     },
     h2: {
-      fontSize: "3.5rem",
+      fontSize: pxToRemCustom(56),
       fontFamily: "Karma Future",
       marginTop: "0.4em",
       marginBottom: "0.2em",
       "@media (max-width:600px)": {
-        fontSize: "3rem",
+        fontSize: pxToRemCustom(46),
       },
       hyphens: "manual",
     },
     h3: {
-      fontSize: "3rem",
+      fontSize: pxToRemCustom(46),
       fontFamily: "Karma Future",
       marginTop: "0.4em",
       marginBottom: "0.2em",
       "@media (max-width:600px)": {
-        fontSize: "2.5rem",
+        fontSize: pxToRemCustom(40),
       },
       hyphens: "manual",
     },
     h4: {
-      fontSize: "2.5rem",
+      fontSize: pxToRemCustom(40),
       fontFamily: "Karma Future",
       marginTop: "0.4em",
       marginBottom: "0.2em",
       "@media (max-width:600px)": {
-        fontSize: "2rem",
+        fontSize: pxToRemCustom(32),
       },
     },
     h5: {
-      fontSize: "2rem",
+      fontSize: pxToRemCustom(32),
       fontFamily: "Karma Future",
       marginTop: "0.4em",
       marginBottom: "0.2em",
       "@media (max-width:600px)": {
-        fontSize: "1.5rem",
+        fontSize: pxToRemCustom(26),
       },
     },
     h6: {
-      fontSize: "1.5rem",
+      fontSize: pxToRemCustom(26),
       fontFamily: "Karma Future",
       marginTop: "0.4em",
       marginBottom: "0.2em",
@@ -99,9 +117,9 @@ const baseOptions: ThemeOptions = {
       },
     },
     subtitle1: {
-      fontSize: "1.8rem",
+      fontSize: pxToRemCustom(28),
       "@media (max-width:600px)": {
-        fontSize: "1.6rem",
+        fontSize: pxToRemCustom(26),
       },
       lineHeight: 0.8,
       fontWeight: 600,
@@ -109,9 +127,9 @@ const baseOptions: ThemeOptions = {
       marginBottom: "0.15em",
     },
     subtitle2: {
-      fontSize: "1.6rem",
+      fontSize: pxToRemCustom(26),
       "@media (max-width:600px)": {
-        fontSize: "1.4rem",
+        fontSize: pxToRemCustom(22),
       },
       lineHeight: 0.8,
       fontWeight: 600,
@@ -119,35 +137,30 @@ const baseOptions: ThemeOptions = {
       marginBottom: "0.15em",
     },
     body1: {
-      fontSize: "1.8rem",
+      fontSize: pxToRemCustom(28),
       "@media (max-width:600px)": {
-        fontSize: "1.6rem",
+        fontSize: pxToRemCustom(26),
       },
       lineHeight: 0.9,
       marginBottom: "0.6em",
       letterSpacing: "0.03em",
     },
     body2: {
-      fontSize: "1.6rem",
+      fontSize: pxToRemCustom(26),
       "@media (max-width:600px)": {
-        fontSize: "1.4rem",
+        fontSize: pxToRemCustom(22),
       },
       lineHeight: 1,
       marginBottom: "0.3em",
       letterSpacing: "0.04em",
     },
-    button: {
-      fontSize: "1.4rem",
-      "@media (max-width:600px)": {
-        fontSize: "1.2rem",
-      },
-    },
+    button: {},
     caption: {
-      fontSize: "1.5rem",
+      fontSize: pxToRemCustom(22),
       lineHeight: 0.8,
       fontStyle: "italic",
       "@media (max-width:600px)": {
-        fontSize: "1.3rem",
+        fontSize: pxToRemCustom(20),
       },
       marginTop: "0.2em",
       marginBottom: "0.4em",
@@ -165,7 +178,6 @@ const baseOptions: ThemeOptions = {
           boxSizing: "border-box",
         },
         html: {
-          fontSize: 16,
           MozOsxFontSmoothing: "grayscale",
           WebkitFontSmoothing: "antialiased",
           height: "100%",
@@ -403,7 +415,7 @@ const darkThemeOptions: ThemeOptions = {
     },
     divider: "#f5f5f5",
     background: {
-      paper: "#424242", // Dark gray
+      paper: "#303030", // Dark gray
     },
     menuBackground: {
       main: "#525252",
