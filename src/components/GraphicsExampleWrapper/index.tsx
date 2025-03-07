@@ -9,6 +9,9 @@ export function GraphicsExampleWrapper({ children }: ExampleProps) {
     <Box
       component='div'
       sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
         height: "400px",
         borderRadius: "6px",
         border: (theme) => `2px dashed ${theme.palette.divider}`,

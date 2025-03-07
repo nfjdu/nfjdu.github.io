@@ -13,11 +13,9 @@ import DividersPage from "../pages/Styleguide/Dividers";
 import TagsPage from "../pages/Styleguide/Tags";
 import DevPage from "../pages/Dev/Dev";
 import ExamplesPage from "../pages/Examples";
-import RESTPage from "../pages/Examples/REST";
-import BrowserAPIsPage from "../pages/Examples/BrowserAPIs";
-import GraphicsPage from "../pages/Examples/Graphics";
-import GraphicsOtherPage from "../pages/Examples/Graphics/Other";
-import GraphicsModelsPage from "../pages/Examples/Graphics/Models";
+import $3DPage from "../pages/Examples/3D";
+import $2DPage from "../pages/Examples/2D";
+import CssPage from "../pages/Examples/CSS";
 
 export const routes = [
   {
@@ -28,44 +26,47 @@ export const routes = [
       { index: true, element: <Navigate to='/home' /> },
       { path: "home", element: <HomePage /> },
       { path: "projects", element: <ProjectsPage /> },
-      // {
-      //   path: "dev",
-      //   element: <DevPage />,
-      //   children: [
-      //     { index: true, element: <Navigate to='/dev/styleguide' /> },
-      //     {
-      //       path: "styleguide",
-      //       element: <StyleguidePage />,
-      //       children: [
-      //         { index: true, element: <Navigate to='/dev/styleguide/buttons' /> },
-      //         { path: "buttons", element: <ButtonsPage /> },
-      //         { path: "colors", element: <ColorsPage /> },
-      //         { path: "dividers", element: <DividersPage /> },
-      //         { path: "icons", element: <IconsPage /> },
-      //         { path: "tags", element: <TagsPage /> },
-      //         { path: "typography", element: <TypographyPage /> },
-      //       ],
-      //     },
-      //     {
-      //       path: "examples",
-      //       element: <ExamplesPage />,
-      //       children: [
-      //         { index: true, element: <Navigate to='/dev/examples/rest' /> },
-      //         { path: "rest", element: <RESTPage /> },
-      //         { path: "browser", element: <BrowserAPIsPage /> },
-      //         {
-      //           path: "graphics",
-      //           element: <GraphicsPage />,
-      //           children: [
-      //             { index: true, element: <Navigate to='/dev/examples/graphics/models' /> },
-      //             { path: "models", element: <GraphicsModelsPage /> },
-      //             { path: "other", element: <GraphicsOtherPage /> },
-      //           ],
-      //         },
-      //       ],
-      //     },
-      //   ],
-      // },
+      {
+        path: "dev",
+        element: <DevPage />,
+        children: [
+          { index: true, element: <Navigate to='/dev/styleguide' /> },
+          {
+            path: "styleguide",
+            element: <StyleguidePage />,
+            children: [
+              { index: true, element: <Navigate to='/dev/styleguide/buttons' /> },
+              { path: "buttons", element: <ButtonsPage /> },
+              { path: "colors", element: <ColorsPage /> },
+              { path: "dividers", element: <DividersPage /> },
+              { path: "icons", element: <IconsPage /> },
+              { path: "tags", element: <TagsPage /> },
+              { path: "typography", element: <TypographyPage /> },
+            ],
+          },
+          {
+            path: "examples",
+            element: <ExamplesPage />,
+            children: [
+              { index: true, element: <Navigate to='/dev/examples/2d' /> },
+              // { path: "rest", element: <RESTPage /> },
+              // { path: "browser", element: <BrowserAPIsPage /> },
+              {
+                path: "css",
+                element: <CssPage />,
+              },
+              {
+                path: "2d",
+                element: <$2DPage />,
+              },
+              {
+                path: "3d",
+                element: <$3DPage />,
+              },
+            ],
+          },
+        ],
+      },
       { path: "contacts", element: <ContactsPage /> },
     ],
   },

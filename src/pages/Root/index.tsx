@@ -95,7 +95,6 @@ const RootPage = () => {
         <List sx={{ py: { xs: 12, sm: 14, xl: 18 }, px: { xs: 1.5, sm: 14, xl: 18 } }}>
           <NavLink to='/home' text='Home' onClick={() => setIsMenuOpened(false)} />
           <NavLink to='/projects' text='Projects' onClick={() => setIsMenuOpened(false)} />
-          {/*
           <NavLinksGroup title='Dev'>
             <NavLink
               to='/dev/styleguide'
@@ -105,7 +104,7 @@ const RootPage = () => {
               paddingMultiplier={1}
             />
             <NavLinksGroup title='Examples' typographyVariant='h2' paddingMultiplier={1}>
-              <NavLink
+              {/*<NavLink
                 typographyVariant='h3'
                 paddingMultiplier={2}
                 to='/dev/examples/rest'
@@ -118,17 +117,30 @@ const RootPage = () => {
                 to='/dev/examples/browser'
                 text='Browser APIs'
                 onClick={() => setIsMenuOpened(false)}
+              />*/}
+              <NavLink
+                typographyVariant='h3'
+                paddingMultiplier={2}
+                to='/dev/examples/css'
+                text='CSS'
+                onClick={() => setIsMenuOpened(false)}
               />
               <NavLink
                 typographyVariant='h3'
                 paddingMultiplier={2}
-                to='/dev/examples/graphics'
-                text='Graphics'
+                to='/dev/examples/2d'
+                text='2D'
+                onClick={() => setIsMenuOpened(false)}
+              />
+              <NavLink
+                typographyVariant='h3'
+                paddingMultiplier={2}
+                to='/dev/examples/3d'
+                text='3D'
                 onClick={() => setIsMenuOpened(false)}
               />
             </NavLinksGroup>
           </NavLinksGroup>
-          */}
 
           <NavLink to='/contacts' text='Contacts' onClick={() => setIsMenuOpened(false)} />
         </List>
