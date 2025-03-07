@@ -1,5 +1,6 @@
-import { Stack, Typography } from "@mui/material";
+import { Stack } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
+import TypographyNoMargin from "../../../../components/TypographyNoMargin";
 
 interface Props {}
 
@@ -68,9 +69,9 @@ const TypewriterEffect = ({}: Props) => {
 
   return (
     <Stack sx={{ width: "fit-content", maxWidth: "100%" }}>
-      <Typography
+      <TypographyNoMargin
         sx={{
-          fontSize: "clamp(12px, 5vw, 30px) !important",
+          fontSize: "clamp(12px, 5vw, 28px) !important",
           fontFamily: "monospace",
           lineHeight: 1.3,
           overflow: "hidden",
@@ -105,7 +106,7 @@ const TypewriterEffect = ({}: Props) => {
         }}
       >
         {currentPhraze}
-      </Typography>
+      </TypographyNoMargin>
     </Stack>
   );
 };
