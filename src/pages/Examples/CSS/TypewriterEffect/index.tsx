@@ -9,7 +9,7 @@ enum ANIMATION_STATE_ENUM {
 }
 enum PHRAZES_ENUM {
   PHRAZE1 = "Hello world!",
-  PHRAZE2 = "What a beautiful day!",
+  PHRAZE2 = "What a beautiful day :)",
   PHRAZE3 = "Let's code something...",
 }
 
@@ -62,15 +62,16 @@ const TypewriterEffect = ({}: Props) => {
     if (import.meta.env.DEV && !isDoubleMountingHandled) {
       isDoubleMountingHandled = true;
       fnsRef.current.startWriting();
-    } else {
+    } else if (import.meta.env.PROD) {
       fnsRef.current.startWriting();
     }
   }, []);
 
   return (
-    <Stack sx={{ width: "fit-content" }}>
+    <Stack sx={{ width: "fit-content", maxWidth: "100%" }}>
       <Typography
         sx={{
+          fontSize: "clamp(12px, 5vw, 30px) !important",
           fontFamily: "monospace",
           lineHeight: 1.3,
           overflow: "hidden",
