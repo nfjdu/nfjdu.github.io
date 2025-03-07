@@ -2,6 +2,8 @@ import TypographyWithDivider from "../../../components/TypographyWithDivider";
 import { Alert, Stack } from "@mui/material";
 import { GraphicsExampleWrapper } from "../../../components/GraphicsExampleWrapper";
 import TypewriterEffect from "./TypewriterEffect";
+import GradientTextEffect from "./GradientTextEffect";
+import GlassmorphizmCube from "./Hexagon";
 
 const CssPage = () => {
   return (
@@ -26,6 +28,14 @@ const CssPage = () => {
       >
         <GraphicsExampleWrapper>
           <TypewriterEffect />
+        </GraphicsExampleWrapper>
+
+        <GraphicsExampleWrapper>
+          <GradientTextEffect />
+        </GraphicsExampleWrapper>
+
+        <GraphicsExampleWrapper>
+          <GlassmorphizmCube />
         </GraphicsExampleWrapper>
       </Stack>
     </>
