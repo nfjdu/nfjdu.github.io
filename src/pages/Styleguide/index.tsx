@@ -7,7 +7,7 @@ const StyleguidePage = () => {
   return (
     <>
       <TypographyWithDivider variant='h1'>Style&shy;giude</TypographyWithDivider>
-      <Stack direction={{ xs: "column", md: "row" }} sx={{ mt: 2 }} gap={2}>
+      <Stack direction={{ xxs: "column", md: "row" }} sx={{ mt: 2 }} gap={2}>
         <PageSideNav
           links={[
             { text: "Buttons", to: "/dev/styleguide/buttons" },

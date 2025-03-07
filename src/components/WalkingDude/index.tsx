@@ -117,7 +117,7 @@ const WalkingDude = () => {
             },
           },
         ]}
-        sx={{ maxWidth: { xs: "80%", sm: "50%" } }}
+        sx={{ maxWidth: { xxs: "80%", sm: "50%" } }}
       >
         <Box
           component={"div"}

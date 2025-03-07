@@ -12,7 +12,7 @@ const $3DPage = () => {
         Work in progress...
       </Alert>
 
-      <Stack direction={{ xs: "column", md: "row" }} sx={{ mt: 2 }} gap={2}>
+      <Stack direction={{ xxs: "column", md: "row" }} sx={{ mt: 2 }} gap={2}>
         <Stack direction='column' sx={{ flex: 1 }}>
           <GraphicsExampleWrapper>
             <IphoneScene />

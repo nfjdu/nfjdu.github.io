@@ -12,12 +12,21 @@ const CssPage = () => {
         Work in progress...
       </Alert>
 
-      <Stack direction={{ xs: "column", md: "row" }} sx={{ mt: 2 }} gap={2}>
-        <Stack direction='column' sx={{ flex: 1, gap: 2 }}>
-          <GraphicsExampleWrapper>
-            <TypewriterEffect />
-          </GraphicsExampleWrapper>
-        </Stack>
+      <Stack
+        sx={{
+          mt: 2,
+          display: "grid",
+          gridTemplateColumns: {
+            xxs: "repeat(1, 1fr)",
+            md: "repeat(2, 1fr)",
+            xl: "repeat(3, 1fr)",
+          },
+        }}
+        gap={2}
+      >
+        <GraphicsExampleWrapper>
+          <TypewriterEffect />
+        </GraphicsExampleWrapper>
       </Stack>
     </>
   );

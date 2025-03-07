@@ -30,7 +30,7 @@ interface Props {
 
 const PageSideNav = ({ sx, links }: Props) => {
   return (
-    <Stack direction='column' sx={{ flex: { xs: "0 0 auto", md: "0 0 200px" }, ...sx }}>
+    <Stack direction='column' sx={{ flex: { xxs: "0 0 auto", md: "0 0 200px" }, ...sx }}>
       {links.map((link, index) => (
         <SideNavLink key={index} to={link.to} text={link.text} />
       ))}

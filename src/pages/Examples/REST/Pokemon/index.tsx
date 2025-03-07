@@ -12,7 +12,7 @@ const Pokemon = ({ name }: Props) => {
   return (
     <Stack
       sx={{
-        width: { xxs: "50%", xs: "30%", sm: "20%", md: "20%", lg: "10%" },
+        width: { xxs: "50%", xxs: "30%", sm: "20%", md: "20%", lg: "10%" },
         alignItems: "center",
       }}
       spacing={1}
