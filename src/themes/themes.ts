@@ -182,6 +182,7 @@ const baseOptions: ThemeOptions = {
           WebkitFontSmoothing: "antialiased",
           height: "100%",
           width: "100%",
+          scrollBehavior: "smooth",
 
           cursor: "url('/Normal select.cur'), auto",
         },
