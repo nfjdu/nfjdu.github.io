@@ -8,7 +8,8 @@ Title: iPhone 13 Pro
 */
 
 import * as THREE from "three";
-import React from "react";
+import React, { useRef } from "react";
+import { useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 
@@ -71,10 +72,22 @@ type GLTFResult = GLTF & {
 
 export function Model(props: JSX.IntrinsicElements["group"]) {
   const { nodes, materials } = useGLTF("/iphone_13_pro.glb") as GLTFResult;
+
+  const parentGroupRef = useRef<any>();
+
+  useFrame((state) => {
+    const t = state.clock.getElapsedTime();
+    if (parentGroupRef.current) {
+      // group.current.rotation.z = 0.02 - (1 + Math.sin(t / 1.5)) / 20;
+      parentGroupRef.current.rotation.x = 0;
+      parentGroupRef.current.rotation.y = t / 1.8;
+    }
+  });
+
   return (
-    <group {...props} dispose={null}>
-      <group scale={0.01}>
-        <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+    <group {...props} dispose={null} ref={parentGroupRef}>
+      <group scale={0.01} position={[0, -2, 0]} rotation={[0, 0, 0]}>
+        <group rotation={[Math.PI / 2, Math.PI, 0]} scale={500}>
           <mesh geometry={nodes.Frame001_Frame_0.geometry} material={materials.Frame} />
           <mesh geometry={nodes.Frame001_Port_0.geometry} material={materials.Port} />
           <mesh geometry={nodes.Frame001_Antenna_0.geometry} material={materials.Antenna} />
