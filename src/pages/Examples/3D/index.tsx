@@ -1,12 +1,11 @@
-import TypographyWithDivider from "../../../components/TypographyWithDivider";
-import { Alert, Stack } from "@mui/material";
+import { Alert, Stack, Typography } from "@mui/material";
 import { GraphicsExampleWrapper } from "../../../components/GraphicsExampleWrapper";
 import IphoneScene from "./Iphone3DModel/IphoneScene";
 
 const $3DPage = () => {
   return (
     <>
-      <TypographyWithDivider variant='h2'>3D</TypographyWithDivider>
+      <Typography variant='h2'>3D</Typography>
 
       <Alert variant='outlined' severity='info'>
         Work in progress...

@@ -1,5 +1,4 @@
-import TypographyWithDivider from "../../../components/TypographyWithDivider";
-import { Alert, Stack } from "@mui/material";
+import { Alert, Stack, Typography } from "@mui/material";
 import { GraphicsExampleWrapper } from "../../../components/GraphicsExampleWrapper";
 import TypewriterEffect from "./TypewriterEffect";
 import GradientTextEffect from "./GradientTextEffect";
@@ -8,7 +7,7 @@ import GlassmorphizmCube from "./GlassmorphizmCube";
 const CssPage = () => {
   return (
     <>
-      <TypographyWithDivider variant='h2'>CSS</TypographyWithDivider>
+      <Typography variant='h2'>CSS</Typography>
 
       <Alert variant='outlined' severity='info'>
         Work in progress...

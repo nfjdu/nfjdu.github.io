@@ -1,12 +1,11 @@
-import TypographyWithDivider from "../../../components/TypographyWithDivider";
-import { Alert, Stack } from "@mui/material";
+import { Alert, Stack, Typography } from "@mui/material";
 import { GraphicsExampleWrapper } from "../../../components/GraphicsExampleWrapper";
 import CharsMadeOfChars from "./CharsMadeOfChars";
 
 const $2DPage = () => {
   return (
     <>
-      <TypographyWithDivider variant='h2'>2D</TypographyWithDivider>
+      <Typography variant='h2'>2D</Typography>
 
       <Alert variant='outlined' severity='info'>
         Work in progress...
