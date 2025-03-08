@@ -81,7 +81,7 @@ const GlassmorphizmCube = () => {
             transition: "all 0.3s ease",
           }}
         >
-          Front
+          ⊂(◉‿◉)つ
         </Paper>
 
         {/* Back face */}
@@ -103,7 +103,7 @@ const GlassmorphizmCube = () => {
             transition: "all 0.3s ease",
           }}
         >
-          Back
+          (ㆆ _ ㆆ)
         </Paper>
 
         {/* Right face */}
@@ -125,7 +125,7 @@ const GlassmorphizmCube = () => {
             transition: "all 0.3s ease",
           }}
         >
-          Right
+          (✿◠‿◠)
         </Paper>
 
         {/* Left face */}
@@ -147,7 +147,7 @@ const GlassmorphizmCube = () => {
             transition: "all 0.3s ease",
           }}
         >
-          Left
+          (⌐■_■)
         </Paper>
 
         {/* Top face */}
@@ -169,7 +169,7 @@ const GlassmorphizmCube = () => {
             transition: "all 0.3s ease",
           }}
         >
-          Top
+          (｡◕‿‿◕｡)
         </Paper>
 
         {/* Bottom face */}
@@ -191,7 +191,7 @@ const GlassmorphizmCube = () => {
             transition: "all 0.3s ease",
           }}
         >
-          Bottom
+          (͡ ° ͜ʖ ͡ °)
         </Paper>
       </Box>
     </Box>

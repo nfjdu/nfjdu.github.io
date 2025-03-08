@@ -3,7 +3,7 @@ import { Alert, Stack } from "@mui/material";
 import { GraphicsExampleWrapper } from "../../../components/GraphicsExampleWrapper";
 import TypewriterEffect from "./TypewriterEffect";
 import GradientTextEffect from "./GradientTextEffect";
-import GlassmorphizmCube from "./Hexagon";
+import GlassmorphizmCube from "./GlassmorphizmCube";
 
 const CssPage = () => {
   return (
