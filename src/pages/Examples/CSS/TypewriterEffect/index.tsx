@@ -32,7 +32,6 @@ export function getNextPhraze(phraze: PHRAZES_ENUM) {
 }
 
 const TypewriterEffect = ({}: Props) => {
-  const doubleMountingRef = useRef<boolean>(false);
   const fnsRef = useRef<{ startCleanup: () => void; startWriting: () => void }>({
     startCleanup: () => {},
     startWriting: () => {},
@@ -59,12 +58,7 @@ const TypewriterEffect = ({}: Props) => {
   };
 
   useEffect(() => {
-    if (import.meta.env.DEV && !doubleMountingRef.current) {
-      doubleMountingRef.current = true;
-      fnsRef.current.startWriting();
-    } else if (import.meta.env.PROD) {
-      fnsRef.current.startWriting();
-    }
+    fnsRef.current.startWriting();
   }, []);
 
   return (
