@@ -3,6 +3,7 @@ import { GraphicsExampleWrapper } from "../../../components/GraphicsExampleWrapp
 import TypewriterEffect from "./TypewriterEffect";
 import GradientTextEffect from "./GradientTextEffect";
 import GlassmorphizmCube from "./GlassmorphizmCube";
+import TextScrambleEffect from "./TextScrambleEffect";
 
 const CssPage = () => {
   return (
@@ -35,6 +36,10 @@ const CssPage = () => {
 
         <GraphicsExampleWrapper>
           <GlassmorphizmCube />
+        </GraphicsExampleWrapper>
+
+        <GraphicsExampleWrapper>
+          <TextScrambleEffect />
         </GraphicsExampleWrapper>
       </Stack>
     </>
