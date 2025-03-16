@@ -18,7 +18,7 @@ const TextScrambleEffect: React.FC<TextScrambleEffectProps> = ({
 }) => {
   const textRef = useRef<HTMLElement>(null);
   const [displayText, setDisplayText] = useState<string>("");
-  const chars = "!<>-_\\/[]{}—=+*^?#________";
+  const chars = "!<>-_\\/[]{}—=+*^?#@$&_____";
   let frameRequest: number;
 
   const randomChar = (): string => chars[Math.floor(Math.random() * chars.length)];
