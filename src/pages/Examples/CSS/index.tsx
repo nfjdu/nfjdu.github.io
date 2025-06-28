@@ -27,7 +27,7 @@ const CssPage = () => {
         gap={2}
       >
         <GraphicsExampleWrapper>
-          <TypewriterEffect />
+          <TextScrambleEffect />
         </GraphicsExampleWrapper>
 
         <GraphicsExampleWrapper>
@@ -39,7 +39,7 @@ const CssPage = () => {
         </GraphicsExampleWrapper>
 
         <GraphicsExampleWrapper>
-          <TextScrambleEffect />
+          <TypewriterEffect />
         </GraphicsExampleWrapper>
       </Stack>
     </>
