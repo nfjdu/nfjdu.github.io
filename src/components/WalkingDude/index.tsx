@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
-import { Popper, Box } from "@mui/material";
+import { Popper, Box, useTheme } from "@mui/material";
 import { generateDudeTalkingText } from "./gpt";
 
 const walkingDudeWidth = 28;
@@ -24,6 +24,7 @@ export function getMaxAnimationFramesCount(animationType: AnimationType) {
 
 //todo: get rid of framer motion lib
 const WalkingDude = () => {
+  const theme = useTheme();
   const [currentAnimation, setCurrentAnimation] = useState<AnimationType>("walking");
   const [animationFrames, setAnimationFrames] = useState<Record<AnimationType, number>>({
     walking: 0,
@@ -102,6 +103,9 @@ const WalkingDude = () => {
           bottom: 0,
           right: right,
           scaleX: walkingDirection === "left" ? -1 : 1,
+          // Increase contrast in dark theme
+          filter:
+            theme.palette.mode === "light" ? "none" : "sepia(1) hue-rotate(270deg) contrast(1)",
         }}
       ></motion.div>
 
