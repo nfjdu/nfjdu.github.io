@@ -162,7 +162,7 @@ const ProjectsPage = () => {
         resource requirements and helped teams make informed decisions based on accurate estimates.
       </Typography>
 
-      <DashedDivider sx={{ mt: 1, mb: 3 }} />
+      <DashedDivider sx={{ mt: 8, mb: 8 }} />
 
       <Typography variant='caption'>
         This is just a small glimpse into the comercial projects I have worked on during my
