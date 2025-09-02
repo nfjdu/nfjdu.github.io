@@ -7,6 +7,7 @@ import { useAppDispatch } from "../../store";
 import { toggleTheme } from "../../store/settings/slice";
 import AppIcon from "../../components/AppIcon";
 import WalkingDude from "../../components/WalkingDude";
+import DevOnly from "../../components/DevOnlyRoute";
 
 const RootPage = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
@@ -96,28 +97,40 @@ const RootPage = () => {
           <NavLink to='/home' text='Home' onClick={() => setIsMenuOpened(false)} />
           <NavLink to='/projects' text='Projects' onClick={() => setIsMenuOpened(false)} />
           <NavLinksGroup title='Dev'>
-            <NavLink
-              to='/dev/styleguide'
-              text='Style&shy;guide'
-              onClick={() => setIsMenuOpened(false)}
-              typographyVariant='h2'
-              paddingMultiplier={1}
+            <DevOnly
+              element={
+                <NavLink
+                  to='/dev/styleguide'
+                  text='Style&shy;guide'
+                  onClick={() => setIsMenuOpened(false)}
+                  typographyVariant='h2'
+                  paddingMultiplier={1}
+                />
+              }
             />
             <NavLinksGroup title='Examples' typographyVariant='h2' paddingMultiplier={1}>
-              {/*<NavLink
-                typographyVariant='h3'
-                paddingMultiplier={2}
-                to='/dev/examples/rest'
-                text='REST'
-                onClick={() => setIsMenuOpened(false)}
+              <DevOnly
+                element={
+                  <NavLink
+                    typographyVariant='h3'
+                    paddingMultiplier={2}
+                    to='/dev/examples/rest'
+                    text='REST'
+                    onClick={() => setIsMenuOpened(false)}
+                  />
+                }
               />
-              <NavLink
-                typographyVariant='h3'
-                paddingMultiplier={2}
-                to='/dev/examples/browser'
-                text='Browser APIs'
-                onClick={() => setIsMenuOpened(false)}
-              />*/}
+              <DevOnly
+                element={
+                  <NavLink
+                    typographyVariant='h3'
+                    paddingMultiplier={2}
+                    to='/dev/examples/browser'
+                    text='Browser APIs'
+                    onClick={() => setIsMenuOpened(false)}
+                  />
+                }
+              />
               <NavLink
                 typographyVariant='h3'
                 paddingMultiplier={2}

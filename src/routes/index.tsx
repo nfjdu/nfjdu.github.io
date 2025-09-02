@@ -1,4 +1,4 @@
-import { Navigate } from "react-router-dom";
+import { Navigate, RouteObject } from "react-router-dom";
 import ErrorPage from "../pages/Error";
 import HomePage from "../pages/Home";
 import RootPage from "../pages/Root";
@@ -7,8 +7,6 @@ import ButtonsPage from "../pages/Styleguide/Buttons";
 import ColorsPage from "../pages/Styleguide/Colors";
 import IconsPage from "../pages/Styleguide/Icons";
 import TypographyPage from "../pages/Styleguide/Typography";
-import ProjectsPage from "../pages/Projects";
-import ContactsPage from "../pages/Contacts";
 import DividersPage from "../pages/Styleguide/Dividers";
 import TagsPage from "../pages/Styleguide/Tags";
 import DevPage from "../pages/Dev/Dev";
@@ -16,8 +14,14 @@ import ExamplesPage from "../pages/Examples";
 import $3DPage from "../pages/Examples/3D";
 import $2DPage from "../pages/Examples/2D";
 import CssPage from "../pages/Examples/CSS";
+import ProjectsPage from "../pages/Projects";
+import ContactsPage from "../pages/Contacts";
 
-export const routes = [
+import DevOnly from "../components/DevOnlyRoute";
+import RESTPage from "../pages/Examples/REST";
+import BrowserAPIsPage from "../pages/Examples/BrowserAPIs";
+
+export const routes: RouteObject[] = [
   {
     path: "/",
     element: <RootPage />,
@@ -30,10 +34,10 @@ export const routes = [
         path: "dev",
         element: <DevPage />,
         children: [
-          { index: true, element: <Navigate to='/dev/styleguide' /> },
+          { index: true, element: <Navigate to='/dev/examples' /> },
           {
             path: "styleguide",
-            element: <StyleguidePage />,
+            element: <DevOnly element={<StyleguidePage />} />,
             children: [
               { index: true, element: <Navigate to='/dev/styleguide/buttons' /> },
               { path: "buttons", element: <ButtonsPage /> },
@@ -49,8 +53,8 @@ export const routes = [
             element: <ExamplesPage />,
             children: [
               { index: true, element: <Navigate to='/dev/examples/2d' /> },
-              // { path: "rest", element: <RESTPage /> },
-              // { path: "browser", element: <BrowserAPIsPage /> },
+              { path: "rest", element: <DevOnly element={<RESTPage />} /> },
+              { path: "browser", element: <DevOnly element={<BrowserAPIsPage />} /> },
               {
                 path: "css",
                 element: <CssPage />,

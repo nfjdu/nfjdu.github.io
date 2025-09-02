@@ -1,4 +1,4 @@
-import { Pagination, Stack, Theme, Typography, useMediaQuery } from "@mui/material";
+import { Alert, Pagination, Stack, Theme, Typography, useMediaQuery } from "@mui/material";
 import { useGetPokemonsQuery } from "../../../api/pokemonApi";
 import TypographyWithDivider from "../../../components/TypographyWithDivider";
 import Pokemon from "./Pokemon";
@@ -13,14 +13,15 @@ const RESTPage = () => {
   return (
     <>
       <TypographyWithDivider variant='h2'>REST (using RTK Query)</TypographyWithDivider>
+      <Alert variant='outlined' severity='info'>
+        Work in progress...
+      </Alert>
 
       {isLoading ? (
         <Typography>Loading...</Typography>
       ) : (
         <Stack direction='row' flexWrap='wrap'>
-          {data?.results?.map((item: any) => (
-            <Pokemon key={item.name} name={item.name} />
-          ))}
+          {data?.results?.map((item: any) => <Pokemon key={item.name} name={item.name} />)}
         </Stack>
       )}
       <Pagination
