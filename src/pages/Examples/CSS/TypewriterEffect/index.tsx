@@ -1,5 +1,5 @@
 import { Stack } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import TypographyNoMargin from "../../../../components/TypographyNoMargin";
 
 interface Props {}
@@ -32,33 +32,29 @@ export function getNextPhraze(phraze: PHRAZES_ENUM) {
 }
 
 const TypewriterEffect = ({}: Props) => {
-  const fnsRef = useRef<{ startCleanup: () => void; startWriting: () => void }>({
-    startCleanup: () => {},
-    startWriting: () => {},
-  });
   const [currentPhraze, setCurrentPhraze] = useState(PHRAZES_ENUM.PHRAZE3);
   const [currentStep, setCurrentStep] = useState<ANIMATION_STATE_ENUM>(
     ANIMATION_STATE_ENUM.WRITING,
   );
 
-  fnsRef.current.startCleanup = () => {
-    setCurrentStep(ANIMATION_STATE_ENUM.CLEANUP);
-    setTimeout(() => {
-      fnsRef.current.startWriting();
-    }, 2000);
-  };
-
-  fnsRef.current.startWriting = () => {
-    setCurrentPhraze(getNextPhraze(currentPhraze));
+  const startWriting = useCallback((_currentPhraze: PHRAZES_ENUM) => {
+    setCurrentPhraze(_currentPhraze);
     setCurrentStep(ANIMATION_STATE_ENUM.WRITING);
 
     setTimeout(() => {
-      fnsRef.current.startCleanup();
+      startCleanup(getNextPhraze(_currentPhraze));
     }, 3000);
-  };
+  }, []);
+
+  const startCleanup = useCallback((_currentPhraze: PHRAZES_ENUM) => {
+    setCurrentStep(ANIMATION_STATE_ENUM.CLEANUP);
+    setTimeout(() => {
+      startWriting(_currentPhraze);
+    }, 2000);
+  }, []);
 
   useEffect(() => {
-    fnsRef.current.startWriting();
+    startWriting(PHRAZES_ENUM.PHRAZE1);
   }, []);
 
   return (
