@@ -28,7 +28,7 @@ const HomePage = () => {
         project in mind, or simply want to connect, don't hesitate to reach out.
       </Typography>
       <Typography variant='caption'>
-        P.S. This text was written without using AI
+        P.S. This text was not written using AI
         <br />
         P.S.2. But there is no assurance =)
       </Typography>
