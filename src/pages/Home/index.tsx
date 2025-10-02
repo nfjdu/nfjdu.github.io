@@ -7,17 +7,18 @@ const HomePage = () => {
       <TypographyWithDivider variant='h1'>Hi there!</TypographyWithDivider>
       <Typography>
         Welcome to my professional portfolio website, dedicated to showcasing my skills and
-        expertise as a Middle Frontend(React) Developer from Ukraine. I bring 6 years of valuable
-        commercial experience, honing my skills and delivering successful projects in the
-        ever-evolving tech industry.
+        expertise as a Full Stack Developer from Ukraine. I bring 6 years of valuable commercial
+        experience, honing my skills and delivering successful projects in the ever-evolving tech
+        industry.
       </Typography>
       <Typography>
-        Additionally, I possess a sufficient understanding of .NET Core and Express.js, allowing me
-        to leverage their power in developing robust web applications. Inspired by the elegance of
-        minimalism, I strive to create digital experiences that are both visually captivating and
-        functionally seamless. In this portfolio, you'll find a curated collection of my most
-        notable projects. By leveraging the latest tools and frameworks, I strive to deliver
-        innovative and cutting-edge solutions that drive your business forward.
+        While my main expertise is in frontend development, I possess a sufficient understanding of
+        .NET Core and Express.js, allowing me to leverage their power in developing robust web
+        applications. Inspired by the elegance of minimalism, I strive to create digital experiences
+        that are both visually captivating and functionally seamless. In this portfolio, you'll find
+        a curated collection of my most notable projects. By leveraging the latest tools and
+        frameworks, I strive to deliver innovative and cutting-edge solutions that drive your
+        business forward.
       </Typography>
       <Typography>
         Collaboration is at the heart of my work philosophy. I firmly believe that the best results
