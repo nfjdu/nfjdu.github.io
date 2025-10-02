@@ -7,7 +7,7 @@ const HomePage = () => {
       <TypographyWithDivider variant='h1'>Hi there!</TypographyWithDivider>
       <Typography>
         Welcome to my professional portfolio website, dedicated to showcasing my skills and
-        expertise as a Middle Frontend(React) Developer from Ukraine. I bring four years of valuable
+        expertise as a Middle Frontend(React) Developer from Ukraine. I bring 6 years of valuable
         commercial experience, honing my skills and delivering successful projects in the
         ever-evolving tech industry.
       </Typography>
