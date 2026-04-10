@@ -1,4 +1,4 @@
-import { Box, Typography, Stack, Card, CardContent, CardActionArea } from "@mui/material";
+import { Box, Typography, Card, CardContent, CardActionArea } from "@mui/material";
 import TypographyWithDivider from "../../components/TypographyWithDivider";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -61,44 +61,64 @@ const PlaygroundPage = () => {
         experimenting with different techniques.
       </Typography>
 
-      <Stack spacing={2}>
+      <Box
+        sx={{
+          display: "grid",
+          gridTemplateColumns: {
+            xxs: "1fr",
+            sm: "repeat(2, 1fr)",
+            lg: "repeat(3, 1fr)",
+          },
+          gap: 3,
+        }}
+      >
         {experiments.map((experiment, idx) => (
           <MotionCard
             key={experiment.path}
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, delay: idx * 0.05 }}
-            sx={{ maxWidth: 600 }}
+            sx={{
+              height: "100%",
+              background: (theme) =>
+                `linear-gradient(135deg, ${theme.palette.background.paper} 0%, ${theme.palette.action.hover} 100%)`,
+              border: (theme) => `1px solid ${theme.palette.divider}`,
+              transition: "all 0.3s ease",
+              "&:hover": {
+                transform: "translateY(-8px)",
+                boxShadow: (theme) => theme.shadows[8],
+              },
+            }}
           >
-            <CardActionArea onClick={() => navigate(experiment.path)}>
-              <CardContent>
-                <Stack direction='row' justifyContent='space-between' alignItems='center'>
-                  <Box>
-                    <Typography variant='h4' gutterBottom>
-                      {experiment.title}
-                    </Typography>
-                    <Typography variant='body2' color='text.secondary'>
-                      {experiment.description}
-                    </Typography>
-                  </Box>
-                  <Typography
-                    variant='caption'
-                    sx={{
-                      px: 1.5,
-                      py: 0.5,
-                      borderRadius: 1,
-                      bgcolor: "action.hover",
-                      whiteSpace: "nowrap",
-                    }}
-                  >
-                    {experiment.category}
-                  </Typography>
-                </Stack>
+            <CardActionArea
+              onClick={() => navigate(experiment.path)}
+              sx={{ height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch" }}
+            >
+              <CardContent sx={{ flexGrow: 1 }}>
+                <Typography
+                  variant='caption'
+                  sx={{
+                    px: 1.5,
+                    py: 0.5,
+                    borderRadius: 1,
+                    bgcolor: "action.selected",
+                    display: "inline-block",
+                    mb: 2,
+                  }}
+                >
+                  {experiment.category}
+                </Typography>
+                <Typography variant='h4' gutterBottom>
+                  {experiment.title}
+                </Typography>
+                <Typography variant='body2' color='text.secondary'>
+                  {experiment.description}
+                </Typography>
               </CardContent>
             </CardActionArea>
           </MotionCard>
         ))}
-      </Stack>
+      </Box>
     </MotionBox>
   );
 };
