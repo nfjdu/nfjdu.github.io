@@ -108,6 +108,7 @@ const RootPage = () => {
       >
         <List sx={{ py: { xxs: 12, sm: 14, xl: 18 }, px: { xxs: 1.5, sm: 14, xl: 18 } }}>
           <NavLink to='/home' text='Home' onClick={() => setIsMenuOpened(false)} />
+          <NavLink to='/skills' text='Skills' onClick={() => setIsMenuOpened(false)} />
           <NavLink to='/projects' text='Projects' onClick={() => setIsMenuOpened(false)} />
           <NavLinksGroup title='Dev'>
             <DevOnly

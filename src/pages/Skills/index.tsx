@@ -1,0 +1,69 @@
+import { Box, Typography, Chip, Stack } from "@mui/material";
+import TypographyWithDivider from "../../components/TypographyWithDivider";
+import { motion } from "framer-motion";
+
+const MotionBox = motion(Box);
+
+const skills = {
+  "Languages & Core": ["JavaScript", "TypeScript", "Node.js"],
+  "Frontend Frameworks & Libraries": [
+    "React",
+    "React Router",
+    "React Query",
+    "TanStack Query",
+  ],
+  "State Management": ["Redux", "Redux Toolkit", "Jotai", "Zustand"],
+  "UI & Styling": [
+    "Material UI",
+    "Styled Components",
+    "Tailwind CSS",
+    "SASS",
+    "SCSS",
+    "Figma",
+  ],
+  "Testing & Quality": ["Jest", "React Testing Library", "Storybook"],
+  "Backend & APIs": ["Express.js", "REST API", "tRPC", "Axios"],
+  "Real-time Communication": ["Socket.io", "WebSockets", "SignalR", "WebRTC"],
+  "Build Tools & Bundlers": ["Webpack", "Vite"],
+  "DevOps & Infrastructure": ["Docker", "Azure", "CI/CD", "Git"],
+  "Development Tools": ["Postman", "Sentry", "vim", "neovim", "Linux"],
+  "Authentication & Security": ["Auth0"],
+  "Other": ["OOP"],
+};
+
+const SkillsPage = () => {
+  return (
+    <MotionBox
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <TypographyWithDivider variant='h1'>Skills & Technologies</TypographyWithDivider>
+      <Typography sx={{ mb: 4 }}>
+        Throughout my 8+ years of professional experience, I've worked with a wide range of
+        technologies and tools. Here's a comprehensive overview of my technical skill set.
+      </Typography>
+
+      {Object.entries(skills).map(([category, items], idx) => (
+        <MotionBox
+          key={category}
+          sx={{ mb: 3 }}
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3, delay: idx * 0.05 }}
+        >
+          <Typography variant='h3' sx={{ mb: 1.5 }}>
+            {category}
+          </Typography>
+          <Stack direction='row' spacing={1} sx={{ flexWrap: "wrap", gap: 1 }}>
+            {items.map((skill) => (
+              <Chip key={skill} label={skill} variant='outlined' />
+            ))}
+          </Stack>
+        </MotionBox>
+      ))}
+    </MotionBox>
+  );
+};
+
+export default SkillsPage;

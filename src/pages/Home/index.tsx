@@ -1,14 +1,7 @@
-import { Typography, Box, Button, Stack, Chip } from "@mui/material";
+import { Typography, Box, Button } from "@mui/material";
 import TypographyWithDivider from "../../components/TypographyWithDivider";
 import { Download } from "@mui/icons-material";
 import { motion } from "framer-motion";
-
-const skills = {
-  Frontend: ["React", "TypeScript", "Redux", "MUI", "Framer Motion", "Three.js", "Vite"],
-  Backend: [".NET Core", "Node.js", "Express.js", "SignalR", "REST APIs"],
-  Tools: ["Git", "Docker", "Webpack", "ESLint", "Prettier"],
-  Other: ["WebRTC", "Real-time Communication", "Performance Optimization", "Architecture Design"],
-};
 
 const MotionBox = motion(Box);
 
@@ -41,30 +34,6 @@ const HomePage = () => {
         I believe in pragmatic engineering—choosing the right tool for the job, writing clean and
         testable code, and fostering collaboration through clear communication and knowledge sharing.
       </Typography>
-
-      <Box sx={{ mt: 4 }}>
-        <Typography variant='h2' sx={{ mb: 2 }}>
-          Skills & Technologies
-        </Typography>
-        {Object.entries(skills).map(([category, items], idx) => (
-          <MotionBox
-            key={category}
-            sx={{ mb: 2 }}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3, delay: idx * 0.1 }}
-          >
-            <Typography variant='subtitle1' sx={{ mb: 1, fontWeight: 600 }}>
-              {category}
-            </Typography>
-            <Stack direction='row' spacing={1} sx={{ flexWrap: "wrap", gap: 1 }}>
-              {items.map((skill) => (
-                <Chip key={skill} label={skill} size='small' />
-              ))}
-            </Stack>
-          </MotionBox>
-        ))}
-      </Box>
 
       <Box sx={{ mt: 3, display: "flex", gap: 2, flexWrap: "wrap" }}>
         <Button

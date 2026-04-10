@@ -6,6 +6,7 @@ import DevOnly from "../components/DevOnlyRoute";
 
 // Lazy load pages
 const HomePage = lazy(() => import("../pages/Home"));
+const SkillsPage = lazy(() => import("../pages/Skills"));
 const ProjectsPage = lazy(() => import("../pages/Projects"));
 const ContactsPage = lazy(() => import("../pages/Contacts"));
 const StyleguidePage = lazy(() => import("../pages/Styleguide"));
@@ -37,6 +38,7 @@ export const routes: RouteObject[] = [
     children: [
       { index: true, element: <Navigate to='/home' /> },
       { path: "home", element: withSuspense(HomePage) },
+      { path: "skills", element: withSuspense(SkillsPage) },
       { path: "projects", element: withSuspense(ProjectsPage) },
       {
         path: "dev",
