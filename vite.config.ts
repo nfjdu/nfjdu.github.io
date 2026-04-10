@@ -34,6 +34,13 @@ export default defineConfig({
           redux: ["redux", "react-redux", "@reduxjs/toolkit"],
         },
       },
+      onwarn(warning, warn) {
+        // Suppress eval warning from three-stdlib
+        if (warning.code === "EVAL" && warning.id?.includes("three-stdlib")) {
+          return;
+        }
+        warn(warning);
+      },
     },
     chunkSizeWarningLimit: 1000,
   },
