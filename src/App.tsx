@@ -6,6 +6,7 @@ import { routes } from "./routes";
 import CssBaseline from "@mui/material/CssBaseline";
 import { connect } from "react-redux";
 import { AppState } from "./store";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 const router = createBrowserRouter(routes);
 
@@ -16,10 +17,12 @@ function App({ theme = THEME.DARK }: Props) {
   const _theme = createCustomTheme(theme);
 
   return (
-    <ThemeProvider theme={_theme}>
-      <CssBaseline />
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <ErrorBoundary>
+      <ThemeProvider theme={_theme}>
+        <CssBaseline />
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 }
 

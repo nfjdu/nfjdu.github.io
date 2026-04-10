@@ -1,25 +1,33 @@
 import { Navigate, RouteObject } from "react-router-dom";
+import { lazy, Suspense } from "react";
 import ErrorPage from "../pages/Error";
-import HomePage from "../pages/Home";
 import RootPage from "../pages/Root";
-import StyleguidePage from "../pages/Styleguide";
-import ButtonsPage from "../pages/Styleguide/Buttons";
-import ColorsPage from "../pages/Styleguide/Colors";
-import IconsPage from "../pages/Styleguide/Icons";
-import TypographyPage from "../pages/Styleguide/Typography";
-import DividersPage from "../pages/Styleguide/Dividers";
-import TagsPage from "../pages/Styleguide/Tags";
-import DevPage from "../pages/Dev/Dev";
-import ExamplesPage from "../pages/Examples";
-import $3DPage from "../pages/Examples/3D";
-import $2DPage from "../pages/Examples/2D";
-import CssPage from "../pages/Examples/CSS";
-import ProjectsPage from "../pages/Projects";
-import ContactsPage from "../pages/Contacts";
-
 import DevOnly from "../components/DevOnlyRoute";
-import RESTPage from "../pages/Examples/REST";
-import BrowserAPIsPage from "../pages/Examples/BrowserAPIs";
+
+// Lazy load pages
+const HomePage = lazy(() => import("../pages/Home"));
+const ProjectsPage = lazy(() => import("../pages/Projects"));
+const ContactsPage = lazy(() => import("../pages/Contacts"));
+const StyleguidePage = lazy(() => import("../pages/Styleguide"));
+const ButtonsPage = lazy(() => import("../pages/Styleguide/Buttons"));
+const ColorsPage = lazy(() => import("../pages/Styleguide/Colors"));
+const IconsPage = lazy(() => import("../pages/Styleguide/Icons"));
+const TypographyPage = lazy(() => import("../pages/Styleguide/Typography"));
+const DividersPage = lazy(() => import("../pages/Styleguide/Dividers"));
+const TagsPage = lazy(() => import("../pages/Styleguide/Tags"));
+const DevPage = lazy(() => import("../pages/Dev/Dev"));
+const ExamplesPage = lazy(() => import("../pages/Examples"));
+const $3DPage = lazy(() => import("../pages/Examples/3D"));
+const $2DPage = lazy(() => import("../pages/Examples/2D"));
+const CssPage = lazy(() => import("../pages/Examples/CSS"));
+const RESTPage = lazy(() => import("../pages/Examples/REST"));
+const BrowserAPIsPage = lazy(() => import("../pages/Examples/BrowserAPIs"));
+
+const withSuspense = (Component: React.LazyExoticComponent<() => JSX.Element>) => (
+  <Suspense fallback={<div />}>
+    <Component />
+  </Suspense>
+);
 
 export const routes: RouteObject[] = [
   {
@@ -28,50 +36,41 @@ export const routes: RouteObject[] = [
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Navigate to='/home' /> },
-      { path: "home", element: <HomePage /> },
-      { path: "projects", element: <ProjectsPage /> },
+      { path: "home", element: withSuspense(HomePage) },
+      { path: "projects", element: withSuspense(ProjectsPage) },
       {
         path: "dev",
-        element: <DevPage />,
+        element: withSuspense(DevPage),
         children: [
           { index: true, element: <Navigate to='/dev/examples' /> },
           {
             path: "styleguide",
-            element: <DevOnly element={<StyleguidePage />} />,
+            element: <DevOnly element={withSuspense(StyleguidePage)} />,
             children: [
               { index: true, element: <Navigate to='/dev/styleguide/buttons' /> },
-              { path: "buttons", element: <ButtonsPage /> },
-              { path: "colors", element: <ColorsPage /> },
-              { path: "dividers", element: <DividersPage /> },
-              { path: "icons", element: <IconsPage /> },
-              { path: "tags", element: <TagsPage /> },
-              { path: "typography", element: <TypographyPage /> },
+              { path: "buttons", element: withSuspense(ButtonsPage) },
+              { path: "colors", element: withSuspense(ColorsPage) },
+              { path: "dividers", element: withSuspense(DividersPage) },
+              { path: "icons", element: withSuspense(IconsPage) },
+              { path: "tags", element: withSuspense(TagsPage) },
+              { path: "typography", element: withSuspense(TypographyPage) },
             ],
           },
           {
             path: "examples",
-            element: <ExamplesPage />,
+            element: withSuspense(ExamplesPage),
             children: [
               { index: true, element: <Navigate to='/dev/examples/2d' /> },
-              { path: "rest", element: <DevOnly element={<RESTPage />} /> },
-              { path: "browser", element: <DevOnly element={<BrowserAPIsPage />} /> },
-              {
-                path: "css",
-                element: <CssPage />,
-              },
-              {
-                path: "2d",
-                element: <$2DPage />,
-              },
-              {
-                path: "3d",
-                element: <$3DPage />,
-              },
+              { path: "rest", element: <DevOnly element={withSuspense(RESTPage)} /> },
+              { path: "browser", element: <DevOnly element={withSuspense(BrowserAPIsPage)} /> },
+              { path: "css", element: withSuspense(CssPage) },
+              { path: "2d", element: withSuspense($2DPage) },
+              { path: "3d", element: withSuspense($3DPage) },
             ],
           },
         ],
       },
-      { path: "contacts", element: <ContactsPage /> },
+      { path: "contacts", element: withSuspense(ContactsPage) },
     ],
   },
 ];

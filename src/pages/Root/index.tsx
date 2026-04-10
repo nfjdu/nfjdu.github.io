@@ -56,6 +56,7 @@ const RootPage = () => {
             mr: 3.3,
           }}
           onClick={() => setIsMenuOpened(!isMenuOpened)}
+          aria-label={isMenuOpened ? "Close menu" : "Open menu"}
         >
           <AppIcon icon='menu' />
         </IconButton>
@@ -66,19 +67,31 @@ const RootPage = () => {
           LinkComponent={"a"}
           target='_blank'
           href='https://www.linkedin.com/in/vlad-mosienko-766910186/'
+          aria-label='LinkedIn profile'
         >
           <AppIcon icon='linkedin' />
         </IconButton>
-        <IconButton LinkComponent={"a"} target='_blank' href='https://github.com/nfjdu'>
+        <IconButton
+          LinkComponent={"a"}
+          target='_blank'
+          href='https://github.com/nfjdu'
+          aria-label='GitHub profile'
+        >
           <AppIcon icon='github' />
         </IconButton>
-        <IconButton sx={{ ml: "auto" }} onClick={() => dispatch(toggleTheme())}>
+        <IconButton
+          sx={{ ml: "auto" }}
+          onClick={() => dispatch(toggleTheme())}
+          aria-label='Toggle theme'
+        >
           <AppIcon icon='theme' />
         </IconButton>
       </Box>
 
       <Box
-        component='div'
+        component='nav'
+        role='navigation'
+        aria-label='Main navigation'
         sx={{
           position: "fixed",
           top: 0,
@@ -159,7 +172,9 @@ const RootPage = () => {
         </List>
       </Box>
 
-      <Outlet />
+      <Box component='main' role='main'>
+        <Outlet />
+      </Box>
     </Box>
   );
 };

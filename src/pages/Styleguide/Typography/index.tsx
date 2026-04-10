@@ -30,28 +30,6 @@ const TypographyPage = () => {
         incididunt ut labore et dolore magna aliqua.
       </Typography>
 
-      <TypographyWithDivider variant='h3'>Typography with no margin</TypographyWithDivider>
-      <TypographyNoMargin variant='h1'>Heading 1</TypographyNoMargin>
-      <TypographyNoMargin variant='h2'>Heading 2</TypographyNoMargin>
-      <TypographyNoMargin variant='h3'>Heading 3</TypographyNoMargin>
-      <TypographyNoMargin variant='h4'>Heading 4</TypographyNoMargin>
-      <TypographyNoMargin variant='h5'>Heading 5</TypographyNoMargin>
-      <TypographyNoMargin variant='h6'>Heading 6</TypographyNoMargin>
-      <TypographyNoMargin variant='subtitle1'>Subtitle 1</TypographyNoMargin>
-      <TypographyNoMargin variant='body1'>
-        Body1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua.
-      </TypographyNoMargin>
-      <TypographyNoMargin variant='subtitle2'>Subtitle 2</TypographyNoMargin>
-      <TypographyNoMargin variant='body2'>
-        Body2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua.
-      </TypographyNoMargin>
-      <TypographyNoMargin variant='caption'>
-        Caption. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua.
-      </TypographyNoMargin>
-
       <TypographyWithDivider variant='h3'>Typography with divider</TypographyWithDivider>
       <TypographyWithDivider variant='h1' sx={{ width: "fit-content" }}>
         Heading 1

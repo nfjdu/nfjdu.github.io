@@ -1,38 +1,42 @@
-import { Typography } from "@mui/material";
+import { Typography, Box, Button } from "@mui/material";
 import TypographyWithDivider from "../../components/TypographyWithDivider";
+import { Download } from "@mui/icons-material";
 
 const HomePage = () => {
   return (
     <>
       <TypographyWithDivider variant='h1'>Hi there!</TypographyWithDivider>
       <Typography>
-        Welcome to my professional portfolio website, dedicated to showcasing my skills and
-        expertise as a Full Stack Developer from Ukraine. I bring 6 years of valuable commercial
-        experience, honing my skills and delivering successful projects in the ever-evolving tech
-        industry.
+        I'm a Senior Full Stack Developer from Ukraine with 8+ years of commercial experience
+        building scalable, high-performance web applications. I specialize in architecting frontend
+        systems, leading technical initiatives, and delivering solutions that drive measurable
+        business impact.
       </Typography>
       <Typography>
-        While my main expertise is in frontend development, I possess a sufficient understanding of
-        .NET Core and Express.js, allowing me to leverage their power in developing robust web
-        applications. Inspired by the elegance of minimalism, I strive to create digital experiences
-        that are both visually captivating and functionally seamless. In this portfolio, you'll find
-        a curated collection of my most notable projects. By leveraging the latest tools and
-        frameworks, I strive to deliver innovative and cutting-edge solutions that drive your
-        business forward.
+        My expertise centers on modern frontend development with React, TypeScript, and state
+        management solutions, complemented by solid backend knowledge in .NET Core and Node.js. I've
+        led architecture decisions for enterprise applications, mentored development teams, and
+        consistently delivered projects that balance technical excellence with user experience.
       </Typography>
       <Typography>
-        Collaboration is at the heart of my work philosophy. I firmly believe that the best results
-        are achieved through open communication, teamwork, and a shared passion for innovation.
+        Throughout my career, I've worked on complex systems including fleet management platforms,
+        real-time video communication tools, and internal enterprise applications. I focus on code
+        quality, performance optimization, and building maintainable solutions that scale.
       </Typography>
       <Typography>
-        Thank you for visiting my portfolio website. If you're interested in collaborating, have a
-        project in mind, or simply want to connect, don't hesitate to reach out.
+        I believe in pragmatic engineering—choosing the right tool for the job, writing clean and
+        testable code, and fostering collaboration through clear communication and knowledge sharing.
       </Typography>
-      <Typography variant='caption'>
-        P.S. This text was not written using AI
-        <br />
-        P.S.2. But there is no assurance =)
-      </Typography>
+      <Box sx={{ mt: 3, display: "flex", gap: 2, flexWrap: "wrap" }}>
+        <Button
+          variant='contained'
+          startIcon={<Download />}
+          href='/resume.pdf'
+          download='Vlad_Mosienko_Resume.pdf'
+        >
+          Download Resume
+        </Button>
+      </Box>
     </>
   );
 };
