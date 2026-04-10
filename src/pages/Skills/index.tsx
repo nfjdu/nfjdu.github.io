@@ -16,7 +16,7 @@ const skills = {
   "DevOps & Infrastructure": ["Azure", "Docker", "CI/CD", "Git"],
   "Development Tools": ["neovim", "AI Agents", "Cursor", "Claude"],
   "Authentication & Security": ["Auth0"],
-  Other: ["OOP"],
+  "Principles & Practices": ["OOP", "SOLID", "DRY", "KISS", "YAGNI"],
 };
 
 const SkillsPage = () => {
