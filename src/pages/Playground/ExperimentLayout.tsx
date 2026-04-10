@@ -14,7 +14,8 @@ const ExperimentLayout = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       sx={{
-        minHeight: "100vh",
+        height: "100%",
+        width: "100%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -25,10 +26,10 @@ const ExperimentLayout = () => {
       <IconButton
         onClick={() => navigate("/playground")}
         sx={{
-          position: "fixed",
-          top: 80,
-          left: 20,
-          zIndex: 1000,
+          position: "absolute",
+          top: 0,
+          left: 0,
+          zIndex: 1,
         }}
         aria-label='Back to playground'
       >

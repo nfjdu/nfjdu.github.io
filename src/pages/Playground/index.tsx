@@ -32,10 +32,10 @@ const experiments = [
     category: "CSS/3D",
   },
   {
-    title: "ASCII Art Generator",
-    description: "Convert text into ASCII art characters",
+    title: "Characters Made of Characters",
+    description: "Animated letters forming larger letters using Three.js",
     path: "/playground/ascii-art",
-    category: "Canvas/2D",
+    category: "Three.js/Animation",
   },
   {
     title: "iPhone 3D Model",

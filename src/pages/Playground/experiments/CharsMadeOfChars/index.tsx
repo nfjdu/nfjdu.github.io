@@ -178,8 +178,9 @@ function CustomScene1() {
 
   return (
     <>
-      <Stack direction='row' sx={{ position: "absolute", top: 0, zIndex: 1, p: 0.5 }}>
+      <Stack direction='row' sx={{ position: "absolute", top: 0, zIndex: 1 }}>
         <Button
+          size='large'
           sx={{ mr: 1 }}
           onClick={() => {
             setCurrentFormType(FORM_TYPES.RANDOM);
