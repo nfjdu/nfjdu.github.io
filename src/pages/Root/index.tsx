@@ -2,12 +2,11 @@ import { Box, IconButton, List } from "@mui/material";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import NavLink from "../../components/NavLink";
-import NavLinksGroup from "../../components/NavLinksGroup";
 import { useAppDispatch } from "../../store";
 import { toggleTheme } from "../../store/settings/slice";
 import AppIcon from "../../components/AppIcon";
 import WalkingDude from "../../components/WalkingDude";
-import DevOnly from "../../components/DevOnlyRoute";
+import DashedDivider from "../../components/DashedDivider";
 
 const RootPage = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
@@ -110,66 +109,11 @@ const RootPage = () => {
           <NavLink to='/home' text='Home' onClick={() => setIsMenuOpened(false)} />
           <NavLink to='/skills' text='Skills' onClick={() => setIsMenuOpened(false)} />
           <NavLink to='/projects' text='Projects' onClick={() => setIsMenuOpened(false)} />
-          <NavLinksGroup title='Dev'>
-            <DevOnly
-              element={
-                <NavLink
-                  to='/dev/styleguide'
-                  text='Style&shy;guide'
-                  onClick={() => setIsMenuOpened(false)}
-                  typographyVariant='h2'
-                  paddingMultiplier={1}
-                />
-              }
-            />
-            <NavLinksGroup title='Examples' typographyVariant='h2' paddingMultiplier={1}>
-              <DevOnly
-                element={
-                  <NavLink
-                    typographyVariant='h3'
-                    paddingMultiplier={2}
-                    to='/dev/examples/rest'
-                    text='REST'
-                    onClick={() => setIsMenuOpened(false)}
-                  />
-                }
-              />
-              <DevOnly
-                element={
-                  <NavLink
-                    typographyVariant='h3'
-                    paddingMultiplier={2}
-                    to='/dev/examples/browser'
-                    text='Browser APIs'
-                    onClick={() => setIsMenuOpened(false)}
-                  />
-                }
-              />
-              <NavLink
-                typographyVariant='h3'
-                paddingMultiplier={2}
-                to='/dev/examples/css'
-                text='CSS'
-                onClick={() => setIsMenuOpened(false)}
-              />
-              <NavLink
-                typographyVariant='h3'
-                paddingMultiplier={2}
-                to='/dev/examples/2d'
-                text='2D'
-                onClick={() => setIsMenuOpened(false)}
-              />
-              <NavLink
-                typographyVariant='h3'
-                paddingMultiplier={2}
-                to='/dev/examples/3d'
-                text='3D'
-                onClick={() => setIsMenuOpened(false)}
-              />
-            </NavLinksGroup>
-          </NavLinksGroup>
-
           <NavLink to='/contacts' text='Contacts' onClick={() => setIsMenuOpened(false)} />
+          
+          <DashedDivider sx={{ my: 2 }} />
+          
+          <NavLink to='/playground' text='Playground' onClick={() => setIsMenuOpened(false)} />
         </List>
       </Box>
 
