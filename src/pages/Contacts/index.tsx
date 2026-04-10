@@ -19,9 +19,6 @@ const ContactsPage = () => {
       </Typography>
 
       <Box sx={{ mb: 4 }}>
-        <Typography variant='h3' sx={{ mb: 2 }}>
-          Contact Methods
-        </Typography>
         <Stack spacing={2}>
           <Stack direction='row' spacing={2} alignItems='center'>
             <Button
