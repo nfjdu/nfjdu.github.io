@@ -299,7 +299,7 @@ const baseOptions: ThemeOptions = {
     },
     MuiAlert: {
       styleOverrides: {
-        root: ({ theme }) => ({
+        root: () => ({
           fontWeight: "600",
           borderStyle: "dashed",
           borderWidth: "2px",

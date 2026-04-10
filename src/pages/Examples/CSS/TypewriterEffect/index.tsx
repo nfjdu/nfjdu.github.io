@@ -1,5 +1,5 @@
 import { Stack } from "@mui/material";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import TypographyNoMargin from "../../../../components/TypographyNoMargin";
 
 interface Props {}

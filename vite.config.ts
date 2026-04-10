@@ -24,4 +24,17 @@ export default defineConfig({
       },
     }),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom", "react-router-dom"],
+          mui: ["@mui/material", "@mui/icons-material"],
+          three: ["three", "@react-three/fiber", "@react-three/drei"],
+          redux: ["redux", "react-redux", "@reduxjs/toolkit"],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+  },
 });

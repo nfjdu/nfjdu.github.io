@@ -1,6 +1,5 @@
 import { Typography } from "@mui/material";
 import TypographyWithDivider from "../../../components/TypographyWithDivider";
-import TypographyNoMargin from "../../../components/TypographyNoMargin";
 import TypographyNoMarginWithDivider from "../../../components/TypographyNoMarginWithDivider";
 
 const TypographyPage = () => {
