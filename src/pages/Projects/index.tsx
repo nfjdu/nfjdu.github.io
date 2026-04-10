@@ -65,11 +65,11 @@ const ProjectsPage = () => {
         Redux, and SignalR were used.
       </Typography>
       <ProjectImage src='/nexus-screenshot1.png' alt='Seequre' />
-      <Typography variant='caption' sx={{ textAlign: "center" }}>
+      <Typography variant='caption' sx={{ textAlign: "center", display: "block", mt: 1, mb: 3 }}>
         Picture 1. Screenshot of NexusFleet №1
       </Typography>
       <ProjectImage src='/nexus-screenshot2.png' alt='Seequre' />
-      <Typography variant='caption' sx={{ textAlign: "center" }}>
+      <Typography variant='caption' sx={{ textAlign: "center", display: "block", mt: 1, mb: 3 }}>
         Picture 2. Screenshot of NexusFleet №2
       </Typography>
 
@@ -99,7 +99,7 @@ const ProjectsPage = () => {
         enhancing the overall usability and productivity of the application.
       </Typography>
       <ProjectImage src='/ald-screenshot.png' alt='Drivalia' />
-      <Typography variant='caption' sx={{ textAlign: "center" }}>
+      <Typography variant='caption' sx={{ textAlign: "center", display: "block", mt: 1, mb: 3 }}>
         Picture 1. Very informative screenshot of Drivalia internal tool application =)
       </Typography>
 
@@ -135,11 +135,11 @@ const ProjectsPage = () => {
         were created.
       </Typography>
       <ProjectImage src='/seequre-screenshot2.jpg' alt='Seequre' />
-      <Typography variant='caption' sx={{ textAlign: "center" }}>
+      <Typography variant='caption' sx={{ textAlign: "center", display: "block", mt: 1, mb: 3 }}>
         Picture 1. Screenshot of Seequre №1
       </Typography>
       <ProjectImage src='/seequre-screenshot.png' alt='Seequre' />
-      <Typography variant='caption' sx={{ textAlign: "center" }}>
+      <Typography variant='caption' sx={{ textAlign: "center", display: "block", mt: 1, mb: 3 }}>
         Picture 2. Screenshot of Seequre №2
       </Typography>
 
