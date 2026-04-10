@@ -23,7 +23,7 @@ const ContactsPage = () => {
           Contact Methods
         </Typography>
         <Stack spacing={2}>
-          <Box>
+          <Stack direction='row' spacing={2} alignItems='center'>
             <Button
               variant='outlined'
               size='large'
@@ -35,12 +35,12 @@ const ContactsPage = () => {
             >
               LinkedIn
             </Button>
-            <Typography variant='caption' sx={{ display: "block", mt: 0.5, ml: 1 }}>
+            <Typography variant='body2' color='text.secondary'>
               Best for professional inquiries
             </Typography>
-          </Box>
+          </Stack>
 
-          <Box>
+          <Stack direction='row' spacing={2} alignItems='center'>
             <Button
               variant='outlined'
               size='large'
@@ -51,12 +51,12 @@ const ContactsPage = () => {
             >
               Email
             </Button>
-            <Typography variant='caption' sx={{ display: "block", mt: 0.5, ml: 1 }}>
+            <Typography variant='body2' color='text.secondary'>
               mosienko20133@gmail.com
             </Typography>
-          </Box>
+          </Stack>
 
-          <Box>
+          <Stack direction='row' spacing={2} alignItems='center'>
             <Button
               variant='outlined'
               size='large'
@@ -68,10 +68,10 @@ const ContactsPage = () => {
             >
               GitHub
             </Button>
-            <Typography variant='caption' sx={{ display: "block", mt: 0.5, ml: 1 }}>
+            <Typography variant='body2' color='text.secondary'>
               Check out my open source work
             </Typography>
-          </Box>
+          </Stack>
         </Stack>
       </Box>
 
