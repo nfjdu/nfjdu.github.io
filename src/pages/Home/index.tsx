@@ -39,7 +39,6 @@ const HomePage = () => {
       <Box sx={{ mt: 3, display: "flex", gap: 2, flexWrap: "wrap" }}>
         <Button
           variant='contained'
-          size='large'
           startIcon={<Download />}
           href='/Vlad_Mosienko_CV.pdf'
           download='Vlad_Mosienko_CV.pdf'

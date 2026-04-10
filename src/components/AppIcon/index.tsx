@@ -5,6 +5,9 @@ import ThemeIcon from "@mui/icons-material/Brightness6";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import EmailIcon from "@mui/icons-material/Email";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import PublicIcon from "@mui/icons-material/Public";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { SvgIconProps } from "@mui/material";
 
 const iconsMap = {
@@ -15,6 +18,9 @@ const iconsMap = {
   email: EmailIcon,
   "expand-less": ExpandLessIcon,
   "expand-more": ExpandMoreIcon,
+  location: LocationOnIcon,
+  globe: PublicIcon,
+  time: AccessTimeIcon,
 };
 
 interface Props extends SvgIconProps {

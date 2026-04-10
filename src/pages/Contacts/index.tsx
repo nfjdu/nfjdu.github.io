@@ -26,7 +26,6 @@ const ContactsPage = () => {
           <Stack direction='row' spacing={2} alignItems='center'>
             <Button
               variant='outlined'
-              size='large'
               LinkComponent='a'
               target='_blank'
               href='https://www.linkedin.com/in/vlad-mosienko-766910186/'
@@ -43,7 +42,6 @@ const ContactsPage = () => {
           <Stack direction='row' spacing={2} alignItems='center'>
             <Button
               variant='outlined'
-              size='large'
               LinkComponent='a'
               target='_blank'
               href='https://github.com/nfjdu'
@@ -60,7 +58,6 @@ const ContactsPage = () => {
           <Stack direction='row' spacing={2} alignItems='center'>
             <Button
               variant='outlined'
-              size='large'
               LinkComponent='a'
               href='mailto:mosienko20133@gmail.com'
               startIcon={<AppIcon icon='email' />}
@@ -79,9 +76,20 @@ const ContactsPage = () => {
         <Typography variant='h3' sx={{ mb: 2 }}>
           Location & Availability
         </Typography>
-        <Typography>📍 Based in Ukraine</Typography>
-        <Typography>🌍 Open to remote opportunities worldwide</Typography>
-        <Typography>⏰ Timezone: EET (UTC+2/UTC+3)</Typography>
+        <Stack spacing={1}>
+          <Stack direction='row' spacing={1} alignItems='center'>
+            <AppIcon icon='location' fontSize='small' />
+            <Typography>Based in Ukraine</Typography>
+          </Stack>
+          <Stack direction='row' spacing={1} alignItems='center'>
+            <AppIcon icon='globe' fontSize='small' />
+            <Typography>Open to remote opportunities worldwide</Typography>
+          </Stack>
+          <Stack direction='row' spacing={1} alignItems='center'>
+            <AppIcon icon='time' fontSize='small' />
+            <Typography>Timezone: EET (UTC+2/UTC+3)</Typography>
+          </Stack>
+        </Stack>
       </Box>
     </MotionBox>
   );
