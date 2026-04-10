@@ -1,0 +1,1 @@
+import{j as r,T as o,D as m}from"./mui-ChtHYpiI.js";const d=({variant:s="h1",dividerVariant:t="dashed",children:i,...e})=>r.jsxs(o,{variant:s,...e,sx:{mb:0,display:"flex",flexDirection:"column",...e.sx},children:[i,r.jsx(m,{sx:{borderBottomWidth:"0.08em",borderStyle:t,mt:"0.1em",mb:"0.2em"}})]});export{d as T};
