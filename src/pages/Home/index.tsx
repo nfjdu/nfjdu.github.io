@@ -40,8 +40,8 @@ const HomePage = () => {
         <Button
           variant='contained'
           startIcon={<Download />}
-          href='/Vlad_Mosienko_CV.pdf'
-          download='Vlad_Mosienko_CV.pdf'
+          href='/vlad-mosienko-cv.pdf'
+          download='vlad-mosienko-cv.pdf'
           component={motion.a}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}

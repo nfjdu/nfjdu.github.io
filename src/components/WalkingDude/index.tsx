@@ -83,8 +83,8 @@ const WalkingDude = () => {
 
   const walkingDudeImg = new Image();
   const idleDudeImg = new Image();
-  walkingDudeImg.src = "/DudeWalking.png";
-  idleDudeImg.src = "/DudeLookingUp.png";
+  walkingDudeImg.src = "/dude-walking.png";
+  idleDudeImg.src = "/dude-looking-up.png";
 
   return (
     <>
@@ -92,7 +92,7 @@ const WalkingDude = () => {
         onClick={handleClick}
         style={{
           zIndex: 2,
-          cursor: "url('/Link select.cur'), auto",
+          cursor: "url('/link-select.cur'), auto",
           width: `${walkingDudeWidth}px`,
           minHeight: `${isWalking ? walkingDudeHeight : idleDudeHeight}px`,
           backgroundRepeat: "no-repeat",

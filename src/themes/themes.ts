@@ -184,7 +184,7 @@ const baseOptions: ThemeOptions = {
           width: "100%",
           scrollBehavior: "smooth",
 
-          cursor: "url('/Normal select.cur'), auto",
+          cursor: "url('/normal-select.cur'), auto",
         },
         body: {
           height: "100%",
@@ -203,7 +203,7 @@ const baseOptions: ThemeOptions = {
       },
       styleOverrides: {
         root: {
-          cursor: "url('/Link select.cur'), pointer",
+          cursor: "url('/link-select.cur'), pointer",
         },
       },
     },
@@ -278,14 +278,14 @@ const baseOptions: ThemeOptions = {
       styleOverrides: {
         root: ({ theme }) => ({
           textDecorationColor: theme.palette.text.primary,
-          cursor: "url('/Link select.cur'), auto",
+          cursor: "url('/link-select.cur'), auto",
         }),
       },
     },
     MuiChip: {
       styleOverrides: {
         root: ({ theme }) => ({
-          cursor: "url('/Normal select.cur'), auto",
+          cursor: "url('/normal-select.cur'), auto",
           color: theme.palette.primary.main,
           background: theme.palette.background.paper,
           border: `1px dashed ${theme.palette.primary.main}`,
