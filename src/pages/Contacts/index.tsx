@@ -31,28 +31,12 @@ const ContactsPage = () => {
               target='_blank'
               href='https://www.linkedin.com/in/vlad-mosienko-766910186/'
               startIcon={<AppIcon icon='linkedin' />}
-              sx={{ minWidth: 200 }}
+              sx={{ minWidth: 150 }}
             >
               LinkedIn
             </Button>
             <Typography variant='body2' color='text.secondary'>
-              Best for professional inquiries
-            </Typography>
-          </Stack>
-
-          <Stack direction='row' spacing={2} alignItems='center'>
-            <Button
-              variant='outlined'
-              size='large'
-              LinkComponent='a'
-              href='mailto:mosienko20133@gmail.com'
-              startIcon={<AppIcon icon='email' />}
-              sx={{ minWidth: 200 }}
-            >
-              Email
-            </Button>
-            <Typography variant='body2' color='text.secondary'>
-              mosienko20133@gmail.com
+              {"-> Best for professional inquiries"}
             </Typography>
           </Stack>
 
@@ -64,12 +48,28 @@ const ContactsPage = () => {
               target='_blank'
               href='https://github.com/nfjdu'
               startIcon={<AppIcon icon='github' />}
-              sx={{ minWidth: 200 }}
+              sx={{ minWidth: 150 }}
             >
               GitHub
             </Button>
             <Typography variant='body2' color='text.secondary'>
-              Check out my open source work
+              {"-> Check out my open source work"}
+            </Typography>
+          </Stack>
+
+          <Stack direction='row' spacing={2} alignItems='center'>
+            <Button
+              variant='outlined'
+              size='large'
+              LinkComponent='a'
+              href='mailto:mosienko20133@gmail.com'
+              startIcon={<AppIcon icon='email' />}
+              sx={{ minWidth: 150 }}
+            >
+              Email
+            </Button>
+            <Typography variant='body2' color='text.secondary'>
+              {"-> mosienko20133@gmail.com"}
             </Typography>
           </Stack>
         </Stack>

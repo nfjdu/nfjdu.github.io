@@ -40,13 +40,13 @@ const HomePage = () => {
         <Button
           variant='contained'
           startIcon={<Download />}
-          href='/resume.pdf'
-          download='Vlad_Mosienko_Resume.pdf'
+          href='/Vlad_Mosienko_CV.pdf'
+          download='Vlad_Mosienko_CV.pdf'
           component={motion.a}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Download Resume
+          Download resume
         </Button>
       </Box>
     </MotionBox>
