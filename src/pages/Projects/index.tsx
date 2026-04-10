@@ -1,9 +1,12 @@
-import { Stack, Link, Typography } from "@mui/material";
+import { Stack, Link, Typography, Box } from "@mui/material";
 import TypographyWithDivider from "../../components/TypographyWithDivider";
 import DashedDivider from "../../components/DashedDivider";
 import ProjectImage from "../../components/ProjectImage";
 import TypographyNoMargin from "../../components/TypographyNoMargin";
 import Tag from "../../components/Tag";
+import { motion } from "framer-motion";
+
+const MotionBox = motion(Box);
 
 interface ProjectHeaderProps {
   title: string;
@@ -32,7 +35,11 @@ const ProjectHeader = ({ title, dates, tags }: ProjectHeaderProps) => {
 
 const ProjectsPage = () => {
   return (
-    <>
+    <MotionBox
+      initial={{ opacity: 0, x: 50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <TypographyWithDivider variant='h1'>Projects</TypographyWithDivider>
 
       <ProjectHeader
@@ -169,7 +176,7 @@ const ProjectsPage = () => {
         programming career. There are numerous other projects that I have developed both during my
         time in university and for personal endeavors.
       </Typography>
-    </>
+    </MotionBox>
   );
 };
 

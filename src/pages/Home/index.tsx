@@ -8,8 +8,8 @@ const MotionBox = motion(Box);
 const HomePage = () => {
   return (
     <MotionBox
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, x: 50 }}
+      animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
     >
       <TypographyWithDivider variant='h1'>Hi there!</TypographyWithDivider>

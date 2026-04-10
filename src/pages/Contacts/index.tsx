@@ -1,10 +1,17 @@
 import { Button, Stack, Box, Typography } from "@mui/material";
 import TypographyWithDivider from "../../components/TypographyWithDivider";
 import AppIcon from "../../components/AppIcon";
+import { motion } from "framer-motion";
+
+const MotionBox = motion(Box);
 
 const ContactsPage = () => {
   return (
-    <>
+    <MotionBox
+      initial={{ opacity: 0, x: 50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <TypographyWithDivider variant='h1'>Get In Touch</TypographyWithDivider>
       <Typography sx={{ mb: 3 }}>
         I'm always open to discussing new opportunities, collaborations, or just connecting with
@@ -76,7 +83,7 @@ const ContactsPage = () => {
         <Typography>🌍 Open to remote opportunities worldwide</Typography>
         <Typography>⏰ Timezone: EET (UTC+2/UTC+3)</Typography>
       </Box>
-    </>
+    </MotionBox>
   );
 };
 
