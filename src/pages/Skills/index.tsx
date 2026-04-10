@@ -5,30 +5,18 @@ import { motion } from "framer-motion";
 const MotionBox = motion(Box);
 
 const skills = {
-  "Languages & Core": ["JavaScript", "TypeScript", "Node.js"],
-  "Frontend Frameworks & Libraries": [
-    "React",
-    "React Router",
-    "React Query",
-    "TanStack Query",
-  ],
+  "Languages & Core": ["JavaScript", "TypeScript", "Node.js", ".NET"],
+  "Frontend Frameworks & Libraries": ["React", "React Router", "React Query", "TanStack Query"],
   "State Management": ["Redux", "Redux Toolkit", "Jotai", "Zustand"],
-  "UI & Styling": [
-    "Material UI",
-    "Styled Components",
-    "Tailwind CSS",
-    "SASS",
-    "SCSS",
-    "Figma",
-  ],
-  "Testing & Quality": ["Jest", "React Testing Library", "Storybook"],
+  "UI & Styling": ["Material UI", "Styled Components", "Tailwind CSS", "SASS", "SCSS", "Figma"],
+  "Testing & Quality": ["Jest", "React Testing Library", "Storybook", "Sentry"],
   "Backend & APIs": ["Express.js", "REST API", "tRPC", "Axios"],
-  "Real-time Communication": ["Socket.io", "WebSockets", "SignalR", "WebRTC"],
-  "Build Tools & Bundlers": ["Webpack", "Vite"],
-  "DevOps & Infrastructure": ["Docker", "Azure", "CI/CD", "Git"],
-  "Development Tools": ["Postman", "Sentry", "vim", "neovim", "Linux"],
+  "Real-time Communication": ["WebRTC", "WebSockets", "Socket.io", "SignalR"],
+  "Build Tools & Bundlers": ["Vite", "Webpack"],
+  "DevOps & Infrastructure": ["Azure", "Docker", "CI/CD", "Git"],
+  "Development Tools": ["neovim", "AI Agents", "Cursor", "Claude"],
   "Authentication & Security": ["Auth0"],
-  "Other": ["OOP"],
+  Other: ["OOP"],
 };
 
 const SkillsPage = () => {
@@ -40,7 +28,7 @@ const SkillsPage = () => {
     >
       <TypographyWithDivider variant='h1'>Skills & Technologies</TypographyWithDivider>
       <Typography sx={{ mb: 4 }}>
-        Throughout my 8+ years of professional experience, I've worked with a wide range of
+        Throughout my 7+ years of professional experience, I've worked with a wide range of
         technologies and tools. Here's a comprehensive overview of my technical skill set.
       </Typography>
 
@@ -55,7 +43,7 @@ const SkillsPage = () => {
           <Typography variant='h3' sx={{ mb: 1.5 }}>
             {category}
           </Typography>
-          <Stack direction='row' spacing={1} sx={{ flexWrap: "wrap", gap: 1 }}>
+          <Stack direction='row' sx={{ flexWrap: "wrap", gap: 1 }}>
             {items.map((skill) => (
               <Chip key={skill} label={skill} variant='outlined' />
             ))}

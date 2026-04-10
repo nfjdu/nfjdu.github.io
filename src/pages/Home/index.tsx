@@ -14,7 +14,7 @@ const HomePage = () => {
     >
       <TypographyWithDivider variant='h1'>Hi there!</TypographyWithDivider>
       <Typography>
-        I'm a Senior Full Stack Developer from Ukraine with 8+ years of commercial experience
+        I'm a Senior Full Stack Developer from Ukraine with 7+ years of commercial experience
         building scalable, high-performance web applications. I specialize in architecting frontend
         systems, leading technical initiatives, and delivering solutions that drive measurable
         business impact.
@@ -32,7 +32,8 @@ const HomePage = () => {
       </Typography>
       <Typography>
         I believe in pragmatic engineering—choosing the right tool for the job, writing clean and
-        testable code, and fostering collaboration through clear communication and knowledge sharing.
+        testable code, and fostering collaboration through clear communication and knowledge
+        sharing.
       </Typography>
 
       <Box sx={{ mt: 3, display: "flex", gap: 2, flexWrap: "wrap" }}>
