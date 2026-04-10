@@ -225,6 +225,7 @@ const baseOptions: ThemeOptions = {
           paddingLeft: theme.spacing(2),
           transition: "all 0.2s",
           zIndex: 0,
+          fontSize: "1rem",
           "&:hover": {
             ...(isMobile
               ? {}
