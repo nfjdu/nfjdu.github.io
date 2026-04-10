@@ -9,6 +9,7 @@ const SkillsPage = lazy(() => import("../pages/Skills"));
 const ProjectsPage = lazy(() => import("../pages/Projects"));
 const ContactsPage = lazy(() => import("../pages/Contacts"));
 const PlaygroundPage = lazy(() => import("../pages/Playground"));
+const ExperimentLayout = lazy(() => import("../pages/Playground/ExperimentLayout"));
 
 // Playground experiments
 const TextScrambleEffect = lazy(() => import("../pages/Playground/experiments/TextScrambleEffect"));
@@ -39,12 +40,17 @@ export const routes: RouteObject[] = [
         path: "playground",
         children: [
           { index: true, element: withSuspense(PlaygroundPage) },
-          { path: "text-scramble", element: withSuspense(TextScrambleEffect) },
-          { path: "typewriter", element: withSuspense(TypewriterEffect) },
-          { path: "gradient-text", element: withSuspense(GradientTextEffect) },
-          { path: "glassmorphism", element: withSuspense(GlassmorphizmCube) },
-          { path: "ascii-art", element: withSuspense(CharsMadeOfChars) },
-          { path: "iphone-3d", element: withSuspense(Iphone3DModel) },
+          {
+            element: withSuspense(ExperimentLayout),
+            children: [
+              { path: "text-scramble", element: withSuspense(TextScrambleEffect) },
+              { path: "typewriter", element: withSuspense(TypewriterEffect) },
+              { path: "gradient-text", element: withSuspense(GradientTextEffect) },
+              { path: "glassmorphism", element: withSuspense(GlassmorphizmCube) },
+              { path: "ascii-art", element: withSuspense(CharsMadeOfChars) },
+              { path: "iphone-3d", element: withSuspense(Iphone3DModel) },
+            ],
+          },
         ],
       },
     ],

@@ -86,13 +86,18 @@ const PlaygroundPage = () => {
               transition: "all 0.3s ease",
               "&:hover": {
                 transform: "translateY(-8px)",
-                boxShadow: (theme) => theme.shadows[8],
+                boxShadow: (theme) => theme.shadows[2],
               },
             }}
           >
             <CardActionArea
               onClick={() => navigate(experiment.path)}
-              sx={{ height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch" }}
+              sx={{
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "stretch",
+              }}
             >
               <CardContent sx={{ flexGrow: 1 }}>
                 <Typography
