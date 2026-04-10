@@ -14,6 +14,7 @@ const ProjectImage = ({ src, alt }: Props) => {
         mr: "auto",
         width: { xxs: "100%", lg: "70%" },
         height: "auto",
+        display: "block",
       }}
       component={"img"}
       src={src}
