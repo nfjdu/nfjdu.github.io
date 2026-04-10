@@ -24,6 +24,7 @@ const RootPage = () => {
 
   return (
     <Box
+      role='main'
       component='div'
       sx={{
         width: "100%",
@@ -110,16 +111,14 @@ const RootPage = () => {
           <NavLink to='/skills' text='Skills' onClick={() => setIsMenuOpened(false)} />
           <NavLink to='/projects' text='Projects' onClick={() => setIsMenuOpened(false)} />
           <NavLink to='/contacts' text='Contacts' onClick={() => setIsMenuOpened(false)} />
-          
+
           <DashedDivider sx={{ my: 2 }} />
-          
+
           <NavLink to='/playground' text='Playground' onClick={() => setIsMenuOpened(false)} />
         </List>
       </Box>
 
-      <Box component='main' role='main'>
-        <Outlet />
-      </Box>
+      <Outlet />
     </Box>
   );
 };

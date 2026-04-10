@@ -10,8 +10,8 @@ const ExperimentLayout = () => {
 
   return (
     <MotionBox
-      initial={{ opacity: 0, x: 50 }}
-      animate={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       sx={{
         minHeight: "100vh",
@@ -20,7 +20,6 @@ const ExperimentLayout = () => {
         alignItems: "center",
         justifyContent: "center",
         position: "relative",
-        pt: 10,
       }}
     >
       <IconButton
@@ -31,7 +30,7 @@ const ExperimentLayout = () => {
           left: 20,
           zIndex: 1000,
         }}
-        aria-label="Back to playground"
+        aria-label='Back to playground'
       >
         <ArrowBack />
       </IconButton>
@@ -41,4 +40,3 @@ const ExperimentLayout = () => {
 };
 
 export default ExperimentLayout;
-
