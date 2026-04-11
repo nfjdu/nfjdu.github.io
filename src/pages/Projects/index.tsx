@@ -48,7 +48,7 @@ const ProjectsPage = () => {
         tags={["React", "MUI", "Redux", "SignalR", ".NET Core"]}
       />
       <Typography>
-        <Link target='_blank' href='https://www.nexusfleet.io/'>
+        <Link target='_blank' href='https://nexusops.io/'>
           NexusFleet
         </Link>{" "}
         represents the forefront of fleet return management automation software, meticulously
