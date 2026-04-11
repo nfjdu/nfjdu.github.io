@@ -1,15 +1,18 @@
 import { Box } from "@mui/material";
-import { GraphicsExampleWrapper } from "../../../../components/GraphicsExampleWrapper";
 import IphoneScene from "./IphoneScene";
 
-interface Props {}
-
-const GraphicsModelsPage = ({}: Props) => {
+const GraphicsModelsPage = () => {
   return (
-    <Box component='div' sx={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2 }}>
-      <GraphicsExampleWrapper>
-        <IphoneScene />
-      </GraphicsExampleWrapper>
+    <Box
+      component='div'
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "400px",
+      }}
+    >
+      <IphoneScene />
     </Box>
   );
 };
