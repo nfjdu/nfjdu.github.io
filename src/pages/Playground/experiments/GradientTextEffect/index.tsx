@@ -1,11 +1,10 @@
 import TypographyNoMargin from "../../../../components/TypographyNoMargin";
+import { memo } from "react";
 
-interface Props {}
-
-const GradientTextEffect = ({}: Props) => {
+const GradientTextEffect = memo(() => {
   return (
     <TypographyNoMargin
-      variant={"h3"}
+      variant='h3'
       sx={{
         textTransform: "uppercase",
         background: "linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff)",
@@ -24,6 +23,8 @@ const GradientTextEffect = ({}: Props) => {
       Lorem ipsum
     </TypographyNoMargin>
   );
-};
+});
+
+GradientTextEffect.displayName = "GradientTextEffect";
 
 export default GradientTextEffect;
