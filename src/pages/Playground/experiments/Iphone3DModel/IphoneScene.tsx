@@ -11,7 +11,7 @@ const IphoneControls = () => {
 
 const IphoneScene = () => {
   return (
-    <Canvas style={{ height: "400px" }} camera={{ position: [0, 0, 5], fov: 50 }}>
+    <Canvas style={{ height: "400px" }} camera={{ position: [0, 0, 7], fov: 50 }}>
       <IphoneControls />
       <Suspense fallback={null}>
         <ambientLight intensity={0.8} />
