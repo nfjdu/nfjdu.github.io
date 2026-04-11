@@ -37,8 +37,7 @@ const TypewriterEffect = () => {
     <Stack sx={{ width: "fit-content", maxWidth: "100%" }}>
       <TypographyNoMargin
         sx={{
-          fontSize: "clamp(12px, 5vw, 28px) !important",
-          fontFamily: "monospace",
+          fontSize: "clamp(16px, 6vw, 36px) !important",
           lineHeight: 1.3,
           overflow: "hidden",
           whiteSpace: "nowrap",
