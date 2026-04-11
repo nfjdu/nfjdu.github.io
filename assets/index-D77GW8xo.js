@@ -1,8 +1,0 @@
-import{x as f,j as r,B as s}from"./mui-ChtHYpiI.js";import{a as m}from"./vendor-C3YG3lOk.js";const j=()=>{const[n,o]=m.useState(!1),i=()=>o(!0),d=()=>o(!1),e=100,t=n?70:30,l={position:"absolute",width:"100%",height:"100%",display:"flex",alignItems:"center",justifyContent:"center",color:"white",fontWeight:"bold",borderRadius:"12px",backdropFilter:"blur(18px)",border:"2px solid rgba(255, 255, 255, 0.3)",transition:"all 0.3s ease",overflow:"hidden"},p=["rgba(25, 118, 210, 0.4)","rgba(211, 47, 47, 0.4)","rgba(56, 142, 60, 0.4)","rgba(245, 124, 0, 0.4)","rgba(123, 31, 162, 0.4)","rgba(251, 192, 45, 0.4)"],x=["⊂(◉‿◉)つ","(ㆆ _ ㆆ)","(✿◠‿◠)","(⌐■_■)","(｡◕‿‿◕｡)","(͡ ° ͜ʖ ͡ °)"],c=[`translateZ(${e/2+t}px)`,`rotateY(180deg) translateZ(${e/2+t}px)`,`rotateY(90deg) translateZ(${e/2+t}px)`,`rotateY(-90deg) translateZ(${e/2+t}px)`,`rotateX(90deg) translateZ(${e/2+t}px)`,`rotateX(-90deg) translateZ(${e/2+t}px)`],g=f`
-    from {
-      transform: rotateX(-30deg) rotateY(0deg);
-    }
-    to {
-      transform: rotateX(-30deg) rotateY(360deg);
-    }
-  `;return r.jsx(s,{sx:{display:"flex",alignItems:"center",justifyContent:"center",height:"100%",width:"100%",padding:"24px"},onMouseEnter:i,onMouseLeave:d,children:r.jsx(s,{sx:{width:"160px",height:"160px",perspective:"1000px",filter:"drop-shadow(0 4px 30px rgba(0, 0, 0, 0.1))"},children:r.jsx(s,{sx:{position:"relative",width:"100%",height:"100%",transformStyle:"preserve-3d",animation:`${g} 10s linear infinite`},children:x.map((h,a)=>r.jsx(s,{sx:{...l,background:p[a],transform:c[a]},children:r.jsx(s,{sx:{width:"100%",height:"100%",display:"flex",alignItems:"center",justifyContent:"center",color:"white",fontWeight:"bold"},children:h})}))})})})};export{j as default};
