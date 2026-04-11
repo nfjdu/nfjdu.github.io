@@ -43,6 +43,51 @@ const ProjectsPage = () => {
       <TypographyWithDivider variant='h1'>Projects</TypographyWithDivider>
 
       <ProjectHeader
+        title='FK Marketplace (side project)'
+        dates='Jan 2026 - Apr 2026'
+        tags={[
+          "React",
+          "TypeScript",
+          "Vite",
+          "Tailwind CSS",
+          "Shadcn/ui",
+          "TanStack Query",
+          "SignalR",
+        ]}
+      />
+      <Typography>
+        <Link target='_blank' href='https://www.felleskjopet.no/'>
+          Felleskjøpet
+        </Link>{" "}
+        Marketplace is a comprehensive auction platform for agricultural equipment, consisting of a
+        customer-facing marketplace and an administrative panel for managing auctions, users, and
+        company operations.
+      </Typography>
+      <Typography>
+        My primary focus was on the admin panel, where I developed the core architecture and
+        implemented critical features including a real-time notifications system with SignalR
+        integration, multi-tenancy support for managing multiple companies, comprehensive user
+        management with role-based access control, and auction management workflows. I also built
+        company admin features for user invitations, saved searches, and user preferences
+        management.
+      </Typography>
+      <Typography>
+        On the marketplace side, I contributed to the trader installation feature, internal intranet
+        pages, and feature toggle system for different deployment environments. The project utilizes
+        modern technologies including React 18, TypeScript, Vite for build tooling, Tailwind CSS
+        with shadcn/ui components, TanStack Query for data fetching, and SignalR for real-time
+        updates.
+      </Typography>
+      <ProjectImage src='/fk-marketplace-screenshot1.png' alt='FK Marketplace' />
+      <Typography variant='caption' sx={{ textAlign: "center", display: "block", mt: 1, mb: 3 }}>
+        Picture 1. Screenshot of FK Marketplace №1
+      </Typography>
+      <ProjectImage src='/fk-marketplace-screenshot2.png' alt='FK Marketplace' />
+      <Typography variant='caption' sx={{ textAlign: "center", display: "block", mt: 1, mb: 3 }}>
+        Picture 2. Screenshot of FK Marketplace №2
+      </Typography>
+
+      <ProjectHeader
         title='NexusFleet'
         dates='2022 - present'
         tags={["React", "MUI", "Redux", "SignalR", ".NET Core"]}
