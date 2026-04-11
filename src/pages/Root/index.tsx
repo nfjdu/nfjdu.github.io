@@ -32,7 +32,7 @@ const RootPage = () => {
         overflowX: "hidden",
         position: "relative",
         py: { xxs: 10, sm: 12, xl: 16 },
-        px: { xxs: 3.6, sm: 14, xl: 18 },
+        px: { xxs: 3.6, sm: 14, xl: 21 },
         backgroundColor: (theme) => theme.palette.background.paper,
         display: "flex",
         flexDirection: "column",
