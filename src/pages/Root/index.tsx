@@ -15,7 +15,7 @@ const RootPage = () => {
   // trick to fix github SPA routing problem
   useEffect(() => {
     const path = localStorage.getItem("path");
-    if (path) {
+    if (path && path !== window.location.pathname) {
       localStorage.removeItem("path");
       navigate(path);
     }
