@@ -1,37 +1,14 @@
 import { Stack } from "@mui/material";
 import { useCallback, useEffect, useState } from "react";
 import TypographyNoMargin from "../../../../components/TypographyNoMargin";
-
-interface Props {}
+import { PHRAZES_ENUM, getNextPhraze } from "./utils";
 
 enum ANIMATION_STATE_ENUM {
   WRITING = 1,
   CLEANUP = 2,
 }
-enum PHRAZES_ENUM {
-  PHRAZE1 = "Hello world!",
-  PHRAZE2 = "What a beautiful day :)",
-  PHRAZE3 = "Let's code something...",
-}
 
-export function getNextPhraze(phraze: PHRAZES_ENUM) {
-  switch (phraze) {
-    case PHRAZES_ENUM.PHRAZE1: {
-      return PHRAZES_ENUM.PHRAZE2;
-    }
-    case PHRAZES_ENUM.PHRAZE2: {
-      return PHRAZES_ENUM.PHRAZE3;
-    }
-    case PHRAZES_ENUM.PHRAZE3: {
-      return PHRAZES_ENUM.PHRAZE1;
-    }
-    default: {
-      return PHRAZES_ENUM.PHRAZE1;
-    }
-  }
-}
-
-const TypewriterEffect = ({}: Props) => {
+const TypewriterEffect = () => {
   const [currentPhraze, setCurrentPhraze] = useState(PHRAZES_ENUM.PHRAZE3);
   const [currentStep, setCurrentStep] = useState<ANIMATION_STATE_ENUM>(
     ANIMATION_STATE_ENUM.WRITING,

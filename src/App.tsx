@@ -4,7 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { routes } from "./routes";
 import CssBaseline from "@mui/material/CssBaseline";
 import ErrorBoundary from "./components/ErrorBoundary";
-import { ThemeProvider, useTheme } from "./contexts/ThemeContext";
+import { ThemeProvider } from "./contexts/ThemeContext.tsx";
+import { useTheme } from "./contexts/ThemeContext";
 
 const router = createBrowserRouter(routes);
 

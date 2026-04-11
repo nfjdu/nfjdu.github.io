@@ -2,25 +2,13 @@ import { useEffect, useState } from "react";
 import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
 import { Popper, Box, useTheme } from "@mui/material";
 import { generateDudeTalkingText } from "./gpt";
+import { AnimationType, getMaxAnimationFramesCount } from "./utils";
 
 const walkingDudeWidth = 28;
 const walkingDudeHeight = 49;
-const walkingDudeAnimationFramesCount = 8;
 const idleDudeWidth = 64;
 const idleDudeHeight = 49;
-const idleDudeAnimationFramesCount = 5;
 const walkDistance = 375 - walkingDudeWidth;
-
-type AnimationType = "walking" | "idle";
-
-export function getMaxAnimationFramesCount(animationType: AnimationType) {
-  switch (animationType) {
-    case "walking":
-      return walkingDudeAnimationFramesCount;
-    case "idle":
-      return idleDudeAnimationFramesCount;
-  }
-}
 
 //todo: get rid of framer motion lib
 const WalkingDude = () => {
