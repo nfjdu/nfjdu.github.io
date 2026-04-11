@@ -1,6 +1,6 @@
 import { Box, IconButton, List } from "@mui/material";
-import { Outlet, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { Outlet } from "react-router-dom";
+import { useState } from "react";
 import NavLink from "../../components/NavLink";
 import { useTheme } from "../../contexts/ThemeContext";
 import AppIcon from "../../components/AppIcon";
@@ -10,16 +10,6 @@ import DashedDivider from "../../components/DashedDivider";
 const RootPage = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const { toggleTheme } = useTheme();
-  const navigate = useNavigate();
-
-  // trick to fix github SPA routing problem
-  useEffect(() => {
-    const path = localStorage.getItem("path");
-    if (path && path !== window.location.pathname) {
-      localStorage.removeItem("path");
-      navigate(path);
-    }
-  }, [navigate]);
 
   return (
     <Box

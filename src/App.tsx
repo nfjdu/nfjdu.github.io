@@ -1,13 +1,13 @@
 import { ThemeProvider as MuiThemeProvider } from "@mui/material";
 import { createCustomTheme } from "./themes/themes";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import { routes } from "./routes";
 import CssBaseline from "@mui/material/CssBaseline";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext.tsx";
 import { useTheme } from "./contexts/ThemeContext";
 
-const router = createBrowserRouter(routes);
+const router = createHashRouter(routes);
 
 const AppContent = () => {
   const { theme } = useTheme();
