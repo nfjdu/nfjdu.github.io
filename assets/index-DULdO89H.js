@@ -1,1 +1,0 @@
-import{r as m,j as r,T as a,w as p}from"./index-2zS8jTDv.js";const d=m.memo(({variant:e="h1",dividerVariant:s="dashed",children:i,sx:o,...t})=>r.jsxs(a,{variant:e,sx:{mb:0,display:"flex",flexDirection:"column",...o},...t,children:[i,r.jsx(p,{sx:{borderBottomWidth:"0.08em",borderStyle:s,mt:"0.1em",mb:"0.2em"}})]}));d.displayName="TypographyWithDivider";export{d as T};
