@@ -1,1 +1,0 @@
-import{r as p,j as s}from"./react-vendor-nIgHDGuE.js";import{T as m}from"./mui-core-C_uuF3vB.js";const t=p.memo(({children:r,sx:o,...a})=>s.jsx(m,{sx:{m:0,...o},...a,children:r}));t.displayName="TypographyNoMargin";export{t as T};
