@@ -1,11 +1,10 @@
 import { Divider, DividerProps } from "@mui/material";
+import { memo } from "react";
 
-interface Props extends DividerProps {
-  sx?: DividerProps["sx"];
-}
+const DashedDivider = memo(({ sx, ...props }: DividerProps) => {
+  return <Divider sx={{ borderStyle: "dashed", ...sx }} {...props} />;
+});
 
-const DashedDivider = ({ sx }: Props) => {
-  return <Divider sx={{ borderStyle: "dashed", ...sx }} />;
-};
+DashedDivider.displayName = "DashedDivider";
 
 export default DashedDivider;

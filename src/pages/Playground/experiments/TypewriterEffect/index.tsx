@@ -37,25 +37,24 @@ const TypewriterEffect = ({}: Props) => {
     ANIMATION_STATE_ENUM.WRITING,
   );
 
-  const startWriting = useCallback((_currentPhraze: PHRAZES_ENUM) => {
-    setCurrentPhraze(_currentPhraze);
-    setCurrentStep(ANIMATION_STATE_ENUM.WRITING);
+  const startWriting = useCallback(
+    (_currentPhraze: PHRAZES_ENUM) => {
+      setCurrentPhraze(_currentPhraze);
+      setCurrentStep(ANIMATION_STATE_ENUM.WRITING);
 
-    setTimeout(() => {
-      startCleanup(getNextPhraze(_currentPhraze));
-    }, 3000);
-  }, []);
-
-  const startCleanup = useCallback((_currentPhraze: PHRAZES_ENUM) => {
-    setCurrentStep(ANIMATION_STATE_ENUM.CLEANUP);
-    setTimeout(() => {
-      startWriting(_currentPhraze);
-    }, 2000);
-  }, []);
+      setTimeout(() => {
+        setCurrentStep(ANIMATION_STATE_ENUM.CLEANUP);
+        setTimeout(() => {
+          startWriting(getNextPhraze(_currentPhraze));
+        }, 2000);
+      }, 3000);
+    },
+    [],
+  );
 
   useEffect(() => {
     startWriting(PHRAZES_ENUM.PHRAZE1);
-  }, []);
+  }, [startWriting]);
 
   return (
     <Stack sx={{ width: "fit-content", maxWidth: "100%" }}>

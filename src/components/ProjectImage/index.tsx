@@ -1,11 +1,12 @@
 import { Box } from "@mui/material";
+import { memo } from "react";
 
-interface Props {
+interface ProjectImageProps {
   src: string;
   alt: string;
 }
 
-const ProjectImage = ({ src, alt }: Props) => {
+const ProjectImage = memo(({ src, alt }: ProjectImageProps) => {
   return (
     <Box
       sx={{
@@ -16,7 +17,7 @@ const ProjectImage = ({ src, alt }: Props) => {
         height: "auto",
         display: "block",
       }}
-      component={"img"}
+      component='img'
       src={src}
       onError={(e) => {
         e.currentTarget.src = "/no-image.png";
@@ -24,6 +25,8 @@ const ProjectImage = ({ src, alt }: Props) => {
       alt={alt}
     />
   );
-};
+});
+
+ProjectImage.displayName = "ProjectImage";
 
 export default ProjectImage;

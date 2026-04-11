@@ -1,7 +1,8 @@
 import { Box } from "@mui/material";
+import { ReactNode } from "react";
 
 interface ExampleProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export function GraphicsExampleWrapper({ children }: ExampleProps) {

@@ -1,5 +1,5 @@
 import { Navigate, RouteObject } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, LazyExoticComponent, ComponentType } from "react";
 import ErrorPage from "../pages/Error";
 import RootPage from "../pages/Root";
 
@@ -19,7 +19,7 @@ const GlassmorphizmCube = lazy(() => import("../pages/Playground/experiments/Gla
 const CharsMadeOfChars = lazy(() => import("../pages/Playground/experiments/CharsMadeOfChars"));
 const Iphone3DModel = lazy(() => import("../pages/Playground/experiments/Iphone3DModel"));
 
-const withSuspense = (Component: React.LazyExoticComponent<React.ComponentType>) => (
+const withSuspense = (Component: LazyExoticComponent<ComponentType>) => (
   <Suspense fallback={<div />}>
     <Component />
   </Suspense>

@@ -2,15 +2,14 @@ import { Box, IconButton, List } from "@mui/material";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import NavLink from "../../components/NavLink";
-import { useAppDispatch } from "../../store";
-import { toggleTheme } from "../../store/settings/slice";
+import { useTheme } from "../../contexts/ThemeContext";
 import AppIcon from "../../components/AppIcon";
 import WalkingDude from "../../components/WalkingDude";
 import DashedDivider from "../../components/DashedDivider";
 
 const RootPage = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
-  const dispatch = useAppDispatch();
+  const { toggleTheme } = useTheme();
   const navigate = useNavigate();
 
   // trick to fix github SPA routing problem
@@ -20,7 +19,7 @@ const RootPage = () => {
       localStorage.removeItem("path");
       navigate(path);
     }
-  }, []);
+  }, [navigate]);
 
   return (
     <Box
@@ -81,7 +80,7 @@ const RootPage = () => {
         </IconButton>
         <IconButton
           sx={{ ml: "auto" }}
-          onClick={() => dispatch(toggleTheme())}
+          onClick={toggleTheme}
           aria-label='Toggle theme'
         >
           <AppIcon icon='theme' />

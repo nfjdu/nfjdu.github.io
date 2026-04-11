@@ -130,7 +130,7 @@ const WalkingDude = () => {
             borderWidth: "28px 17px 40px 21px",
             borderStyle: "solid",
             bgcolor: "transparent",
-            filter: (theme) => `drop-shadow(${theme.shadows[3]})`,
+            filter: (muiTheme) => `drop-shadow(${muiTheme.shadows[3]})`,
           }}
         >
           <Box component={"div"} sx={{ backgroundColor: "white", color: "black" }}>

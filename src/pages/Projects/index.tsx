@@ -5,6 +5,7 @@ import ProjectImage from "../../components/ProjectImage";
 import TypographyNoMargin from "../../components/TypographyNoMargin";
 import Tag from "../../components/Tag";
 import { motion } from "framer-motion";
+import { memo } from "react";
 
 const MotionBox = motion(Box);
 
@@ -14,7 +15,7 @@ interface ProjectHeaderProps {
   tags: string[];
 }
 
-const ProjectHeader = ({ title, dates, tags }: ProjectHeaderProps) => {
+const ProjectHeader = memo(({ title, dates, tags }: ProjectHeaderProps) => {
   return (
     <>
       <Typography variant='h2' sx={{ mb: 0 }}>
@@ -31,7 +32,9 @@ const ProjectHeader = ({ title, dates, tags }: ProjectHeaderProps) => {
       <DashedDivider sx={{ mb: 1 }} />
     </>
   );
-};
+});
+
+ProjectHeader.displayName = "ProjectHeader";
 
 const ProjectsPage = () => {
   return (

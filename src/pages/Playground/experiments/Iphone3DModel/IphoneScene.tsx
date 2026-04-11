@@ -4,9 +4,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Suspense, useRef } from "react";
 import { DirectionalLight } from "three";
 
-interface Props {}
-
-const IphoneControls = ({}: Props) => {
+const IphoneControls = () => {
   const directionalLight = useRef<DirectionalLight | null>(null);
   const orbitControls = useRef<any>(null);
 
@@ -21,9 +19,7 @@ const IphoneControls = ({}: Props) => {
   );
 };
 
-interface Props {}
-
-const IphoneScene = ({}: Props) => {
+const IphoneScene = () => {
   return (
     <Canvas style={{ height: "400px" }}>
       <IphoneControls />

@@ -1,29 +1,33 @@
-import { ThemeProvider } from "@mui/material";
+import { ThemeProvider as MuiThemeProvider } from "@mui/material";
 import { createCustomTheme } from "./themes/themes";
-import { THEME } from "./constants/themes";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { routes } from "./routes";
 import CssBaseline from "@mui/material/CssBaseline";
-import { connect } from "react-redux";
-import { AppState } from "./store";
 import ErrorBoundary from "./components/ErrorBoundary";
+import { ThemeProvider, useTheme } from "./contexts/ThemeContext";
 
 const router = createBrowserRouter(routes);
 
-interface Props {
-  theme?: THEME;
-}
-function App({ theme = THEME.DARK }: Props) {
-  const _theme = createCustomTheme(theme);
+const AppContent = () => {
+  const { theme } = useTheme();
+  const muiTheme = createCustomTheme(theme);
 
   return (
     <ErrorBoundary>
-      <ThemeProvider theme={_theme}>
+      <MuiThemeProvider theme={muiTheme}>
         <CssBaseline />
         <RouterProvider router={router} />
-      </ThemeProvider>
+      </MuiThemeProvider>
     </ErrorBoundary>
   );
-}
+};
 
-export default connect((state: AppState, _) => ({ theme: state.settings.theme }))(App);
+const App = () => {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
+  );
+};
+
+export default App;
